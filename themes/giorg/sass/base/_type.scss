@@ -1,0 +1,745 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: $headings-line-height;
+    font-weight: $headings-font-weight;
+    margin-bottom: $headings-margin-bottom;
+}
+
+h2, h3, h4, h5, h6 {
+    //font-family: $headings-font-family;
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+@include media-breakpoint-down(sm) {
+    h1, .h1 { font-size: ($font-size-h1 * .8); }
+    h2, .h2 { font-size: ($font-size-h2 * .8); }
+    h3, .h3 { font-size: ($font-size-h3 * .8); }
+    h4, .h4 { font-size: ($font-size-h4 * .8); }
+}
+
+// Type display classes
+.display-1 {
+    font-size: $display1-size;
+    //font-weight: $display1-weight;
+}
+.display-2 {
+    font-size: $display2-size;
+    //font-weight: $display2-weight;
+}
+.display-3 {
+    font-size: $display3-size;
+    //font-weight: $display3-weight;
+}
+.display-4 {
+    font-size: $display4-size;
+    //font-weight: $display4-weight;
+}
+
+.main-title {
+    font-family: $font-webfont-one;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 1rem;
+    position: relative;
+    &:after {
+        background: $brand-primary;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .display-1 { font-size: ($display1-size * .8); }
+    .display-2 { font-size: ($display2-size * .8); }
+    .display-3 { font-size: ($display3-size * .8); }
+    .display-4 { font-size: ($display4-size * .8); }
+}
+
+.number-md {
+	font-size: 3em;
+	line-height: .8em;
+}
+
+.number-lg {
+	font-size: 4em;
+	line-height: .8em;
+}
+
+.number-xl {
+    font-size: 6em;
+	line-height: .8em;
+}
+
+//
+// Horizontal rules
+//
+
+hr {
+    margin-top: $spacer-y;
+    margin-bottom: $spacer-y;
+    border: 0;
+    border-top: $hr-border-width solid $hr-border-color;
+}
+
+.hr-stub {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 4rem;
+    min-width: 4rem;
+    .text-inverse & {
+        background: rgba(#fff,.5);
+    }
+}
+
+.hr-sm {
+    height: 1px;
+}
+
+.hr-md {
+    border: none;
+    height: 2px;
+    background: $brand-dark;
+}
+
+.hr-lg {
+    background: $text-color;
+    border: none;
+    height: 5px;
+    .text-inverse & {
+        background: rgba(#fff,.5);
+    }
+}
+
+.hr-centered,
+.hr-div-centered {
+    margin-left: 45%;
+    margin-right: 45%;
+    max-width: none;
+}
+
+.hr-inverse {
+    border-color: transparent;
+    background: rgba(#fff,.15);
+}
+
+//
+// Emphasis
+//
+
+small,
+.small {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+mark,
+.mark {
+    padding: .2em .35em;
+    background-color: $state-warning-bg;
+}
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+    padding: ($spacer / 2) $spacer;
+    margin-bottom: $spacer;
+    font-size: $blockquote-font-size;
+    border-left: .25rem solid $blockquote-border-color;
+    
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    footer {
+        display: block;
+        font-size: 80%; // back to default font-size
+        line-height: $line-height;
+        color: $blockquote-small-color;
+    
+        &:before {
+            content: "\2014 \00A0"; // em dash, nbsp
+        }
+    }
+}
+
+// Opposite alignment of blockquote
+.blockquote-reverse {
+    padding-right: $spacer;
+    padding-left: 0;
+    text-align: right;
+    border-right: .25rem solid $blockquote-border-color;
+    border-left: 0;
+
+    // Account for citation
+    footer {
+        &:before { content: ""; }
+        &:after {
+          content: "\00A0 \2014"; // nbsp, em dash
+        }
+    }
+}
+
+cite {
+    font-style: normal;
+}
+
+.quote-hang {
+    position: relative;
+}
+
+.quote-hang {
+    .hangquote,
+    .endquote {
+        font-family: Georgia;
+    }
+    .hangquote {
+        position: absolute;
+        font-size: 1.7em;
+        left: -.55em;
+        top: -.125em;
+    }
+}
+
+//
+// Figures
+//
+
+.figure {
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
+
+  > img {
+    @extend .img-responsive;
+    line-height: 1;
+    margin-bottom: ($spacer-y / 2);
+  }
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: $gray-light;
+}
+
+/* basic type size and margins */
+p {
+    margin-bottom: 1.5em;
+    margin-top: 0;
+    .hero & {
+        margin-bottom: 0;
+    }
+}
+
+li {
+    margin: 0 0 ($spacer-y / 2);
+}
+// for cards with simple text like support KB
+.entry-content > *:last-child,
+.card-block > *:last-child {
+    margin-bottom: 0;
+}
+
+/* text sizing */
+.text-xxs {
+    font-size: $font-size-xxs;
+    p,
+    li,
+    td {
+       font-size: .6rem; 
+    }
+}
+
+.text-xs {
+    font-size: $font-size-xs;
+    p,
+    li,
+    td {
+       font-size: $font-size-xs; 
+    }
+}
+
+.text-sm {
+    font-size: $font-size-sm;
+    p,
+    li,
+    td {
+       font-size: $font-size-sm;
+    }
+}
+
+.text-normal {
+    font-size: $font-size-normal;
+    p,
+    li,
+    td {
+       font-size: $font-size-normal; 
+    }
+}
+
+.text-baseline {
+    font-size: $font-size-base;
+    p,
+    li,
+    td {
+       font-size: $font-size-base; 
+    }
+}
+
+.text-md {
+    font-size:  $font-size-md;
+    p,
+    li,
+    td {
+       font-size: $font-size-md; 
+    }
+}
+
+.text-lg {
+    font-size: $font-size-lg;
+    p,
+    li,
+    td {
+       font-size: $font-size-lg; 
+    }
+}
+
+.text-xl {
+    font-size: $font-size-xl;
+    p,
+    li,
+    td {
+       font-size: $font-size-xl; 
+    }
+}
+
+.text-xxl {
+    font-size: $font-size-xxl;
+    p,
+    li,
+    td {
+       font-size: $font-size-xxl; 
+    }
+}
+
+.text-pipe {
+    color: #aaa;
+    padding: 0 4px;
+}
+
+.text-uc {
+    @include header-xxs;
+}
+
+// text colors
+.text-letter-spacing {
+    letter-spacing: .2rem;
+}
+
+.text-gold {
+    color: goldenrod;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: $brand-black;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-gray-light {
+    color: $gray-light;
+}
+
+.text-gray-lightly {
+    color: $gray-lightly;
+}
+
+.text-gray-lighter {
+    color: $gray-lighter;
+}
+
+.text-gray-lightest {
+    color: $gray-lightest;
+}
+
+.text-gray-dark {
+    color: $gray-dark;
+}
+
+.text-gray-darker {
+    color: $gray-darker;
+}
+
+.text-dark {
+    color: $brand-dark;
+}
+
+.text-primary {
+    color: $brand-primary;
+}
+
+.text-secondary {
+    color: $brand-secondary;
+}
+
+.text-secondary-light {
+    color: $brand-secondary-light;
+}
+
+.text-secondary-dark {
+    color: $brand-secondary-darker;
+}
+
+.text-info {
+    color: $brand-info;
+}
+
+.text-success {
+    color: $brand-success;
+}
+
+.text-warning {
+    color: $brand-warning;
+}
+
+.text-danger {
+    color: $brand-danger;
+}
+
+.text-info-light {
+    color: $brand-info-light;
+}
+
+.text-info-lighter {
+    color: $brand-info-lighter;
+}
+
+.text-info-lightest {
+    color: lighten($brand-info-lighter,1%);
+}
+
+.text-orange {
+    color: $brand-orange;
+}
+
+.text-orange-dark {
+    color: $brand-orange-dark;
+}
+
+.text-orange-light {
+    color: $brand-orange-dark;
+}
+
+.text-mute {
+    color: lighten($text-muted,15%);
+}
+
+.text-opaque-dark {
+    color: rgba(#000,.5);
+}
+
+.text-opaque-white,
+.text-opaque-light {
+    color: rgba(#fff,.5);
+}
+
+
+// font weights
+.text-300 {
+    font-weight: 300 !important;
+}
+
+.text-400 {
+    font-weight: 400 !important;
+}
+
+.text-500 {
+    font-weight: 500 !important;
+}
+
+.text-600 {
+    font-weight: 600 !important;
+}
+
+.text-700 {
+    font-weight: 700 !important;
+}
+
+.text-webfont-one {
+    font-family: $font-webfont-one;
+}
+
+.text-webfont-two {
+    font-family: $font-webfont-two;
+}
+
+.text-webfont-three {
+    font-family: $font-webfont-three;
+}
+
+//inverse (white on dark)
+.text-inverse {
+	color: #fff;
+	&:focus,
+	&:active {
+        color: #fff;
+    }
+	a {
+    	color: #fff;
+    	&:focus,
+    	&:active {
+	        color: #fff;
+	    }
+	}
+    h1, h2, h3, h4, p {
+        color: inherit;
+    }
+    .text-meta,
+    &.text-meta,
+    .text-muted,
+    &.text-muted {
+        color: rgba(255,255,255,.8);
+    }
+    .text-mute,
+    &.text-mute {
+        color: rgba(255,255,255,.5);
+    }
+    .lead {
+        color: rgba(255,255,255,.8);
+        a {
+            color: lighten(#abbcd2,18%);
+        }
+    }
+}
+
+.text-inverse a:hover,
+a.text-inverse:hover {
+    color: rgba(255,255,255,.7);
+}
+
+// .main-content {
+//     a {
+//         border-bottom: 1px solid transparent;
+//         color: $link-color;
+//         text-decoration: none;
+
+//         @include hover-focus {
+//             border-color: $link-hover-color;
+//             color: $link-hover-color;
+//             text-decoration: none;
+//         }
+
+//         &:focus {
+//             @include tab-focus();
+//         }
+//     }
+// }
+
+// generally used for link type text
+.text-more {
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    &:after {
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        width: .5em;
+        height: .5em;
+        border-top: 2px solid $brand-secondary;
+        border-right: 2px solid $brand-secondary;
+        transform: translateX(2px) translateY(-1px) rotate(45deg);
+        transition: all .15s;
+    }
+    &:hover {
+        &:after {
+            border-top: 2px solid $brand-primary;
+            border-right: 2px solid $brand-primary;
+        }
+    }
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-no-underline {
+    border-bottom: 1px solid transparent;
+    text-decoration: none !important;
+    &:hover .link-block-link {
+        text-decoration: none !important;
+    }
+}
+
+.text-hover-underline,
+.text-no-underline {
+    border-bottom: 1px solid transparent;
+}
+
+.text-underline,
+.text-hover-underline:hover {
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+}
+
+.text-underline {
+    &:hover,
+    &:focus {
+        border: none;
+        text-decoration: none;
+    }
+}
+
+.link-hover-cta {
+    border-bottom: 1px solid darken($brand-info-light,5%);
+    display: inline-block;
+    padding: 2px 4px 2px 4px;
+    position: relative;
+    transition: 0.3s ease-in;
+    text-decoration: none;
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        background: $brand-info-light;
+        content: '';
+        display: block;
+        position: absolute;
+    	height: 100%;
+    	right: 0;
+    	top: 0;
+    	transform: scaleX(0);
+    	transform-origin: 0 0;
+    	transition: transform 0.25s;
+    	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    	z-index: 1;
+    	width: 100%;
+    }
+    &:hover {
+        //box-shadow: inset -2px -100px 0px -2px darken($brand-info-light,2.5%);
+        text-decoration: none;
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+/* for links around blocks */
+.link-block {
+    color: $text-color;
+    .link-block-link {
+        color: $link-color;
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+        .text-inverse & {
+            color: #fff;
+            &:hover {
+                color: #fff;  
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    &:hover .link-block-link {
+        //color: $link-hover-color;
+        //text-decoration: underline;
+        .text-inverse & {
+            color: #fff;
+        }
+    }
+}
+
+.link-top {
+    bottom: 0;
+    font-size: 2.5rem;
+    opacity: 0;
+    position: fixed;
+    transform: translateY(100px);
+    transition: all .5s;
+    right: 1rem;
+    .scrolled & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.link-read-more-parent {
+    max-height: 250px;
+    position: relative;
+    overflow: hidden;
+    &-expanded {
+        max-height: none;
+        padding-bottom: 1.5rem;
+        overflow: visible;
+    }
+}
+
+.read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; 
+    padding: 4rem 0 1rem; 
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
+    .read-more-parent-expanded & {
+        padding: 0;
+        background: none;
+    }
+}
+
+// misc
+
+.line-height-1 {
+    line-height: 1;
+}
+
+.text-sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+.text-serif {
+    font-family: $font-family-serif;
+}

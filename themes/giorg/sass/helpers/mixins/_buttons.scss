@@ -1,0 +1,188 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 12%);
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color !important;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+  @include hover {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+  &.disabled,
+  &:disabled,
+  fieldset[disabled] & {
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}
+
+@mixin button-outline-variant($color, $bgcolor, $color-hover) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $color;
+  border-radius: 0;
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $color;
+        border-color: $color;
+  }
+  @include hover {
+    color: $color-hover !important;
+    background-color: $bgcolor;
+        border-color: $bgcolor;
+  }
+
+  &.disabled,
+  &:disabled,
+  fieldset[disabled] & {
+    &:focus,
+    &.focus {
+      border-color: lighten($color, 20%);
+    }
+    @include hover {
+      border-color: lighten($color, 20%);
+    }
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  @include border-radius($border-radius);
+}
+
+// animated burger menu to x
+.menu-icon {
+    //box-shadow: inset 0 0 0 1px #fff;
+	position: relative;
+	display:  inline-block;
+	margin-right: 2px;
+	width: 20px;
+	height: 14px;
+}
+
+.menu-icon span, 
+.menu-icon span:before, 
+.menu-icon span:after {
+	width: 20px;
+	height: 2px;
+	background-color: #000;
+	display: block;
+}
+
+.menu-icon.menu-icon-staggered span {
+    width: 17px;
+}
+
+.menu-icon.menu-icon-staggered span:before {
+    width: 20px;
+} 
+
+.menu-icon.menu-icon-staggered span:after {
+    width: 14px;
+}
+
+.menu-icon span {
+    left: 0;
+	margin: 0 auto;
+	position: relative;
+	top: 9px;
+}
+
+.menu-icon span:before, 
+.menu-icon span:after {
+	position: absolute;
+	content: '';
+}
+
+.menu-icon span {
+    background-color: #000;
+    opacity: .7;
+}
+
+.menu-icon span:before {
+	margin-top: -6px;
+	transform: rotate(0);
+}
+
+.menu-icon span:after {
+	margin-top: 6px;
+	transform: rotate(0);
+}
+
+// assign transitions
+.menu-icon.menu-icon-animated span {
+	transition-duration: 0s;
+	transition-delay: 0.15s;
+}
+
+.menu-icon.menu-icon-animated span:before {
+	transition-property: margin, transform;
+	transition-duration: 0.15s;
+	transition-delay: 0.15s, 0s;
+}
+
+.menu-icon.menu-icon-animated span:after {
+	transition-property: margin, transform;
+	transition-duration: 0.15s;
+	transition-delay: 0.15s, 0s;
+}
+
+// this is the x state
+.is-toggled .menu-icon.menu-icon-animated span {
+	background-color: transparent;
+	width: 20px;
+}
+
+.is-toggled .menu-icon.menu-icon-animated span:before {
+	margin-top: 0;
+	transform: rotate(45deg);
+	transition-delay: 0s, 0.15s;
+	width: 20px;
+}
+
+.is-toggled .menu-icon.menu-icon-animated span:after {
+	margin-top: 0;
+	transform: rotate(-45deg);
+	transition-delay: 0s, 0.15s;
+	width: 20px;
+}

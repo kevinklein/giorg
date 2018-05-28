@@ -1,0 +1,273 @@
+ul, ol {
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    padding-left: 1.25rem;
+    ul, ol {
+        margin-bottom: 1rem;
+        margin-top: .55rem;
+    }
+}
+
+li ul,
+li ol {
+    margin-bottom: 1rem;
+    margin-top: .55rem;
+}
+
+//
+// Lists
+//
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    li {
+        margin: 0;
+    }
+    li + li {
+        margin-top: ($spacer-y / 2);
+    }
+}
+
+.list-resources {
+    padding-left: 0;
+    list-style: none;
+    strong {
+        font-weight: 600;
+    }
+    li {
+        font-size: .85rem;
+        margin-bottom: 0;
+    }
+    li + li {
+        margin-top: .5rem;
+    }
+    + .list-resources {
+        margin-top: .5rem;
+    }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+
+    > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    }
+}
+
+// Horizontal description lists w/ grid classes
+.dl-horizontal {
+    margin-right: -($grid-gutter-width / 2);
+    margin-left: -($grid-gutter-width / 2);
+    @include clearfix;
+}
+
+// list-items. these are simply to add a bit of decorative conceit and control placement of icons
+.list-items {
+    border-top: 1px solid $border-color;
+    margin: 0 0 ($spacer-y * 1.5);
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-items li + li {
+    margin: 0;
+}
+
+.list-items li,
+.list-item {
+    border-bottom: 1px solid $border-color;
+    margin: 0;
+    padding-bottom: .6rem;
+    padding-top: .6rem;
+    &.list-item-shaded {
+        background-color: $table-bg-accent;
+    }
+}
+
+.text-inverse {
+    .list-items,
+    .list-item {
+        border-color: rgba(#fff,.1);
+    }
+}
+
+.list-items-sm li,
+.list-items-sm .list-item {
+    padding-bottom: .3rem;
+    padding-top: .3rem;
+}
+
+.list-items-card {
+    margin-bottom: 0;
+}
+
+.list-items-card:first-child,
+.card-header + .list-items-card {
+    border: none;
+}
+
+.list-items-card > .list-item,
+.list-items-card > li {
+    padding-left: $card-spacer-x;
+    padding-right: $card-spacer-x;
+    padding-bottom: .7rem;
+    padding-top: .7rem;
+    &:nth-last-of-type(1) {
+        border: none;
+    }
+}
+
+.has-list-items-card {
+    .card-block {
+        padding: 0;
+    }
+    .list-items {
+        @extend .list-items-card;
+    }
+}
+
+.card-sm .list-items-card > .list-item,
+.card-sm .list-items-card > li {
+    padding-bottom: .6rem;
+    padding-top: .6rem;
+}
+
+.list-striped {
+    > li {
+        border: none;
+    }
+    > li:nth-of-type(odd) {
+        background-color: $table-bg-accent;
+    }
+}
+
+.list-icon,
+.has-icon {
+    list-style: none;
+    margin-left: 0;
+    position: relative;
+    padding-left: $list-icon-padding !important;
+    > .icon {
+        position: absolute;
+        left: 0;
+    }
+}
+
+.list-icon > .icon {
+    margin-top: .1rem;
+}
+
+.list-items-card .list-icon {
+    padding-left: 3rem !important;
+    > .icon {
+        left: $card-spacer-x;
+        margin-top: .2rem;   
+    }
+}
+
+.card-sm .list-items-card .list-icon {
+    padding-left: 2.5rem !important;
+    > .icon {
+        left: .8rem;
+    }
+}
+
+.list-items-hover > li,
+.list-item-hover {
+    transition: all .25s;
+}
+
+.list-items-hover > li:hover,
+.list-item-hover:hover {
+    background: $table-bg-hover !important;
+}
+
+.list-items-hover > li,
+.list-item-hover,
+.table-hover tr td:first-child {
+    position: relative;
+}
+
+.list-items-hover > li:after,
+.list-item-hover:after,
+.table-hover tr td:first-child:after  {
+    background: transparent;
+    content: '';
+    display: block;            
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: all .25s;
+    width: 4px;
+}
+
+.list-items-hover > li:hover:after,
+.list-item-hover:hover:after,
+.table-hover tr:hover td:first-child:after  {
+    background: $brand-secondary;
+}
+
+ul.check,
+.list-check {
+    list-style: none;
+    margin: 0 0 ($spacer-y * 1.5);
+    padding: 0;
+    li {
+        padding-left: 30px;
+        position: relative;
+    }
+    li + li {
+        margin-top: 1rem;
+    }
+    &.list-items {
+        li + li {
+            margin-top: 0;
+        }
+    }
+}
+
+ul.check > li:after,
+.list-check > li:after {
+    position: absolute;
+    left: 0;
+    top: .1em;
+}
+
+ul.check.lead > li:after,
+.list-check.lead > li:after,
+ul.check > li.lead:after,
+.list-check > li.lead:after, {
+    top: .2em;
+}
+
+.list-check.list-items > li:after,
+ul.check.list-items > li:after {
+    top: .6em;
+} 
+
+ul.check li:after,
+.list-check > li:after,
+td.check:after {
+    background-color: $gray;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPScxNicgaGVpZ2h0PScxNicgdmlld0JveD0nMCAwIDE2IDE2Jz48cGF0aCBmaWxsPScjZmZmZmZmJyBkPSdNMTQgMi41bC04LjUgOC41LTMuNS0zLjUtMS41IDEuNSA1IDUgMTAtMTB6Jz48L3BhdGg+PC9zdmc+");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+td.check:after {
+    margin: 0 auto;
+}

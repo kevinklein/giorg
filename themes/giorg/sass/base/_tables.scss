@@ -1,0 +1,268 @@
+.table-simple {
+    margin-bottom: $spacer-y;
+    width: 100%;
+    max-width: 100%;
+    th {
+        vertical-align: middle;
+    }
+    td {
+        padding: .25rem;
+        text-align: center;
+        vertical-align: middle;
+        &:first-child {
+            padding-left: 0;
+            text-align: left;
+            word-break: break-word;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.table {
+    font-size: .9rem;
+    max-width: 100%;
+    margin-bottom: $spacer;
+    width: 100%;
+    th,
+    td {
+        padding: $table-cell-padding;
+        line-height: $line-height;
+        vertical-align: top;
+        border-top: 1px solid $table-border-color;
+    }
+    thead th {
+        vertical-align: bottom;
+        border-bottom: $border-width solid darken($gray-lighter,7.5%);
+    }
+    tbody + tbody {
+        border-top: 2px solid $table-border-color;
+    }
+    .table {
+        background-color: $body-bg;
+    }
+}
+
+.table-sm {
+    th,
+    td {
+        padding: $table-sm-cell-padding;
+    }
+}
+
+.table-bordered {
+    border: 1px solid $table-border-color;
+    th,
+    td {
+        border: 1px solid $table-border-color;
+    }
+}
+
+.table-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: $table-bg-accent;
+    }
+}
+
+.table-hover {
+    tbody tr {
+        @include hover {
+          background-color: $table-bg-hover;
+        }
+    }
+}
+
+// Generate the contextual variants
+@include table-row-variant(active, $table-bg-active);
+@include table-row-variant(success, $state-success-bg);
+@include table-row-variant(info, $state-info-bg);
+@include table-row-variant(warning, $state-warning-bg);
+@include table-row-variant(danger, $state-danger-bg);
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.thead-inverse {
+    th {
+        color: #fff;
+        background-color: $gray-dark;
+    }
+}
+
+.thead-default {
+    th {
+        color: $gray;
+        background-color: $gray-lighter;
+    }
+}
+
+.table-inverse {
+    color: $gray-lighter;
+    background-color: $gray-dark;
+    &.table-bordered {
+        border: 0;
+    }
+    th,
+    td,
+    thead th {
+        border-color: $gray;
+    }
+}
+
+.table-middle {
+    > thead,
+    > tbody,
+    > tfoot {
+	    > tr {
+	    > th,
+	    > td {
+            vertical-align: middle;
+	      }
+	    }
+    }
+}
+
+.table-select tbody tr {
+    cursor: pointer;
+}
+
+.table-resource-list {
+	.resource-title {
+		color: $gray-darker;
+		display: block;
+		font-weight: bold;
+		margin-bottom: 1px;
+	}
+	.resource-title + .media {
+		margin-top: 5px;
+	}
+}
+
+.table-resource-list-master {
+	background: #fff;
+	border-radius: $border-radius;
+}
+
+.table-inverse,
+.thead-inverse th {
+    background: $brand-dark;
+}
+
+.table-inverse thead th,
+.thead-inverse th {
+    border-color: #6f6f6f;
+}
+
+.table-thead-reversed > tr > th,
+.thead-inverse-secondary > tr > th {
+  	background: $brand-secondary;
+  	border: none;
+	color: #fff;
+	&:first-child {
+		border-radius: $border-radius-sm 0 0 0;
+	}
+	&:last-child {
+		border-radius: 0 $border-radius-sm 0 0;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: #ccc;
+		}
+	}
+}
+
+.card .table-thead-reversed > tr > th,
+.card .thead-inverse-secondary > tr > th {
+    border-radius: 0;
+}
+
+.card table:first-child .table-thead-reversed > tr > th,
+.card table:first-child .thead-inverse-secondary > tr > th {
+    &:first-child {
+		border-radius: $border-radius-sm 0 0 0;
+	}
+	&:last-child {
+		border-radius: 0 $border-radius-sm 0 0;
+	}
+}
+
+.table-card {
+    background: #fff;
+    border: 1px solid $card-border-color;
+    border-radius: $border-radius-sm;
+    border-collapse: separate;
+    thead {
+        background: $gray-lightest;
+    }
+    thead th {
+        border-top: none;
+    }
+    td {
+        border-top: none;
+        border-bottom: 1px solid $table-border-color;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+.table-layout-fixed {
+    table-layout: fixed;
+}
+
+.table-schedule {
+    border-top: 4px solid $table-border-color; 
+    thead th {
+        border-bottom: 4px solid $table-border-color;
+        border-top: none;
+    } 
+    thead {
+        border-bottom: 4px solid $table-border-color;
+    }
+    td:first-child {
+        border-right: 4px solid $table-border-color;
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding-left: 0;
+        text-align: right;
+        width: 5%;
+        white-space: nowrap;
+        strong {
+            font-weight: 300;
+        }
+    }
+    td:last-child > strong:first-child {
+        font-family: $font-webfont-two;
+        @extend .h5;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-down(sm) {
+    .stacktable.large-only { display: none; }
+    .stacktable.small-only { display: table; }
+    .st-head-row.st-head-row-main {
+        display: none;
+    }
+    .st-head-row {
+        background: $brand-primary;
+        color: #fff;
+    }
+    .table-non-member .st-head-row { 
+        background: $brand-secondary;
+    }
+}

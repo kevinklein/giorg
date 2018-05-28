@@ -1,0 +1,33 @@
+.breadcrumb {
+    background-color: #fff;
+    color: #bbb;
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: .3rem 0;
+    max-width: 100%;
+    .icon {
+        color: #000;
+        margin-right: 4px;
+    }
+    a {
+        color: #888;
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            border-bottom: 1px solid #222;
+            color: #222;
+        }
+    }
+    
+    // ol > li + li:before {  
+    //     content: "/";
+    //     color: #bbb;
+    //     display: inline-block;
+    //     font-weight: 100;
+    //     margin-right: .6rem;
+    // }
+    .breadcrumb_last {
+        color: #000;
+        font-weight: 600;
+    }
+}

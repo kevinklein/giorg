@@ -1,0 +1,136 @@
+.site-hud {
+    
+}
+
+.site-header {
+    
+}
+
+.header-main {
+    position: relative;
+    &:after {
+        background: rgba(#000,.15);
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+#header-main {
+    
+}
+
+@keyframes slideInDown {
+    0% {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+    }
+
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+
+.body-fixed-top #header-main {
+    border: none;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(#000,.1);
+    left: 0;
+    //height: $fixed-top;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    transform: translate3d(0, -100%, 0);
+    animation: slideInDown .15s ease forwards;
+}
+
+.logo {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+    }
+    z-index: 3;
+    img {
+        transition: all .35s;
+        width: 75px;
+        max-height: 75px;
+    }
+}
+
+.logo-footer {
+    background: #fff;
+    border-radius: 50%; 
+    margin: -50px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+ 
+
+.logo-description {
+    //opacity: 0;
+    transition: all 1s;
+}
+
+.body-fixed-top {
+    .logo img {
+        width: 45px;
+    }
+    .logo-description {
+        opacity: 1;
+    }
+}
+
+.header-main-search {
+    margin-bottom: 1rem;
+    .body-fixed-top & {
+        margin-bottom: .35rem;
+    }
+}
+
+.header-main-search-form {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: .25s all;
+    max-width: 300px;
+    &.is-toggled {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-description-v3 {
+    img {
+        margin-left: 10px;
+        width: 270px;
+    }
+    .body-fixed-top & {
+        width: 220px;
+    }
+}
+
+.logo-description-v4 {
+    img {
+        width: 300px;
+    }
+}
+
+.logo-description-v7 {
+    img {
+        margin-left: 10px;
+        width: 270px;
+    }
+    .body-fixed-top & {
+        width: 220px;
+    }
+}

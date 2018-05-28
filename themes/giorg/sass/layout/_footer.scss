@@ -1,0 +1,12 @@
+.site-footer {
+    h3 {
+        font-family: $font-webfont-two;
+        font-size: .8rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+        a {
+            color: $text-color;
+        }
+    }
+}

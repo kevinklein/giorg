@@ -1,0 +1,26 @@
+.pager {
+  padding-left: 0;
+  margin-top: $spacer-y;
+  margin-bottom: $spacer-y;
+  list-style: none;
+  @include clearfix();
+  a,
+  span {
+      display: block;
+  }
+}
+
+.pager-next,
+.pager-prev {
+    position: relative;
+    width: 48%;
+}
+
+.pager-next {
+    float: right;
+    text-align: right;
+}
+
+.pager-prev {
+    float: left;
+}

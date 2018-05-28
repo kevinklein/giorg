@@ -1,0 +1,469 @@
+@include media-breakpoint-up(lg) {
+    .nav-primary-container {
+        display: flex;
+        float: right;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .main-navigation {
+        display: none;
+    }
+    .nav-primary-container {
+        display: block;
+    }
+    .nav-primary-fixed {
+        margin: 0 0 10px;
+    }
+}
+
+.nav-primary {
+    align-items: stretch;
+    background: #fff;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-evenly;
+    > li {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+        margin: 0;
+        position: relative;
+        > a {
+            color: $brand-primary; 
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.15;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+            position: relative;
+            transition: all .2s;
+            white-space: nowrap;
+        }
+        &:hover {
+            background: rgba(#999,.2);
+        }
+        &.current-menu-item,
+        &.current-menu-ancestor {
+            > a {
+                color: $brand-primary;
+                font-weight: 700;
+                position: relative;
+            }
+            &:after {
+                background: $brand-primary;
+                content: '';
+                display: block;
+                height: 3px;
+                left: 0;
+                width: 100%;
+                position: absolute;
+                bottom: -3px;
+            }
+        }
+    }
+}
+
+.cd-morph-dropdown {
+  z-index: 999;
+}
+.cd-morph-dropdown::before {
+  /* never visible - used in JS to check mq */
+  content: 'mobile';
+  display: none;
+}
+.cd-morph-dropdown .morph-dropdown-wrapper {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1.2em 5%;
+  box-shadow: inset 0 1px 0 #e6e6e6;
+  background-color: #FFFFFF;
+}
+.cd-morph-dropdown.nav-open .morph-dropdown-wrapper {
+  display: block;
+}
+.cd-morph-dropdown .dropdown-list > ul > li {
+  margin-bottom: 3.3em;
+}
+.cd-morph-dropdown .list-unstyled {
+    li {
+        margin: 0;
+    }
+    a {
+        color: $brand-dark;
+        display: block;
+        font-size: 1em;
+        font-weight: 400;
+        padding: 5px $spacer-x;
+        transition: all .15s;
+        &:hover {
+            background: $brand-primary;
+            color: #fff;
+        }
+    }
+}
+@media only screen and (min-width: 1000px) {
+  .cd-morph-dropdown {
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+  }
+  .cd-morph-dropdown::before {
+    content: 'desktop';
+  }
+  .cd-morph-dropdown .nav-trigger {
+    display: none;
+  }
+  /* .cd-morph-dropdown .main-nav {
+    display: inline-block;
+  }
+  .cd-morph-dropdown .main-nav > ul > li {
+    display: inline-block;
+    float: left;
+  }
+  .cd-morph-dropdown .main-nav > ul > li > a {
+    display: block;
+    padding: 0 1.8em;
+  } */
+  .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li > a {
+    /* main navigation hover effect - on hover, reduce opacity of elements not hovered over */
+    opacity: .6;
+  }
+  .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li.active > a {
+    opacity: 1;
+  }
+  .cd-morph-dropdown .morph-dropdown-wrapper {
+    /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden */
+    display: block;
+    top: 44px;
+    /* overwrite mobile style */
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    /* Force Hardware acceleration */
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+  }
+  .cd-morph-dropdown.is-dropdown-visible .morph-dropdown-wrapper {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .cd-morph-dropdown .dropdown-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform, width, height;
+    -webkit-transition: visibility .3s;
+    transition: visibility .3s;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.35);
+  }
+  .no-csstransitions .cd-morph-dropdown .dropdown-list {
+    display: none;
+  }
+  .cd-morph-dropdown .dropdown-list::before {
+    /* dropdown top triangle */
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #FFFFFF;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+  }
+  .cd-morph-dropdown .dropdown-list > ul {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .cd-morph-dropdown.is-dropdown-visible .dropdown-list {
+    visibility: visible;
+    -webkit-transition: width .3s, height .3s, -webkit-transform .3s;
+    transition: width .3s, height .3s, -webkit-transform .3s;
+    transition: transform .3s, width .3s, height .3s;
+    transition: transform .3s, width .3s, height .3s, -webkit-transform .3s;
+  }
+  .cd-morph-dropdown.is-dropdown-visible .dropdown-list::before {
+    opacity: 1;
+  }
+  .cd-morph-dropdown .dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s;
+  }
+  .cd-morph-dropdown .dropdown.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .cd-morph-dropdown .dropdown.move-left .content {
+    -webkit-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  .cd-morph-dropdown .dropdown.move-right .content {
+    -webkit-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+
+  .cd-morph-dropdown .content {
+    padding: .2em .8em .8em;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    text-align: left;
+    width: 300px;
+    border-bottom: 5px solid $brand-secondary;
+  }
+
+  .cd-morph-dropdown .bg-layer {
+    /* morph dropdown background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    background: #FFFFFF;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+            transform-origin: top left;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .cd-morph-dropdown.is-dropdown-visible .bg-layer {
+    opacity: 1;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  }
+}
+
+// @include media-breakpoint-down(lg) {
+//     .nav-primary  {
+//         li a {
+//             padding: .9rem .7rem;
+//         }
+//     }
+// }
+
+.nav-secondary {
+    //border-left: 1px solid rgba(#fff,.35);
+    > li {
+        //border-right: 1px solid rgba(#fff,.35);
+    }
+    a {
+        color: #fff;
+        display: block;
+        font-size: .9em;
+        font-weight: 700;
+        padding: .6em .75em;
+        transition: all .25s;
+        &:hover {
+            //background: rgba(#000,.5);
+            background: $brand-primary-lighter;
+            color: #fff;
+            text-decoration: none;
+        }
+        &:after {
+            background: transparent;
+            content: '';
+            display: block;
+            height: 3px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            bottom: -1px;
+        }
+    }
+    > li.active a {
+        background: $brand-secondary;
+    }
+}
+
+.nav-secondary-v3 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
+    > li {
+        margin: 0;
+        + li {
+            margin-left: 1.25rem;
+        }
+    }
+    a {
+        border-bottom: 3px solid transparent;
+        color: $gray-darker;
+        display: block;
+        font-size: 1em;
+        font-weight: 400;
+        padding: .75em 0 .6rem;
+        transition: all .25s;
+        &:hover {
+            //background: rgba(#000,.5);
+            //background: $gray-lighter;
+            color: #000;
+            border-bottom: 3px solid #000;
+        }
+        &:after {
+            background: transparent;
+            content: '';
+            display: block;
+            height: 3px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            bottom: -1px;
+        }
+    }
+    > li.active a {
+        //background: $gray-lighter;
+        color: $brand-primary;
+        font-weight: 700;
+        border-bottom: 3px solid $brand-primary;
+    }
+}
+
+.nav-secondary-v5 {
+    border: 1px solid $gray-lighter;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+        border-top: 1px solid $gray-lighter;
+        margin: 0;
+        padding: 0;
+        > a {
+            color: $brand-primary-darker;
+            display: block;
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.3;
+            padding: .5em $spacer-x;
+            position: relative;
+            transition: all .25s;
+            &:hover {
+                background: $gray-lightest;
+                color: #000;
+            }
+        }
+    }
+    > li > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 .5rem;
+        > li {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: $brand-primary;
+            display: block;
+            font-size: .9em;
+            font-weight: 400;
+            line-height: 1.3;
+            opacity: .75;
+            padding: .35em $spacer-x;
+            position: relative;
+            transition: all .25s;
+            &:hover {
+                //background: $gray-lightest;
+                color: #000;
+                opacity: 1;
+                &:after {
+                    background: $brand-primary;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    width: 3px;
+                    left: -2px;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+    > li.active > a {
+        //background: $gray-lighter;
+        color: $brand-primary;
+        font-weight: 500;
+        &:after {
+            background: $brand-primary;
+            content: '';
+            display: block;
+            height: 100%;
+            width: 3px;
+            left: -2px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .nav-primary  {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        z-index: 999;
+        > li {
+
+            > a {
+                padding-bottom: .8rem;
+                padding-top: .8rem;
+            }
+            &:hover,
+            &.current-menu-item,
+            &.current-menu-ancestor {
+    
+            }
+        }
+    }
+}

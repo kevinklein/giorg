@@ -1,0 +1,85 @@
+.schedule-timeline {
+    margin: 2em 0;
+    position: relative;
+    &:after {
+        background: $brand-secondary;
+        content: '';
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 2px;
+        z-index: 1;
+    }
+}
+
+.schedule-timeline-item {
+    position: relative;
+    &:after {
+        background: #fff;
+        border: 2px solid #000;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 12px;
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        bottom: 0;
+        width: 12px;
+        z-index: 2;
+    }
+    > div {
+        background: #fff;
+        border: 1px solid $brand-secondary;
+        border-radius: 6px;
+        margin: 0;
+        padding: .9rem;
+        position: relative;
+        z-index: 1;
+        &:after {
+            background: #fff;
+            border: 1px solid $brand-secondary;
+            border-bottom: none;
+            border-left: none;
+            content: '';
+            display: block;
+            height: 24px;
+            margin-top: -11px;
+            width: 24px;
+            right: -12px;
+            position: absolute;
+            top: 50%;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+    }
+}
+
+.schedule-timeline-item-right > div:after {
+    border: 1px solid $brand-secondary;
+    border-top: none;
+    border-right: none;
+    left: -12px;
+    right: auto;
+}
+
+.schedule-timeline-item-left {
+    padding-right: 55%;
+}
+
+.schedule-timeline-item-right {
+    padding-left: 55%;
+}
+
+@include media-breakpoint-up(lg) {
+    .schedule-timeline {
+        margin: 3em;
+    }
+    .schedule-timeline-item > div {
+        padding: 1rem;
+    }
+}

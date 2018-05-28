@@ -1,0 +1,151 @@
+.media {
+    width: 100%;
+    &:first-child {
+      margin-top: 0;
+    }
+    .media-body {
+        width: 100%;
+    }
+    .media,
+    .media-body {
+        overflow: hidden;
+    }
+    .media-left,
+    .media-right,
+    .media-body,
+    .pull-left,
+    .pull-right,
+    .alignleft,
+    .alignright {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .media-middle {
+        vertical-align: middle;
+        .media-left,
+        .media-right,
+        .media-body,
+        .pull-left,
+        .pull-right,
+        .alignleft,
+        .alignright {
+            vertical-align: middle;
+        }
+    }
+}
+
+@supports (display: flex) {
+    .media {
+        display: flex;
+        width: auto;
+        .media-body {
+            flex: 1;
+            overflow: visible;
+        }
+        .media-left,
+        .media-right,
+        .media-body,
+        .pull-left,
+        .pull-right,
+        .alignleft,
+        .alignright {
+            display: block;
+        }
+    }
+}
+
+//ie11 bug when in flexbox tiles
+@media all and (-ms-high-contrast:none) {
+    .sr-cta-hover {
+        width: 400px;
+    }
+    .tile.ie-block {
+        .media {
+            display: table;
+            width: 100%; 
+        }
+        .media-left,
+        .media-right,
+        .media-body,
+        .pull-left,
+        .pull-right,
+        .alignleft,
+        .alignright {
+            display: table-cell;
+        }
+        .media-body {
+            display: table-cell;
+            width: auto;
+        }
+    }
+}
+
+.media-middle {
+    align-items: center;
+}
+
+.media .media-middle {
+    align-self: center;
+}
+
+.media-bottom {
+    align-items: flex-end;
+}
+
+.media .media-bottom {
+    align-self: flex-end;
+}
+
+.media + .media {
+    margin-top: 1em;
+}
+
+//
+// Images/elements as the media anchor
+//
+
+.media-object {
+  display: block;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  img {
+    max-width: none;
+  }
+}
+
+.media-right {
+    padding-left: .85rem;
+}
+
+.media-left {
+    padding-right: .85rem;
+}
+
+.media-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.feature-block {
+    .media-body,
+    .pull-left,
+    .pull-right,
+    .alignleft,
+    .alignright {
+        padding-left: .85rem;
+        padding-right: .85rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+	.media.media-responsive {
+		display: block;
+		> .media-right,
+		> .media-left {
+			display: block;
+		}
+		.media-body {
+			display: block;
+		}
+	}
+}

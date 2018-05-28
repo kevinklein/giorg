@@ -1,0 +1,363 @@
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+    &.in {
+        opacity: 1;
+    }
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.br-a-0 { border-radius: 0 !important; }
+.br-tl-0 { border-top-left-radius: 0 !important; }
+.br-tr-0 { border-top-right-radius: 0 !important; }
+.br-bl-0 { border-bottom-left-radius: 0 !important; }
+.br-br-0 { border-bottom-right-radius: 0 !important; }
+
+.br-a-sm { border-radius: $border-radius-sm !important; }
+.br-tl-sm { border-top-left-radius: $border-radius-sm !important; }
+.br-tr-sm { border-top-right-radius: $border-radius-sm !important; }
+.br-bl-sm { border-bottom-left-radius: $border-radius-sm !important; }
+.br-br-sm { border-bottom-right-radius: $border-radius-sm !important; }
+
+.border-all {
+    border: 1px solid $border-color;
+}
+
+.border-top {
+    border-top: 1px solid $border-color;
+}
+
+.border-right {
+    border-right: 1px solid $border-color;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $border-color;
+}
+
+.border-left {
+    border-left: 1px solid $border-color;
+}
+
+.border-inverse {
+    border-color: rgba(#fff,.15) !important;
+}
+
+.border-none {
+    border: none;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.display-block {
+	display: block !important;
+	&button {
+    	width: 100%;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+    .display-sm-block {
+        display: block !important;
+        flex-basis: 100%;
+        float: none !important;
+    }
+    button.display-sm-block {
+    	width: 100%;
+	}
+}
+
+@include media-breakpoint-up(md) {
+    .display-md-block {
+        display: block !important;
+        float: none !important;
+    }
+    button.display-md-block {
+    	width: 100%;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+    .display-lg-block {
+        display: block !important;
+        float: none !important;
+    }
+    button.display-lg-block {
+    	width: 100%;
+	}
+}
+
+.display-inline-block {
+	display: inline-block !important;
+}
+
+.display-flex {
+	display: flex !important;
+}
+
+.display-inline-flex {
+	display: inline-flex !important;
+}
+
+@media all and (-ms-high-contrast:none) {   
+    .display-flex {
+    	display: block !important;
+    }
+    .flex-1 {
+        flex: 1 1 0%;
+        max-width: 100%;
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-absolute-tl {
+    top: 0;
+    left: 0;
+}
+
+.position-absolute-tr {
+    top: 0;
+    right: 0;
+}
+
+.position-absolute-br {
+    bottom: 0;
+    right: 0;
+}
+
+.position-absolute-bl {
+    bottom: 0;
+    left: 0;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-auto-custom::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 9px;
+}
+
+.overflow-auto-custom::-webkit-scrollbar:horizontal {
+    height: 9px;
+    width: auto;
+}
+
+.overflow-auto-custom::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.overflow-auto-custom::-webkit-scrollbar-thumb:hover {
+    background:rgba(0,0,0,0.4);
+}
+
+.overflow-auto-custom::-webkit-scrollbar-track { 
+    background-color: rgba(0, 0, 0, .1); 
+    border-radius: 8px; 
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.shadow {
+    @include shadow;
+}
+
+.text-sm-nowrap {
+    white-space: nowrap;
+}
+
+[data-toggle],
+[data-url],
+[data-url] td {
+    cursor: pointer;
+}
+
+@include media-breakpoint-up(sm) {
+    .nowrap {
+        white-space: nowrap;
+    }
+}
+
+.circle,
+.circle-outline {
+    @include flex-center;
+    border: none; //for use as a button
+    padding: 0; //for use as a button
+    display: inline-flex;
+    line-height: 1;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+}
+
+button.circle,
+button.circle-outline {
+    display: inline-block;
+    line-height: 1.8rem;
+}
+
+.circle-outline {
+    border: .0625rem solid currentColor;
+}
+
+.circle-xs,
+.circle-outline-xs {
+    font-size: .65rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.circle-xxs,
+.circle-outline-xs {
+    font-size: .45rem;
+    width: .75rem;
+    height: .75rem;
+}
+
+button.circle-xs,
+button.circle-outline-xs { line-height: 1rem; }
+
+.circle-sm,
+.circle-outline-sm {
+    font-size: .75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+button.circle-sm,
+button.circle-outline-sm { line-height: 1.25rem; }
+
+.circle-md,
+.circle-outline-md {
+    font-size: 1.3rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+button.circle-md,
+button.circle-outline-md { line-height: 2.25rem; }
+
+.circle-lg,
+.circle-outline-lg {
+    font-size: 1.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+button.circle-lg,
+button.circle-outline-lg { line-height: 3.6rem; }
+
+.circle-xl,
+.circle-outline-xl {
+    font-size: 2.5rem;
+    width: 4.75rem;
+    height: 4.75rem;
+}
+
+button.circle-xl,
+button.circle-outline-xl { line-height: 4.75rem; }
+
+.circle-xxl,
+.circle-outline-xxl {
+    font-size: 4rem;
+    width: 6.75rem;
+    height: 6.75rem;
+}
+
+.close-circle {
+    margin-right: -.5em;
+    margin-left: .4em;
+}
+
+.transition,
+.no-touch .hover-transition {
+    transition: all .15s ease-in-out;
+}
+
+.bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.bg-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.is-selected td {
+    border-color: $btn-success-bg;
+    background: lighten($btn-success-bg,40%);
+}
+
+.is-hidden {
+    display: none;
+}
+
+.z-index-10 {
+    position: relative;
+    z-index: 10;
+}
+
+.faq-item {
+    cursor: pointer;
+    padding-left: 20px;
+    position: relative;
+    &::after {
+        background: url(img/chevron-right.svg) no-repeat 0 0;
+        background-size: 100% 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        height: 11px;
+        width: 11px;
+    }
+    &.is-toggled {
+        &::after {
+            background: url(img/chevron-down.svg) no-repeat 0 0;
+            top: 8px;
+        }
+    }
+}
+
+.faq-answer {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
