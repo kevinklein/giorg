@@ -21,46 +21,37 @@
         <div class="p-y-md site-footer">
             <div class="row row-flex row-bordered">
                 <div class="col-md-8 col-xs-12">
-                    
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-1' ); ?>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-2' ); ?>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-3' ); ?>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2 col-xs-12">
        
-                    <h3><a href="#" class="text-hover-underline">Patients & Families</a></h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-hover-underline">Find a Gastroenterologist</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">GI Health & Disease Resources</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Podcasts</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Brochures</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Digestive Health Insights</a></li>
-                    </ul>
-
-                    <h3 class="m-t-md">ACG Sites</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-hover-underline">AJG</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">CTG</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">ACG Case Reports Journal</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">GIQuIC Registry</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">GI Circle: Connect with Colleagues</a></li>
-                    </ul>
-
-                    <h3 class="m-t-md">Media</h3>
-                    <ul class="list-unstyled m-lg-b-0">
-                        <li><a href="#" class="text-muted text-hover-underline">Press Releases</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">ACG Annual Meeting Press Room</a></li>
-                    </ul>
+                    <?php if ( is_active_sidebar( 'footer-4' ) ) { ?>
+            			<?php dynamic_sidebar( 'footer-4' ); ?>
+            		<?php } ?>
         
                 </div>
                 <div class="col-md-2 col-xs-12">
          
-                    <h3>American College<br> of Gastroenterology</h3>
-                    <ul class="list-unstyled m-lg-b-0">
-                        <li><a href="#" class="text-muted text-hover-underline">My ACG/Login</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Join</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Donate</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Store</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Find a GI</a></li>
-                        <li><a href="#" class="text-muted text-hover-underline">Contact Your ACG Governor</a></li>
-                    </ul>
+                    <?php if ( is_active_sidebar( 'footer-5' ) ) { ?>
+            			<?php dynamic_sidebar( 'footer-5' ); ?>
+            		<?php } ?>
+
                     <a href="#" class="display-block text-no-underline m-t">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/meeting2018-black.svg" class="" width="80">
                     </a>

@@ -238,37 +238,37 @@
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/inc\/custom-header.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/inc\/customizer.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/inc\/customizer.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/inc\/jetpack.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/inc\/jetpack.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/inc\/template-functions.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/inc\/template-functions.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/inc\/template-tags.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/inc\/template-tags.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/index.php": {
 		"cB": 0,
@@ -287,6 +287,56 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/js\/gsap.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/gsap.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/gsap\/CSSPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/gsap\/CSSPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/gsap\/EasePack.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/gsap\/EasePack.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/gsap\/TimelineLite.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/gsap\/TimelineLite.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/gsap\/TweenLite.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/gsap\/TweenLite.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/main.js": {
 		"ft": 64,
 		"ma": 0,
@@ -294,6 +344,16 @@
 		"oA": 1,
 		"oAP": "\/js\/main-min.js",
 		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/matchheight-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/matchheight-min-min.js",
+		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
@@ -314,6 +374,56 @@
 		"oA": 1,
 		"oAP": "\/js\/navigation-min.js",
 		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scrollmagic\/ScrollMagic.animation.gsap.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/scrollmagic\/ScrollMagic.animation.gsap.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scrollmagic\/ScrollMagic.animation.velocity.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/scrollmagic\/ScrollMagic.animation.velocity.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scrollmagic\/ScrollMagic.debug.addIndicators.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/scrollmagic\/ScrollMagic.debug.addIndicators.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scrollmagic\/ScrollMagic.jquery.ScrollMagic.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/scrollmagic\/ScrollMagic.jquery.ScrollMagic.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scrollmagic\/ScrollMagic.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/scrollmagic\/ScrollMagic.min-min.js",
+		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
@@ -350,16 +460,16 @@
 	"\/languages\/giorg.pot": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/languages\/giorg.pot",
-		"oF": 0
+		"oF": 1
 		},
 	"\/languages\/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/languages\/readme.txt",
-		"oF": 0
+		"oF": 1
 		},
 	"\/layouts\/content-sidebar.css": {
 		"aP": 1,
@@ -1684,30 +1794,30 @@
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/template-parts\/content-none.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/template-parts\/content-page.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/template-parts\/content-page.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/template-parts\/content-search.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/template-parts\/content-search.php",
-		"oF": 0
+		"oF": 1
 		},
 	"\/template-parts\/content.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/template-parts\/content.php",
-		"oF": 0
+		"oF": 1
 		}
 	},
 "hooks": [

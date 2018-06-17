@@ -63,9 +63,9 @@
             }
         });
        
-        $(function() {
-            $('.match-height').matchHeight();
-        });
+        // $(function() {
+        //     $('.match-height').matchHeight();
+        // });
 		
 		$('.toggle-target').click(function() {
             var target = '#' + $(this).data('target');

@@ -27,7 +27,7 @@
     <div class="text-sm bg-gray-lightest" role="directory" id="header-hud">
         <div class="container item-flex justify-content-flex-end">
             <nav class="text-normal hidden-sm-down p-r">
-                <a href="#" class="nav-link text-hover-underline">About</a>
+                <!-- <a href="#" class="nav-link text-hover-underline">About</a>
                 <span class="text-pipe">|</span>
                 <a href="#" class="nav-link text-hover-underline">Donate</a>
                 <span class="text-pipe">|</span>
@@ -41,7 +41,16 @@
                 <span class="text-pipe">|</span>
                 <a href="/membership/" class="nav-link text-hover-underline">Find Your ACG Governor</a>
                 <span class="text-pipe">|</span>
-                <a href="/membership/" class="nav-link text-hover-underline">Join</a>
+                <a href="/membership/" class="nav-link text-hover-underline">Join</a> -->
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-3',
+                    'menu_id' => 'nav-top',
+                    'menu_class' => 'nav-top',
+                    'container_class' => '',
+                    'container' => 'ul'
+                ) );
+                ?>
             </nav>
             <div class="item-flex-addon">
                 <a href="#" class="btn btn-primary btn-sm br-a-0"><svg class="icon icon-users"><use xlink:href="#icon-users"></use></svg> My ACG/Log In</a>
@@ -61,9 +70,20 @@
                 </div>
                 <div class="item-flex-addon">
                     <nav class="item-flex position-relative text-lg">
-                        <a href="/guidelines" class="m-x text-hover-underline">Guidelines</a>
+                        <!-- <a href="/guidelines" class="m-x text-hover-underline">Guidelines</a>
                         <a href="/guidelines" class="m-x text-hover-underline">ACG Blog</a>
-                        <a href="/guidelines" class="m-x text-hover-underline">Patients</a>
+                        <a href="/guidelines" class="m-x text-hover-underline">Patients</a> -->
+
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'menu-2',
+                            'menu_id' => 'nav-ancillary',
+                            'menu_class' => 'list-inline',
+                            'container_class' => '',
+                            'container' => 'ul'
+                        ) );
+                        ?>
+
                         <a href="http://acgmeetings.gi.org" class="m-l-md" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/acg2018-philly-logo-header.svg" width="110"></a>
                     </nav>
                 </div>
@@ -250,12 +270,14 @@
 
     <div class="p-y border-bottom position-absolute bg-white raised" style="display:none;z-index:1599;right:0;left:0; top:100%" id="search-container">
         <div class="container">
-            <div class="input-group">
-                <input type="text" class="form-control form-control-lg" style="padding-top:.5rem;padding-bottom:.5rem;" id="search" placeholder="Search Gi.org">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary btn-lg br-a-0" type="button">Search</button>
-                </span>
-            </div>
+            <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+                <div class="input-group">
+                    <input type="text" value="" name="s" id="s" class="form-control form-control-lg" style="padding-top:.5rem;padding-bottom:.5rem;" placeholder="Search Gi.org">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary btn-lg br-a-0" type="submit" id="searchsubmit">Search</button>
+                    </span> 
+                </div>
+            </form>
         </div>
     </div>
 
