@@ -505,6 +505,20 @@
 		"oAP": "\/page.php",
 		"oF": 1
 		},
+	"\/partials\/breadcrumbs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/partials\/breadcrumbs.php",
+		"oF": 0
+		},
+	"\/partials\/page-title.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/partials\/page-title.php",
+		"oF": 0
+		},
 	"\/phpcs.xml.dist": {
 		"cB": 0,
 		"ft": 8192,
@@ -1314,32 +1328,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/helpers\/mixins\/_gradients.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/helpers\/mixins\/_grid-framework.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/helpers\/mixins\/_grid-framework.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/helpers\/mixins\/_grid.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/helpers\/mixins\/_grid.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1

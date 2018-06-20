@@ -15,26 +15,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( !get_field( 'hide_header' ) ): ?>
-		<header>
-			<div class="container p-y-md"> 
-				<?php the_title( '<h1 class="main-title">', '</h1>' ); ?>      
-			</div>
-		</header>
-	<?php endif; ?>
-
-	<?php if ( !get_field( 'hide_breadcrumbs' ) ): ?>
-		<nav class="breadcrumb p-y border-bottom border-top">
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb('
-			<div class="container"><svg class="icon icon-home2"><use xlink:href="#icon-home2"></use></svg>','</div>
-			');
-			}
-			?>
-		</nav>
-	<?php endif; ?>
-
 	<!-- <?php giorg_post_thumbnail(); ?> -->
 
 	<main class="

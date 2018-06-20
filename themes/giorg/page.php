@@ -15,10 +15,12 @@
 get_header();
 ?>
 
+	<?php require_once( 'partials/page-title.php' ); ?>
+
 	<?php
 	while ( have_posts() ) :
 		the_post();
-
+	
 		get_template_part( 'template-parts/content', 'page' );
 
 		// If comments are open or we have at least one comment, load up the comment template.

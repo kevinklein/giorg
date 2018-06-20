@@ -27,21 +27,6 @@
     <div class="text-sm bg-gray-lightest" role="directory" id="header-hud">
         <div class="container item-flex justify-content-flex-end">
             <nav class="text-normal hidden-sm-down p-r">
-                <!-- <a href="#" class="nav-link text-hover-underline">About</a>
-                <span class="text-pipe">|</span>
-                <a href="#" class="nav-link text-hover-underline">Donate</a>
-                <span class="text-pipe">|</span>
-                <a href="#" class="nav-link text-hover-underline">ACG Store</a>
-                <span class="text-pipe">|</span>
-                <a href="#" class="nav-link text-hover-underline">Online Store</a>
-                <span class="text-pipe">|</span>
-                <a href="#" class="nav-link text-hover-underline">Find a GI</a>
-                <span class="text-pipe">|</span>
-                <a href="/membership/" class="nav-link text-hover-underline">Membership</a>
-                <span class="text-pipe">|</span>
-                <a href="/membership/" class="nav-link text-hover-underline">Find Your ACG Governor</a>
-                <span class="text-pipe">|</span>
-                <a href="/membership/" class="nav-link text-hover-underline">Join</a> -->
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-3',
@@ -70,10 +55,6 @@
                 </div>
                 <div class="item-flex-addon">
                     <nav class="item-flex position-relative text-lg">
-                        <!-- <a href="/guidelines" class="m-x text-hover-underline">Guidelines</a>
-                        <a href="/guidelines" class="m-x text-hover-underline">ACG Blog</a>
-                        <a href="/guidelines" class="m-x text-hover-underline">Patients</a> -->
-
                         <?php
                         wp_nav_menu( array(
                             'theme_location' => 'menu-2',
@@ -83,29 +64,17 @@
                             'container' => 'ul'
                         ) );
                         ?>
-
                         <a href="http://acgmeetings.gi.org" class="m-l-md" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/acg2018-philly-logo-header.svg" width="110"></a>
                     </nav>
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="position-relative">
         <nav class="container item-flex">
 
             <button class="btn-link display-2 m-r p-a-0 toggle-is-toggled" id="menu-toggle" data-toggle="modal" data-target=".modal-menu"><svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg></button>
-
-            <!-- <ul class="nav-primary hidden-sm-down item-flex-main main-nav">
-                <li class="has-dropdown" data-content="education"><a href="#"><span>Education</span></a></li>
-                <li class="has-dropdown" data-content="journal"><a href="#"><span>Journal<br>& Publications</span></a></li>
-                <li class="has-dropdown" data-content="research"><a href="#"><span>Research</span></a></li>
-                <li class="has-dropdown" data-content="institute"><a href="#"><span>ACG Institute</span></a></li>
-                <li class="has-dropdown" data-content="practice"><a href="#"><span>Practice<br>Management</span></a></li>
-                <li class="has-dropdown" data-content="public"><a href="#"><span>Public Policy</span></a></li>
-                <li class="has-dropdown" data-content="trainees"><a href="/trainees"><span>Trainees</span></a></li>
-            </ul> -->
 
 			<?php
 			wp_nav_menu( array(
@@ -272,7 +241,7 @@
         <div class="container">
             <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
                 <div class="input-group">
-                    <input type="text" value="" name="s" id="s" class="form-control form-control-lg" style="padding-top:.5rem;padding-bottom:.5rem;" placeholder="Search Gi.org">
+                    <input type="text" value="" name="s" id="s" class="form-control form-control-lg"  placeholder="Search Gi.org">
                     <span class="input-group-btn">
                         <button class="btn btn-secondary btn-lg br-a-0" type="submit" id="searchsubmit">Search</button>
                     </span> 
@@ -292,7 +261,23 @@
                     <button type="button" class="circle bg-white text-primary text-xl" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="p-x p-b">
-                    <?php include 'nav-v2.php' ?>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-1' ); ?>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-2' ); ?>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
+                                <?php dynamic_sidebar( 'footer-3' ); ?>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </div>
             </div>
 		</div>

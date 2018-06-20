@@ -24,6 +24,17 @@ get_header();
 				</h1>
 			</header><!-- .page-header -->
 
+			<?php if ( !get_field( 'hide_header' ) ): ?>
+				<header>
+					<div class="container p-y-md"> 
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</div>
+				</header>
+			<?php endif; ?>
+
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :

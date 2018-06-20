@@ -57,7 +57,6 @@ $text-color: $gray-darker;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex: false;
 $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
@@ -308,7 +307,7 @@ $btn-border-radius-sm: $border-radius-sm;
 // Forms
 
 $input-padding-x: .75rem;
-$input-padding-y: .375rem;
+$input-padding-y: $btn-padding-y;
 
 $input-bg: #fff;
 $input-bg-disabled: $gray-lighter;
@@ -327,10 +326,10 @@ $input-box-shadow-focus: rgba(102,175,233,.6);
 $input-color-placeholder: #999;
 
 $input-padding-x-sm: .75rem;
-$input-padding-y-sm: .25rem;
+$input-padding-y-sm: $btn-padding-y-sm;
 
 $input-padding-x-lg: 1.25rem;
-$input-padding-y-lg: .75rem;
+$input-padding-y-lg: $btn-padding-y-lg;
 
 $input-height: (($font-size-base * $line-height) + ($input-padding-y * 2) + ($border-width * 2));
 $input-height-lg: (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2) + ($border-width * 2));
