@@ -1,5 +1,5 @@
 <?php if ( !get_field( 'hide_breadcrumbs' ) ): ?>
-	<nav class="breadcrumb p-y border-bottom border-top">
+	<nav class="breadcrumb p-y border-bottom">
 		<?php
 		if ( function_exists('yoast_breadcrumb') ) {
 		yoast_breadcrumb('

@@ -16,6 +16,7 @@ get_header();
 ?>
 
 	<?php require_once( 'partials/page-title.php' ); ?>
+	<?php require_once( 'partials/breadcrumbs.php' ); ?>
 
 	<?php
 	while ( have_posts() ) :
