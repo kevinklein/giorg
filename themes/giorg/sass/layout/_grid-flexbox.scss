@@ -7,10 +7,10 @@
     margin-right: -($grid-gutter-width / 2);
     margin-left: -($grid-gutter-width / 2);
     //overflow-x: hidden;
-    &:before,
-    &:after {
-        display: none;
-    }
+    // &:before,
+    // &:after {
+    //     display: none;
+    // }
 }
 
 .row.reverse {
@@ -20,6 +20,80 @@
 .row .col.reverse {
     flex-direction: column-reverse;
 }
+
+/******************* WYSI FLEXBOX REPEATER LAYOUT *******************/
+ 
+.row{
+    .col{
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width / 2);
+        @include media-breakpoint-down(sm) {
+            flex-basis:100%;
+            flex-wrap:wrap;
+        }
+        &.double{
+            flex-grow: 2;
+        }
+    }
+}
+ 
+/* Use number of columns to make each one equal width, and for responsive styling */
+.col-count-1{
+    .col{
+      flex-basis:100%;
+    }
+}
+.col-count-2{
+    .col{
+      flex-basis:50%;
+    }
+}
+.col-count-3{
+    .col{
+      flex-basis:33.33%;
+    }
+}
+.col-count-4{
+    .col{
+      flex-basis:25%;
+    }
+}
+.col-count-5{
+    .col{
+      flex-basis:20%;
+    }
+}
+.col-count-6{
+    .col{
+      flex-basis:16.666%;
+    }
+}
+ 
+//  .wysi-flex-wrap > .col:nth-child(1) {
+//      background: rgba(#000,.02);
+//  }
+  
+//  .wysi-flex-wrap > .col:nth-child(2) {
+//      background: rgba(#000,.04);
+//  }
+  
+//  .wysi-flex-wrap > .col:nth-child(3) {
+//      background: rgba(#000,.06);
+//  }
+  
+//  .wysi-flex-wrap > .col:nth-child(4) {
+//      background: rgba(#000,.08);
+//  }
+  
+//  .wysi-flex-wrap > .col:nth-child(5) {
+//      background: rgba(#000,.10);
+//  }
+  
+//  .wysi-flex-wrap > .col:nth-child(6) {
+//      background: rgba(#000,.12);
+//  }
 
 .row {
     .col-xs,

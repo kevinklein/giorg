@@ -132,7 +132,7 @@ img {
 }
 
 .img-cover {
-	background-position: 50%;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0 auto;
@@ -143,10 +143,6 @@ img {
 .img-cover-block * {
     background: rgba(0,0,0,.33);
     padding: $card-spacer-y;
-}
-
-.img-cover-transtion {
-    transition: background-image 0.2s ease-in-out;
 }
 
 .img-cover-overlay {
@@ -171,47 +167,5 @@ img {
         left: 0;
         width: 100%;
         z-index: 2;
-    }
-}
-
-.home-cta-box {
-    position: relative;
-    &:after {
-        background: rgba(#000,.6);
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        top: 0;
-        transition: opacity .2s ease-in;
-        width: 100%;
-        z-index: 1;
-    }
-    &:hover {
-        &:after {
-            opacity: 1;
-        }
-    }
-    h2 {
-        background: #000;
-        color: #fff;
-        display: table-cell;
-        font-size: 1rem;
-        height: 27.5%;
-        padding: .8rem 1rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: center;
-        text-transform: uppercase;
-        vertical-align: middle;
-        width: 100%;    
-        @include flex-center;
-        z-index: 3;
-    }
-    &:hover h2 {
-        color: $brand-warning;
     }
 }

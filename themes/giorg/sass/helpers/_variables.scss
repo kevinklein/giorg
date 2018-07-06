@@ -2,54 +2,54 @@ $fixed-top: 145px;
 
 //== Colors
 $gray-base: #000;
-$gray-darker: #333;
-$gray-dark: #555;
-$gray: #777;
-$gray-light: #999;
-$gray-lighter: #ebebeb;
-$gray-lightly: #efefef;
-$gray-lightest: #f3f3f6;
+$gray-darkest: #000;
+$gray-darker: #1c2b39;
+$gray-dark: #55606B;
+$gray: #8E959C;
+$gray-light: #C6CACE;
+$gray-lighter: #DDDFE1;
+$gray-lightest: #f9f9f9;
 
 $brand-dark: #444;
 $brand-black: #141414;
 
-$brand-primary: #002e6d;
-$brand-secondary: #980438;
-$brand-success: #58ba47;
-$brand-info: #2e75bc;
-//$brand-info: #22c1e6;
+$brand-primary: #002f6c;
+$brand-primary-light: #406391;
+$brand-primary-lighter: #8097B6;
+$brand-primary-lightest: #BFCBDA;
+$brand-primary-pale: #D9E0E9;
+
+$brand-secondary: #00A9B7;
+$brand-secondary-light: #40BFC9;
+$brand-secondary-lighter: #80D4DB;
+$brand-secondary-lightest: #BFEAED;
+$brand-secondary-pale: #D9F2F4;
+
+$brand-success: #78BE20;
+$brand-success-light: #9ACE58;
+$brand-success-lighter: #BCDF90;
+$brand-success-lightest: #DDEFC7;
+$brand-success-pale: #EBF5DE;
+
+$brand-orange: 	 #ED8B00;
+$brand-orange-light: #F2A840;
+$brand-orange-lighter: #F6C580;
+$brand-orange-lightest: #FBE2BF;
+$brand-orange-pale: #FCEED9;
+
 $brand-warning: #ffc72c;
 $brand-danger: #d02230;
 
-$brand-orange: 	 #ea7600;
-$brand-orange-light: lighten($brand-orange,7.5%);
-$brand-orange-lighter: #fcedcf;
-$brand-orange-lightest: #feebd1;
 $brand-orange-dark: darken($brand-orange,7.5%);
+$brand-maroon: #980438;
 
+$brand-info: $brand-primary;
 $brand-info-dark: darken($brand-info,7.5%);
 $brand-info-darker: darken($brand-info,10.5%);
 $brand-info-darkest: darken($brand-info,7.5%);
 $brand-info-light: lighten($brand-info,10%);
 $brand-info-lighter: lighten($brand-info,15.5%);
 $brand-info-lightest: lighten($brand-info,55.5%);
-
-$brand-success-lighter: #d6efe7;
-$brand-success-lightest: #dcf1dc;
-
-$brand-primary-light: #ccd5e2;
-$brand-primary-lighter: lighten($brand-primary-light,10%);
-$brand-primary-lightest: lighten($brand-primary-lighter,10%);
-$brand-primary-dark: darken($brand-primary,5%);
-$brand-primary-darker: darken($brand-primary,10%);
-$brand-primary-darkest: darken($brand-primary,15%);
-
-$brand-secondary-lightest: lighten($brand-secondary,15%);
-$brand-secondary-lighter: lighten($brand-secondary,10%);
-$brand-secondary-light: lighten($brand-secondary,5%);
-$brand-secondary-dark: darken($brand-secondary,5%);
-$brand-secondary-darker: darken($brand-secondary,10%);
-$brand-secondary-darkest: darken($brand-secondary,15%);
 
 $text-color: $gray-darker;
 
@@ -248,7 +248,7 @@ $table-sm-cell-padding: .3rem;
 $table-bg: transparent;
 $table-bg-accent: #f9f9f9;
 $table-bg-hover: $gray-lightest;
-$table-bg-active: $brand-info-lighter;
+$table-bg-active: $brand-primary-pale;
 
 $table-border-color: darken($gray-lighter,5%); 
 
@@ -663,7 +663,7 @@ $card-spacer-x-sm: ($card-spacer-x * .667);
 $card-spacer-y-sm: ($card-spacer-y / 2);
 $card-border-width: .0625rem;
 $card-border-radius: 0;
-$card-border-color: #dfdfdf;
+$card-border-color: #ccc;
 $card-border-radius-inner: 0;//($card-border-radius - $card-border-width);
 
 $card-cap-bg: #fff;

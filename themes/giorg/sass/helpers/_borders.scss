@@ -1,0 +1,255 @@
+//https://tailwindcss.com/docs/border-width
+
+.border {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.border-t {
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.border-r {
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.border-b {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.border-l {
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+.border-solid {
+	border-style: solid
+}
+
+.border-dashed {
+	border-style: dashed
+}
+
+.border-dotted {
+	border-style: dotted
+}
+
+.border-none {
+	border-style: none
+}
+
+.border-0 {
+	border-width: 0
+}
+
+.border-2 {
+	border-width: 2px
+}
+
+.border-4 {
+	border-width: 4px
+}
+
+.border-8 {
+	border-width: 8px
+}
+
+.border-transparent {
+	border-color: transparent
+}
+
+.border-black {
+	border-color: $gray-base;
+}
+
+.border-gray {
+    border-color: $gray;
+}
+
+.border-gray-light {
+    border-color: $gray-light !important;
+}
+
+.border-gray-lighter {
+    border-color: $gray-lighter;
+}
+
+.border-gray-lightest {
+    border-color: $gray-lightest;
+}
+
+.border-gray-dark {
+    border-color: $gray-dark;
+}
+
+.border-gray-darker {
+    border-color: $gray-darker;
+}
+
+.border-gray-darkest {
+    border-color: $gray-darker;
+}
+
+.border-primary {
+    border-color: $brand-primary;
+}
+
+.border-primary-light {
+    background: $brand-primary-light;
+}
+
+.border-primary-lighter {
+    border-color: $brand-primary-lighter;
+}
+
+.border-primary-lightest {
+    border-color: $brand-primary-lightest;
+}
+
+.border-primary-pale {
+    background: $brand-primary-pale;
+}
+
+.border-secondary {
+    border-color: $brand-secondary;
+}
+
+.border-secondary-light {
+    border-color: $brand-secondary-light;
+}
+
+.border-secondary-lighter {
+    border-color: $brand-secondary-lighter;
+}
+
+.border-secondary-lightest {
+    border-color: $brand-secondary-lightest;
+}
+
+.border-secondary-pale {
+    border-color: $brand-secondary-pale;
+}
+
+.border-orange {
+    border-color: $brand-orange;
+}
+
+.border-orange-light {
+    background: $brand-orange-light;
+}
+
+.border-orange-lighterr {
+    border-color: $brand-orange-lighter;
+}
+
+.border-orange-lightest {
+    border-color: $brand-orange-lightest;
+}
+
+.border-orange-pale  {
+    border-color: $brand-orange-pale;
+}
+
+.border-success {
+    border-color: $brand-success;
+}
+
+.border-success-light {
+    border-color: $brand-success-light;
+}
+
+.border-success-lighter {
+    border-color: $brand-success-lighter;
+}
+
+.border-success-lightest {
+    border-color: $brand-success-lightest;
+}
+
+.border-success-pale {
+    border-color: $brand-success-pale;
+}
+
+.border-warning {
+    border-color: $brand-warning;
+}
+
+.border-danger {
+    border-color: $brand-danger;
+}
+
+// .hover\:border-pink-lightest:hover {
+// 	border-color: #ffebef
+// }
+
+
+.border {
+	border-width: 1px
+}
+
+.border-t-0 {
+	border-top-width: 0
+}
+
+.border-r-0 {
+	border-right-width: 0
+}
+
+.border-b-0 {
+	border-bottom-width: 0
+}
+
+.border-l-0 {
+	border-left-width: 0
+}
+
+.border-t-2 {
+	border-top-width: 2px
+}
+
+.border-r-2 {
+	border-right-width: 2px
+}
+
+.border-b-2 {
+	border-bottom-width: 2px
+}
+
+.border-l-2 {
+	border-left-width: 2px
+}
+
+.border-t-4 {
+	border-top-width: 4px
+}
+
+.border-r-4 {
+	border-right-width: 4px
+}
+
+.border-b-4 {
+	border-bottom-width: 4px
+}
+
+.border-l-4 {
+	border-left-width: 4px
+}
+
+.border-t-8 {
+	border-top-width: 8px
+}
+
+.border-r-8 {
+	border-right-width: 8px
+}
+
+.border-b-8 {
+	border-bottom-width: 8px
+}
+
+.border-l-8 {
+	border-left-width: 8px
+}

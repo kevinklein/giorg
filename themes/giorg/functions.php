@@ -180,3 +180,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+include_once('inc/acf-smart-button/acf-smart-button.php');
+
+// add_action( 'acf/register_fields', 'acf_register_fields' );
+
+// function acf_register_fields() {
+// 	include_once('inc/acf-widget_area/acf-widget_area.php');
+// }

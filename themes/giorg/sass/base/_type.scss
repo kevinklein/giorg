@@ -30,6 +30,54 @@ h6, .h6 { font-size: $font-size-h6; }
     h4, .h4 { font-size: ($font-size-h4 * .8); }
 }
 
+.header-full {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    span {
+        background: #fff;
+        padding: 0 60px;
+        position: relative;
+        &:before {
+            background: #8096b6;
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            bottom: 5px;
+            top: 5px;
+            width: 1px;
+        }
+        &:after {
+            background: #8096b6;
+            content: '';
+            display: block;
+            right: 0;
+            position: absolute;
+            bottom: 5px;
+            top: 5px;
+            width: 1px;
+        }
+    }
+    &:after {
+        background: #8096b6;
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: calc(50% - 1px);
+        width: 100%;
+        z-index: -1;
+    }
+}
+
 // Type display classes
 .display-1 {
     font-size: $display1-size;
@@ -366,14 +414,6 @@ li {
     letter-spacing: .2rem;
 }
 
-.text-gold {
-    color: goldenrod;
-}
-
-.text-white {
-    color: #fff;
-}
-
 .text-black {
     color: $brand-black;
 }
@@ -384,10 +424,6 @@ li {
 
 .text-gray-light {
     color: $gray-light;
-}
-
-.text-gray-lightly {
-    color: $gray-lightly;
 }
 
 .text-gray-lighter {
@@ -422,12 +458,8 @@ li {
     color: $brand-secondary-light;
 }
 
-.text-secondary-dark {
-    color: $brand-secondary-darker;
-}
-
-.text-info {
-    color: $brand-info;
+.text-secondary-lighter {
+    color: $brand-secondary-lighter;
 }
 
 .text-success {
@@ -442,28 +474,16 @@ li {
     color: $brand-danger;
 }
 
-.text-info-light {
-    color: $brand-info-light;
-}
-
-.text-info-lighter {
-    color: $brand-info-lighter;
-}
-
-.text-info-lightest {
-    color: lighten($brand-info-lighter,1%);
-}
-
 .text-orange {
     color: $brand-orange;
 }
 
-.text-orange-dark {
-    color: $brand-orange-dark;
+.text-orange-light {
+    color: $brand-orange-light;
 }
 
-.text-orange-light {
-    color: $brand-orange-dark;
+.text-orange-lighter {
+    color: $brand-orange-lighter;
 }
 
 .text-mute {
@@ -474,11 +494,9 @@ li {
     color: rgba(#000,.5);
 }
 
-.text-opaque-white,
 .text-opaque-light {
     color: rgba(#fff,.5);
 }
-
 
 // font weights
 .text-300 {

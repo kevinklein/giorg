@@ -1,0 +1,688 @@
+[
+    {
+        "key": "group_550f4c3fb623b",
+        "title": "Page Builder",
+        "fields": [
+            {
+                "key": "field_550f4c4b9591a",
+                "label": "Page Builder",
+                "name": "acf_page_builder",
+                "type": "flexible_content",
+                "instructions": "Add and rearrange rows here to change the layout of your page",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "57b9ac2840ad6": {
+                        "key": "57b9ac2840ad6",
+                        "name": "flexbox_columns",
+                        "label": "Columns",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b3030ac049f5",
+                                "label": "Title",
+                                "name": "flexbox_columns_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_57b9ac3a40ad7",
+                                "label": "Add column",
+                                "name": "flexbox_column_repeater",
+                                "type": "repeater",
+                                "instructions": "You should not add more than 6 columns per row",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "field_57b9ac5d40ad8",
+                                "min": 0,
+                                "max": 6,
+                                "layout": "row",
+                                "button_label": "Add New Column",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_57b9ac5d40ad8",
+                                        "label": "Content",
+                                        "name": "flexbox_column_content",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "tabs": "all",
+                                        "toolbar": "full",
+                                        "media_upload": 1,
+                                        "delay": 0
+                                    },
+                                    {
+                                        "key": "field_57b9acc240ada",
+                                        "label": "CSS class",
+                                        "name": "flexbox_column_css_class",
+                                        "type": "text",
+                                        "instructions": "add a class to the column (i.e. \"col-md-8 col-xs-12\")",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "class=",
+                                        "append": "",
+                                        "maxlength": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_57bac6b5add64",
+                                "label": "CSS class",
+                                "name": "flexbox_columns_wrap_css_class",
+                                "type": "text",
+                                "instructions": "pass a class to the wrapper (i.e. \"m-b-lg\")",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "class=",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5b3bfcc437b15": {
+                        "key": "5b3bfcc437b15",
+                        "name": "flexbox_cards",
+                        "label": "Cards",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b3bfcc437b16",
+                                "label": "Title",
+                                "name": "flexbox_cards_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5b3bfcc437b17",
+                                "label": "Add Card Column",
+                                "name": "flexbox_card_repeater",
+                                "type": "repeater",
+                                "instructions": "You should not add more than 6 cards per row",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "field_5b3bfcc437b18",
+                                "min": 0,
+                                "max": 6,
+                                "layout": "row",
+                                "button_label": "Add New Card Column",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5b3bfcc437b1a",
+                                        "label": "CSS class",
+                                        "name": "flexbox_card_css_class",
+                                        "type": "text",
+                                        "instructions": "i.e. \"border-top border-8 border-primary\"",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "pass this CSS to the Card",
+                                        "prepend": "class=",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5b3bfcc437b19",
+                                        "label": "Background Colour",
+                                        "name": "flexbox_card_bg",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "50",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "bg-none": "bg-none",
+                                            "bg-primary": "bg-primary",
+                                            "bg-primary-light": "bg-primary-light",
+                                            "bg-primary-lighter": "bg-primary-lighter",
+                                            "bg-primary-lightest": "bg-primary-lightest",
+                                            "bg-primary-pale": "bg-primary-pale",
+                                            "bg-secondary": "bg-secondary",
+                                            "bg-secondary-light": "bg-secondary-light",
+                                            "bg-secondary-lighter": "bg-secondary-lighter",
+                                            "bg-secondary-lightest": "bg-secondary-lightest",
+                                            "bg-secondary-pale": "bg-secondary-pale",
+                                            "bg-success": "bg-success",
+                                            "bg-success-light": "bg-success-light",
+                                            "bg-success-lighter": "bg-success-lighter",
+                                            "bg-success-lightest": "bg-success-lightest",
+                                            "bg-success-pale": "bg-success-pale",
+                                            "bg-orange": "bg-orange",
+                                            "bg-orange-light": "bg-orange-light",
+                                            "bg-orange-lighter": "bg-orange-lighter",
+                                            "bg-orange-lightest": "bg-orange-lightest",
+                                            "bg-orange-pale": "bg-orange-pale",
+                                            "bg-gray": "bg-gray",
+                                            "bg-gray-light": "bg-gray-light",
+                                            "bg-gray-lighter": "bg-gray-lighter",
+                                            "bg-gray-lightest": "bg-gray-lightest",
+                                            "bg-gray-dark": "bg-gray-dark",
+                                            "bg-gray-darker": "bg-gray-darker",
+                                            "bg-gray-darkest": "bg-gray-darkest",
+                                            "bg-danger": "bg-danger",
+                                            "bg-danger-light": "bg-danger-light",
+                                            "bg-danger-lighter": "bg-danger-lighter",
+                                            "bg-danger-lightest": "bg-danger-lightest",
+                                            "bg-danger-pale": "bg-danger-pale"
+                                        },
+                                        "default_value": [
+                                            "bg-none"
+                                        ],
+                                        "allow_null": 1,
+                                        "multiple": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "return_format": "value",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_5b3bfdc537b1e",
+                                        "label": "Card Title",
+                                        "name": "flexbox_card_title",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5b3c0c6c94968",
+                                        "label": "Card Title Class",
+                                        "name": "flexbox_card_title_class",
+                                        "type": "text",
+                                        "instructions": "i.e. \"bg-primary\" or \"bg-secondary\"",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "class=",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5b3bfe3b37b20",
+                                        "label": "Card Image",
+                                        "name": "flexbox_card_img",
+                                        "type": "image",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "min_width": "",
+                                        "min_height": "",
+                                        "min_size": "",
+                                        "max_width": "",
+                                        "max_height": "",
+                                        "max_size": "",
+                                        "mime_types": ""
+                                    },
+                                    {
+                                        "key": "field_5b3c0f63d746c",
+                                        "label": "Card Image Aspect Ratio",
+                                        "name": "flexbox_card_img_aspect",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "16by9": "16by9",
+                                            "2by1": "2by1",
+                                            "3by1": "3by1",
+                                            "4by3": "4by3"
+                                        },
+                                        "default_value": [
+                                            "16by9"
+                                        ],
+                                        "allow_null": 0,
+                                        "multiple": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "return_format": "value",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_5b3bfcc437b18",
+                                        "label": "Card Content",
+                                        "name": "flexbox_card_content",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "tabs": "all",
+                                        "toolbar": "full",
+                                        "media_upload": 1,
+                                        "delay": 0
+                                    },
+                                    {
+                                        "key": "field_5b3bfdd937b1f",
+                                        "label": "Card Footer",
+                                        "name": "flexbox_card_footer",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "tabs": "text",
+                                        "toolbar": "basic",
+                                        "media_upload": 0,
+                                        "delay": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_5b3bfcc437b1d",
+                                "label": "CSS class",
+                                "name": "flexbox_cards_wrap_css_class",
+                                "type": "text",
+                                "instructions": "add this class to the wrapper",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "class=",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "56dad78dcefe1": {
+                        "key": "56dad78dcefe1",
+                        "name": "content_row",
+                        "label": "Single WYSIWYG Content Row",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b3c1ae38a9a2",
+                                "label": "Content Row Title",
+                                "name": "content_row_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_56dad7abcefe2",
+                                "label": "Content Row HTML",
+                                "name": "content_row_html",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 1
+                            },
+                            {
+                                "key": "field_5b3d1f93091fb",
+                                "label": "CSS Class",
+                                "name": "content_row_wrap_css",
+                                "type": "text",
+                                "instructions": "Wrap the content in a CSS class, i.e. \"container\", \"container-extended\", \"content-sm\", \"container-lg\", \"container-full\".",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "550f4c5c48d6b": {
+                        "key": "550f4c5c48d6b",
+                        "name": "hero_image",
+                        "label": "Hero image and caption",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_550f4d099591b",
+                                "label": "Hero Image",
+                                "name": "hero_image",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 33,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_56feecdd43888",
+                                "label": "Hero Image Title",
+                                "name": "hero_block_title",
+                                "type": "text",
+                                "instructions": "This will be shown in big letters, outside the caption",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 80,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_57a0c76ebdc23",
+                                "label": "Hero Title Font Size",
+                                "name": "hero_block_title_size",
+                                "type": "select",
+                                "instructions": "Choose the size of the title font (you may want to experiment to see which size works best)",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "small": "small",
+                                    "medium": "medium",
+                                    "large": "large"
+                                },
+                                "default_value": [
+                                    "medium"
+                                ],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_550f4d2b9591c",
+                                "label": "Hero Caption Text",
+                                "name": "hero_block_text",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 33,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "text",
+                                "toolbar": "basic",
+                                "media_upload": 1,
+                                "delay": 0
+                            },
+                            {
+                                "key": "field_56d9e9c91377d",
+                                "label": "Caption position",
+                                "name": "hero_block_caption_position",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 33,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "left": "left",
+                                    "right": "right"
+                                },
+                                "default_value": [
+                                    "left"
+                                ],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0,
+                                "return_format": "value"
+                            },
+                            {
+                                "key": "field_550f586ddb0bd",
+                                "label": "Display CTA Button",
+                                "name": "hero_block_display_cta_button",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 20,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "Show Call to Action?",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            },
+                            {
+                                "key": "field_56d9b54e26dc4",
+                                "label": "Hero CTA Button",
+                                "name": "hero_block_hero_cta_button",
+                                "type": "smart_button",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 60,
+                                    "class": "",
+                                    "id": ""
+                                }
+                            },
+                            {
+                                "key": "field_56d9f8edceee4",
+                                "label": "Hero CTA lightbox?",
+                                "name": "hero_cta_lightbox",
+                                "type": "true_false",
+                                "instructions": "Open this link in a lightbox?\r\n(Good for YouTube videos)",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": 20,
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Content Row",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "page-builder.php"
+                }
+            ]
+        ],
+        "menu_order": 5,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "author",
+            "format",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]

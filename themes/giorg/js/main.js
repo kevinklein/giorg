@@ -31,17 +31,7 @@
         ];
 
         var $container = $('#main');
-        var numScenes = $container.data('scenes');
-        console.log('numScenes', numScenes);
         console.log(headerOffset);
-
-        for (var i = 1; i <= numScenes; i++) {
-            scenes.push(
-                new ScrollMagic.Scene(
-                    {triggerElement: '#section-' + i, triggerHook: 'onLeave', duration: $("#section-" + i).outerHeight(), offset: -headerOffset})
-                    .setClassToggle("#high-" + i, "active")
-            );
-        }
 
         controller.addScene(scenes);
 
@@ -70,11 +60,6 @@
 		$('.toggle-target').click(function() {
             var target = '#' + $(this).data('target');
             $(target).slideToggle('fast');    
-        });
-        
-        $( '.meet-the-faculty .tile' ).each(function() {
-            var $facultyName = $(this).find('.tile-backface h3');
-            $($facultyName).clone().appendTo(this);
         });
         
         $('.toggle-target-next').next().hide();

@@ -13,7 +13,7 @@
     cursor: pointer;
     user-select: none;
     border: $border-width solid transparent;
-    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height);
     @include transition(all .2s ease-in-out);
 
     &,
@@ -196,18 +196,18 @@ fieldset[disabled] a.btn {
 
 .btn-xl {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size(($btn-padding-y-lg * 1.25), ($btn-padding-x-lg * 1.25), ($font-size-lg * 1.25), ($line-height-lg * 1.25), $btn-border-radius-xl);
+  @include button-size(($btn-padding-y-lg * 1.25), ($btn-padding-x-lg * 1.25), ($font-size-lg * 1.25), ($line-height-lg * 1.25));
 }
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg);
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm);
 }
 .btn-xs {
-    @include button-size(($btn-padding-y-sm * .8), ($btn-padding-x-sm * .8), ($font-size-sm * .8), $line-height-sm, $border-radius-xs);
+    @include button-size(($btn-padding-y-sm * .8), ($btn-padding-x-sm * .8), ($font-size-sm * .8), $line-height-sm);
 }
 //
 // Block button
@@ -282,12 +282,12 @@ input[type="button"] {
 
 .btn-search-toggle {
     align-self: stretch;
-    background: $brand-primary-light;
+    background: $brand-primary-lightest;
     font-size: 1.7rem;
     padding-left: .7rem;
     padding-right: .7rem;
     &:hover {
-        background: darken(#ccd5e2,10%);
+        background: $brand-primary-pale;
     }
     .icon-search {
         display: inline-block;

@@ -26,7 +26,7 @@
 <header id="header-main" class="cd-morph-dropdown raised-sm position-relative">
     <div class="text-sm bg-gray-lightest" role="directory" id="header-hud">
         <div class="container item-flex justify-content-flex-end">
-            <nav class="text-normal hidden-sm-down p-r">
+            <nav class="hidden-sm-down p-r">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-3',
@@ -49,17 +49,17 @@
                     <div class="logo"> 
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="img-circle" alt="<?php bloginfo( 'name' ); ?>"></a>
                     </div>
-                    <div class="m-l-sm text-primary logo-description logo-description-v3 logo-description-v4">
+                    <div class="m-l-sm logo-description">
                         <a href="/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-type-gotham.svg" alt="<?php bloginfo( 'description' ); ?>"></a>
                     </div>
                 </div>
                 <div class="item-flex-addon">
-                    <nav class="item-flex position-relative text-lg">
+                    <nav class="item-flex position-relative text-md">
                         <?php
                         wp_nav_menu( array(
                             'theme_location' => 'menu-2',
                             'menu_id' => 'nav-ancillary',
-                            'menu_class' => 'list-inline',
+                            'menu_class' => 'list-inline nav-ancillary',
                             'container_class' => '',
                             'container' => 'ul'
                         ) );
@@ -243,7 +243,7 @@
                 <div class="input-group">
                     <input type="text" value="" name="s" id="s" class="form-control form-control-lg"  placeholder="Search Gi.org">
                     <span class="input-group-btn">
-                        <button class="btn btn-secondary btn-lg br-a-0" type="submit" id="searchsubmit">Search</button>
+                        <button class="btn btn-primary btn-lg br-a-0" type="submit" id="searchsubmit">Search</button>
                     </span> 
                 </div>
             </form>
@@ -256,7 +256,7 @@
 <div class="modal modal-menu" tabindex="-1">
     <div class="modal-dialog modal-dialog-lg modal-lg">
         <div class="modal-content">
-            <div class="modal-body bg-primary-dark text-inverse">
+            <div class="modal-body bg-primary text-inverse">
                 <div class="text-right">
                     <button type="button" class="circle bg-white text-primary text-xl" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>

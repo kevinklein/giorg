@@ -3,10 +3,11 @@
 //
 .card {
     background: #fff;
+    box-shadow: 0 0 0 1px $card-border-color;
     position: relative;
     margin-bottom: $grid-gutter-width;
-    @include border-radius($card-border-radius);
-    border: $card-border-width solid $card-border-color;
+//    @include border-radius($card-border-radius);
+//    border: $card-border-width solid $card-border-color;
     position: relative;
     text-decoration: none; // when enclosed in links
 }
@@ -53,8 +54,6 @@
 //
 .card-header {
     padding: $card-spacer-y-sm $card-spacer-x;
-    background-color: $card-cap-bg;
-    border-bottom: $card-border-width solid $card-border-color;
     h1,
     h2,
     h3,
@@ -69,84 +68,89 @@
 }
 
 .card-footer {
+    margin-top: auto;
     padding: $card-spacer-y-sm $card-spacer-x;
-    //border-top: $card-border-width solid $card-border-color;
-    @include border-radius(0 0 $card-border-radius-inner $card-border-radius-inner);
+    p {
+        margin: 0;
+    }
+    p + p {
+        margin-top: 1rem;
+    }
 }
 
-//
-// Background variations
-//
-.card-dark {
-    background-color: $brand-dark;
-    border-color: $brand-dark;
-}
+// //
+// // Background variations
+// //
+// .card-dark {
+//     background-color: $brand-dark;
+//     border-color: $brand-dark;
+// }
 
-.card-primary {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
-}
+// .card-primary {
+//     background-color: $brand-primary;
+//     border-color: $brand-primary;
+// }
 
-.card-secondary {
-    background-color: $brand-secondary;
-    border-color: $brand-secondary;
-}
+// .card-secondary {
+//     background-color: $brand-secondary;
+//     border-color: $brand-secondary;
+// }
 
-.card-secondary-dark {
-    background-color: $brand-secondary-dark;
-    border-color: $brand-secondary-dark;
-}
+// .card-secondary-dark {
+//     background-color: $brand-secondary-dark;
+//     border-color: $brand-secondary-dark;
+// }
 
-.card-success {
-    background-color: $brand-success;
-    border-color: $brand-success;
-}
+// .card-success {
+//     background-color: $brand-success;
+//     border-color: $brand-success;
+// }
 
-.card-info {
-    background-color: $brand-info;
-    border-color: $brand-info;
-}
+// .card-info {
+//     background-color: $brand-info;
+//     border-color: $brand-info;
+// }
 
-.card-warning {
-    background-color: $brand-warning;
-    border-color: $brand-warning;
-}
+// .card-warning {
+//     background-color: $brand-warning;
+//     border-color: $brand-warning;
+// }
 
-.card-danger {
-    background-color: $brand-danger;
-    border-color: $brand-danger;
-}
+// .card-danger {
+//     background-color: $brand-danger;
+//     border-color: $brand-danger;
+// }
 
-.card-gray-darker {
-    background-color: $gray-darker;
-    border-color: $gray-darker;
-}
+// .card-gray-darker {
+//     background-color: $gray-darker;
+//     border-color: $gray-darker;
+// }
 
-.card-gray-dark {
-    background-color: $gray-dark;
-    border-color: $gray-dark;
-}
+// .card-gray-dark {
+//     background-color: $gray-dark;
+//     border-color: $gray-dark;
+// }
 
-.card-gray {
-    background-color: $gray;
-    border-color: $gray;
-}
+// .card-gray {
+//     background-color: $gray;
+//     border-color: $gray;
+// }
 
-.card-gray-light {
-    background-color: $gray-light;
-    border-color: $gray-light;
-}
+// .card-gray-light {
+//     background-color: $gray-light;
+//     border-color: $gray-light;
+// }
 
-.card-gray-lighter {
-    background-color: $gray-lighter;
-    border-color: $gray-lighter;
-}
+// .card-gray-lighter {
+//     background-color: $gray-lighter;
+//     border-color: $gray-lighter;
+// }
 
-.card-highlight,
-.card-gray-lightest {
-    background-color: $gray-lightest;
-    border-color: $gray-lightest;
-}
+// .card-highlight,
+// .card-gray-lightest {
+//     background-color: $gray-lightest;
+//     border-color: $gray-lightest;
+// }
 
 .card-opaque-dark {
     background: rgba(#000, .15);
@@ -160,167 +164,167 @@
     box-shadow: none;
 }
 
-//header
-.card-header-dark {
-    background-color: $brand-dark;
-    border-color: $brand-dark;
-}
+// //header
+// .card-header-dark {
+//     background-color: $brand-dark;
+//     border-color: $brand-dark;
+// }
 
-.card-header-primary {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
-}
+// .card-header-primary {
+//     background-color: $brand-primary;
+//     border-color: $brand-primary;
+// }
 
-.card-header-secondary {
-    background-color: $brand-secondary;
-    border-color: $brand-secondary;
-}
+// .card-header-secondary {
+//     background-color: $brand-secondary;
+//     border-color: $brand-secondary;
+// }
 
-.card-header-secondary-dark {
-    background-color: $brand-secondary-dark;
-    border-color: $brand-secondary-dark;
-}
+// .card-header-secondary-dark {
+//     background-color: $brand-secondary-dark;
+//     border-color: $brand-secondary-dark;
+// }
 
-.card-header-success {
-    background-color: $brand-success;
-    border-color: $brand-success;
-}
+// .card-header-success {
+//     background-color: $brand-success;
+//     border-color: $brand-success;
+// }
 
-.card-header-info {
-    background-color: $brand-info;
-    border-color: $brand-info;
-}
+// .card-header-info {
+//     background-color: $brand-info;
+//     border-color: $brand-info;
+// }
 
-.card-header-warning {
-    background-color: $brand-warning;
-    border-color: $brand-warning;
-}
+// .card-header-warning {
+//     background-color: $brand-warning;
+//     border-color: $brand-warning;
+// }
 
-.card-header-danger {
-    background-color: $brand-danger;
-    border-color: $brand-danger;
-}
+// .card-header-danger {
+//     background-color: $brand-danger;
+//     border-color: $brand-danger;
+// }
 
-.card-header-gray-darker {
-    background-color: $gray-darker;
-    border-color: $gray-darker;
-}
+// .card-header-gray-darker {
+//     background-color: $gray-darker;
+//     border-color: $gray-darker;
+// }
 
-.card-header-gray-dark {
-    background-color: $gray-dark;
-    border-color: $gray-dark;
-}
+// .card-header-gray-dark {
+//     background-color: $gray-dark;
+//     border-color: $gray-dark;
+// }
 
-.card-header-gray {
-    background-color: $gray;
-    border-color: $gray;
-}
+// .card-header-gray {
+//     background-color: $gray;
+//     border-color: $gray;
+// }
 
-.card-header-gray-light {
-    background-color: $gray-light;
-    border-color: $gray-light;
-}
+// .card-header-gray-light {
+//     background-color: $gray-light;
+//     border-color: $gray-light;
+// }
 
-.card-header-gray-lighter {
-    background-color: $gray-lighter;
-    border-color: $gray-lighter;
-}
+// .card-header-gray-lighter {
+//     background-color: $gray-lighter;
+//     border-color: $gray-lighter;
+// }
 
-.card-header-gray-lightest {
-    background-color: $gray-lightest;
-    border-color: $gray-lightest;
-}
+// .card-header-gray-lightest {
+//     background-color: $gray-lightest;
+//     border-color: $gray-lightest;
+// }
 
-.card-header-opaque-dark {
-    background: rgba(#000, .15);
-    border: none;
-}
+// .card-header-opaque-dark {
+//     background: rgba(#000, .15);
+//     border: none;
+// }
 
-.card-header-opaque-light {
-    background: rgba(#fff, .15);
-    border: none;
-}
+// .card-header-opaque-light {
+//     background: rgba(#fff, .15);
+//     border: none;
+// }
 
-//footer
-.card-footer-dark {
-    background-color: $brand-dark;
-    border-color: $brand-dark;
-}
+// //footer
+// .card-footer-dark {
+//     background-color: $brand-dark;
+//     border-color: $brand-dark;
+// }
 
-.card-footer-primary {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
-}
+// .card-footer-primary {
+//     background-color: $brand-primary;
+//     border-color: $brand-primary;
+// }
 
-.card-footer-secondary {
-    background-color: $brand-secondary;
-    border-color: $brand-secondary
-}
+// .card-footer-secondary {
+//     background-color: $brand-secondary;
+//     border-color: $brand-secondary
+// }
 
-.card-footer-secondary-dark {
-    background-color: $brand-secondary-dark;
-    border-color: $brand-secondary-dark;
-}
+// .card-footer-secondary-dark {
+//     background-color: $brand-secondary-dark;
+//     border-color: $brand-secondary-dark;
+// }
 
-.card-footer-success {
-    background-color: $brand-success;
-    border-color: $brand-success;
-}
+// .card-footer-success {
+//     background-color: $brand-success;
+//     border-color: $brand-success;
+// }
 
-.card-footer-info {
-    background-color: $brand-info;
-    border-color: $brand-info;
-}
+// .card-footer-info {
+//     background-color: $brand-info;
+//     border-color: $brand-info;
+// }
 
-.card-footer-warning {
-    background-color: $brand-warning;
-    border-color: $brand-warning;
-}
+// .card-footer-warning {
+//     background-color: $brand-warning;
+//     border-color: $brand-warning;
+// }
 
-.card-footer-danger {
-    background-color: $brand-danger;
-    border-color: $brand-danger;
-}
+// .card-footer-danger {
+//     background-color: $brand-danger;
+//     border-color: $brand-danger;
+// }
 
-.card-footer-gray-darker {
-    background-color: $gray-darker;
-    border-color: $gray-darker;
-}
+// .card-footer-gray-darker {
+//     background-color: $gray-darker;
+//     border-color: $gray-darker;
+// }
 
-.card-footer-gray-dark {
-    background-color: $gray-dark;
-    border-color: $gray-dark;
-}
+// .card-footer-gray-dark {
+//     background-color: $gray-dark;
+//     border-color: $gray-dark;
+// }
 
-.card-footer-gray {
-    background-color: $gray;
-    border-color: $gray;
-}
+// .card-footer-gray {
+//     background-color: $gray;
+//     border-color: $gray;
+// }
 
-.card-footer-gray-light {
-    background-color: $gray-light;
-    border-color: $gray-light;
-}
+// .card-footer-gray-light {
+//     background-color: $gray-light;
+//     border-color: $gray-light;
+// }
 
-.card-footer-gray-lighter {
-    background-color: $gray-lighter;
-    border-color: $gray-lighter;
-}
+// .card-footer-gray-lighter {
+//     background-color: $gray-lighter;
+//     border-color: $gray-lighter;
+// }
 
-.card-footer-gray-lightest {
-    background-color: $gray-lightest;
-    border-color: $gray-lightest;
-}
+// .card-footer-gray-lightest {
+//     background-color: $gray-lightest;
+//     border-color: $gray-lightest;
+// }
 
-.card-footer-opaque-dark {
-    background: rgba(#000, .15);
-    border: none;
-}
+// .card-footer-opaque-dark {
+//     background: rgba(#000, .15);
+//     border: none;
+// }
 
-.card-footer-opaque-light {
-    background: rgba(#fff, .15);
-    border: none;
-}
+// .card-footer-opaque-light {
+//     background: rgba(#fff, .15);
+//     border: none;
+// }
 
 //
 // Inverse text within a card for use with dark backgrounds
@@ -488,210 +492,6 @@ a.card-block {
     padding: $card-spacer-y-sm $card-spacer-x-sm;
 }
 
-.card-half {
-    position: relative
-}
-
-.card-half .card-block {
-    position: relative;
-    z-index: 2
-}
-
-.card-half:before {
-    background: currentColor;
-    border-radius: .2rem .2rem 0 0;
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 50%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1
-}
-
-// bordered cards
-.card-border-top:after {
-    background: $brand-dark;
-    content: '';
-    display: block;
-    left: 0;
-    right: 0;
-    top: -5px;
-    position: absolute;
-    height: 5px;
-}
-
-.card-border-left:after {
-    left: -5px;
-    right: auto;
-    bottom: 0;
-    top: 0;
-    height: auto;
-    width: 5px;
-}
-
-.card-border-black:after {
-    background: $brand-black;
-}
-
-.card-border-primary:after {
-    background: $brand-primary;
-}
-
-.card-border-secondary:after {
-    background: $brand-secondary;
-}
-
-.card-border-tertiary:after {
-    background: $brand-orange;
-}
-
-.card-border-success:after {
-    background: $brand-success;
-}
-
-.card-border-info:after {
-    background: $brand-info;
-}
-
-.card-border-warning:after {
-    background: $brand-warning;
-}
-
-.card-border-danger:after {
-    background: $brand-danger;
-}
-
-.card .text-type-absolute .text-type-icon {
-    border-radius: $card-border-radius 0 0 0;
-}
-
-.card-icon-absolute {
-    position: absolute !important;
-    left: -6px;
-    top: -6px;
-}
-
-.flag-primary,
-.card-flag-primary {
-    background: $brand-primary;
-}
-
-.flag-info,
-.card-flag-info {
-    background: $brand-info;
-}
-
-.flag-secondary,
-.card-flag-secondary {
-    background: $brand-secondary;
-}
-
-.flag-tertiary,
-.card-flag-tertiary {
-    background: $brand-orange;
-}
-
-.flag-success,
-.card-flag-success {
-    background: $brand-success;
-}
-
-.flag-warning,
-.card-flag-warning {
-    background: $brand-warning;
-}
-
-.flag-danger,
-.card-flag-danger {
-    background: $brand-danger;
-}
-
-.card-block .card-flag {
-    margin-left: -$card-spacer-x;
-    .card-sm & {
-        margin-left: -($card-spacer-x * .667);
-    }
-}
-
-.card-ribbon {
-    color: #fff;
-    height: 75px;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    text-transform: uppercase;
-    top: 0;
-    width: 75px;
-    white-space: nowrap;
-    z-index: 1;
-    span {
-        background: $brand-dark;
-        box-shadow: 0 2px 5px -3px rgba(0, 0, 0, .4);
-        display: block;
-        font-size: $font-size-xxs;
-        font-family: $font-family-sans-serif;
-        font-weight: bold;
-        line-height: 25px;
-        transform: rotate(45deg);
-        position: absolute;
-        text-align: center;
-        top: 14px;
-        right: -26px;
-        width: 100px;
-    }
-}
-
-.card-ribbon-sm span {
-    font-size: .625rem;
-}
-
-.card-ribbon-primary span {
-    background: linear-gradient(lighten($brand-primary, 4%) 0%, darken($brand-primary, 4%) 100%);
-    .no-cssgradients & {
-        background: $brand-primary;
-    }
-}
-
-.card-ribbon-success span {
-    background: linear-gradient(lighten($brand-success, 4%) 0%, darken($brand-success, 4%) 100%);
-    .no-cssgradients & {
-        background: $brand-success;
-    }
-}
-
-.card-ribbon-info span {
-    background: linear-gradient(lighten($brand-info, 4%) 0%, darken($brand-info, 4%) 100%);
-    .no-cssgradients & {
-        background: $brand-info;
-    }
-}
-
-.card-ribbon-warning span {
-    background: linear-gradient(lighten($brand-warning, 4%) 0%, darken($brand-warning, 4%) 100%);
-    .no-cssgradients & {
-        background: $brand-warning;
-    }
-}
-
-.card-ribbon-danger span {
-    background: linear-gradient(lighten($brand-danger, 4%) 0%, darken($brand-danger, 4%) 100%);
-    .no-cssgradients & {
-        background: $brand-danger;
-    }
-}
-
-.card-ribbon-left {
-    left: 0;
-    span {
-        transform: rotate(-45deg);
-        left: -26px;
-        right: auto;
-    }
-}
-
 //hovers
 .card-hover {
     transition: box-shadow ease-in-out .15s;
@@ -728,25 +528,4 @@ a.card-block {
 
 .card-hover:hover .card-backface-icon {
     animation-name: bounceIn;
-}
-
-// card flex something on left, stuff on right. uses .item-flex in the layout.scss
-.item-flex.card {
-    .item-flex-addon {
-        padding: $card-spacer-y $card-spacer-x;
-        /*
-        &:first-child {
-            border-radius: $border-radius-sm 0 0 $border-radius-sm;
-        }
-        &:last-child {
-            border-radius: 0 $border-radius-sm $border-radius-sm 0;
-        }
-*/
-    }
-}
-
-.item-flex.card-sm {
-    .item-flex-addon {
-        padding: $card-spacer-y-sm $card-spacer-x-sm;
-    }
 }
