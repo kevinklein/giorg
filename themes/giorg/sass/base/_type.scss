@@ -423,7 +423,7 @@ li {
 }
 
 .text-gray-light {
-    color: $gray-light;
+    color: $gray-light !important;
 }
 
 .text-gray-lighter {
@@ -442,12 +442,28 @@ li {
     color: $gray-darker;
 }
 
-.text-dark {
-    color: $brand-dark;
+.text-gray-darkest {
+    color: $gray-darker;
 }
 
 .text-primary {
     color: $brand-primary;
+}
+
+.text-primary-light {
+    background: $brand-primary-light;
+}
+
+.text-primary-lighter {
+    color: $brand-primary-lighter;
+}
+
+.text-primary-lightest {
+    color: $brand-primary-lightest;
+}
+
+.text-primary-pale {
+    background: $brand-primary-pale;
 }
 
 .text-secondary {
@@ -462,8 +478,52 @@ li {
     color: $brand-secondary-lighter;
 }
 
+.text-secondary-lightest {
+    color: $brand-secondary-lightest;
+}
+
+.text-secondary-pale {
+    color: $brand-secondary-pale;
+}
+
+.text-orange {
+    color: $brand-orange;
+}
+
+.text-orange-light {
+    background: $brand-orange-light;
+}
+
+.text-orange-lighterr {
+    color: $brand-orange-lighter;
+}
+
+.text-orange-lightest {
+    color: $brand-orange-lightest;
+}
+
+.text-orange-pale  {
+    color: $brand-orange-pale;
+}
+
 .text-success {
     color: $brand-success;
+}
+
+.text-success-light {
+    color: $brand-success-light;
+}
+
+.text-success-lighter {
+    color: $brand-success-lighter;
+}
+
+.text-success-lightest {
+    color: $brand-success-lightest;
+}
+
+.text-success-pale {
+    color: $brand-success-pale;
 }
 
 .text-warning {
@@ -472,18 +532,6 @@ li {
 
 .text-danger {
     color: $brand-danger;
-}
-
-.text-orange {
-    color: $brand-orange;
-}
-
-.text-orange-light {
-    color: $brand-orange-light;
-}
-
-.text-orange-lighter {
-    color: $brand-orange-lighter;
 }
 
 .text-mute {
