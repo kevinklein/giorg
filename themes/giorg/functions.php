@@ -182,8 +182,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 include_once('inc/acf-smart-button/acf-smart-button.php');
 
-// add_action( 'acf/register_fields', 'acf_register_fields' );
-
-// function acf_register_fields() {
-// 	include_once('inc/acf-widget_area/acf-widget_area.php');
-// }
+/**
+ * Remove auto insertion of <p> <br> tags in RTEs
+ */
+function acf_wysiwyg_remove_wpautop() {
+    remove_filter('acf_the_content', 'wpautop' );
+}
+add_action('acf/init', 'acf_wysiwyg_remove_wpautop', 15);
