@@ -226,6 +226,10 @@ body.body-fixed-top {
     align-self: flex-end;
 }
 
+.align-self-center {
+    align-self: center;
+}
+
 .flex-1 { flex: 1 1 auto; }
 .flex-initial { flex: initial; }
 .flex-auto { flex: auto; }
