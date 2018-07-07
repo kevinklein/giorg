@@ -42,20 +42,13 @@
     }
 }
 
-// flex the body so there's a sticky footer
-body {
-    // display: flex;
-    // height: 100%;
-    // min-height: 100vh;
-    // flex-direction: column;
+
+body.body-fixed-top {
+    padding-top: 107px;
 }
 
 .main-content {
-    flex: 1 0 auto;
-}
-
-.flex-none {
-    flex: none;
+    min-height: 500px;
 }
 
 .container,

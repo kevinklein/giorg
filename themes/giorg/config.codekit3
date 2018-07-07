@@ -344,34 +344,6 @@
 		"oAP": "\/inc\/acf-smart-button\/readme.txt",
 		"oF": 0
 		},
-	"\/inc\/acf-widget_area\/acf-widget-area.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/acf-widget_area\/acf-widget-area.php",
-		"oF": 0
-		},
-	"\/inc\/acf-widget_area\/readme.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/acf-widget_area\/readme.txt",
-		"oF": 0
-		},
-	"\/inc\/acf-widget_area\/widget-area-v4.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/acf-widget_area\/widget-area-v4.php",
-		"oF": 0
-		},
-	"\/inc\/acf-widget_area\/widget-area-v5.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/acf-widget_area\/widget-area-v5.php",
-		"oF": 0
-		},
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -929,19 +901,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/components\/_dropdown.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/components\/_dropdown_legacy.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/components\/_dropdown_legacy.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
