@@ -8,8 +8,8 @@
 get_header();
 ?>
 
-	<?php require_once( 'partials/page-title.php' ); ?>
 	<?php require_once( 'partials/breadcrumbs.php' ); ?>
+	<?php require_once( 'partials/page-title.php' ); ?>
 
 	<?php
 		$containerSize = get_field('container_size');
