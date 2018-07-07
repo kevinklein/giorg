@@ -257,9 +257,9 @@ $table-border-color: darken($gray-lighter,5%);
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x: .75rem;
+$btn-padding-x: 1rem;
 $btn-padding-y: .5rem;
-$btn-font-weight: normal;
+$btn-font-weight: 600;
 
 $btn-primary-color: #fff;
 $btn-primary-bg: $brand-primary;
