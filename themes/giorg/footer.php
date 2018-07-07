@@ -8,7 +8,7 @@
 ?>
 
 <div class="position-relative border-bottom">
-	<div class="bg-triangles-gray-lightest">
+	<div class="bg-gray-lightest bg-triangles">
 		<div class="container p-y-md text-center">
 			<span class="logo-footer"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="img-circle" width="50"></span>
 			<div class="display-2 text-300">Advancing gastroenterology, improving patient care</div>
