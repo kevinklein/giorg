@@ -23,9 +23,7 @@ $count = count( get_sub_field( 'flexbox_column_repeater' ) );
 		?>
 		
 			<div class="col <?php if($flexbox_column_css): echo $flexbox_column_css; endif;?>">
-				<div class="col-inner">
-					<?php if($flexbox_column_content): echo $flexbox_column_content; endif; ?>
-				</div>
+				<?php if($flexbox_column_content): echo $flexbox_column_content; endif; ?>
 			</div>
 
 		<?php
