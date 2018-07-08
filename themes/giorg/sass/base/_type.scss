@@ -648,8 +648,8 @@ a.text-inverse:hover {
         margin-left: 5px;
         width: .5em;
         height: .5em;
-        border-top: 2px solid $brand-secondary;
-        border-right: 2px solid $brand-secondary;
+        border-top: 2px solid $brand-success;
+        border-right: 2px solid $brand-success;
         transform: translateX(2px) translateY(-1px) rotate(45deg);
         transition: all .15s;
     }
