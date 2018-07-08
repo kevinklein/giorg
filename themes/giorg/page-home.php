@@ -15,32 +15,30 @@ get_header();
 		$containerSize = get_field('container_size');
 	?>
 
-	<main class="
-		<?php echo $containerSize ?>
-		<?php if ( $containerSize != "none" ) { echo "p-y-lg"; } ?>
-		main-content">
+	<main class="main-content">
 
 		<?php
 
 		// check if the flexible content field has rows of data
-		if( have_rows('acf_page_builder') ):
+		if( have_rows('acf_home') ):
 
 			// loop through the rows of data
-			while ( have_rows('acf_page_builder') ) : the_row();
+			while ( have_rows('acf_home') ) : the_row();
 
-				if( get_row_layout() == 'flexbox_columns' ):
-		
-					// Variables
-					$flexbox_columns_title = get_sub_field('flexbox_columns_title');                      
-		
-				include ('views/acf-pagebuilder-flexbox-columns.php'); 
+				if( get_row_layout() == 'hero_image' ):
 
-				elseif( get_row_layout() == 'flexbox_cards' ):
-		
 					// Variables
-					$flexbox_cards_title = get_sub_field('flexbox_cards_title');                      
-		
-					include ('views/acf-pagebuilder-flexbox-cards.php'); 
+					$hero_image = get_sub_field('hero_image');
+					$hero_size = $hero_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
+					$hero_title = get_sub_field('hero_block_title');
+					$hero_title_size = get_sub_field('hero_block_title_size');
+					$hero_caption = get_sub_field('hero_block_text');
+					$caption_position = get_sub_field('hero_block_caption_position');
+					$hero_display_button = get_sub_field('hero_block_display_cta_button');
+					$hero_button = get_sub_field('hero_block_hero_cta_button');
+					$hero_lightbox = get_sub_field('hero_cta_lightbox');
+				
+					include ('views/acf-home_.php'); 
 
 				elseif( get_row_layout() == 'content_row' ):
 		
@@ -50,7 +48,7 @@ get_header();
 					$content_row_wrap_inner_css_class = get_sub_field('content_row_wrap_inner_css_class');
 					$content_row_html = get_sub_field('content_row_html');                     
 		
-					include ('views/acf-pagebuilder-content-row.php'); 
+					include ('views/acf-home.php');   
 
 				endif;
 

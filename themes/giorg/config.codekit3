@@ -98,6 +98,36 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/chevron-down.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chevron-down.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/chevron-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chevron-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/chevron-up.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chevron-up.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/gastro-girl-square.png": {
 		"ft": 32768,
 		"iS": 0,
@@ -612,6 +642,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page-builder.php",
+		"oF": 0
+		},
+	"\/page-home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-home.php",
 		"oF": 0
 		},
 	"\/page.php": {
