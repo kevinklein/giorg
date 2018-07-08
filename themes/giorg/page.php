@@ -17,20 +17,26 @@ get_header();
 
 	<?php require_once( 'partials/breadcrumbs.php' ); ?>
 	<?php require_once( 'partials/page-title.php' ); ?>
-
-	<?php
-	while ( have_posts() ) :
-		the_post();
 	
-		get_template_part( 'template-parts/content', 'page' );
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-
-	endwhile; // End of the loop.
+	<?php
+		$containerSize = get_field('container_size');
 	?>
+
+	<main class="
+		<?php echo $containerSize ?>
+		<?php if ( $containerSize != "none" ) { echo "p-y-lg"; } ?>
+		main-content">
+
+		<?php
+		while ( have_posts() ) :
+			the_post();
+		
+			get_template_part( 'template-parts/content', 'page' );
+
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- .entry-content -->
 
 <?php
 get_footer();

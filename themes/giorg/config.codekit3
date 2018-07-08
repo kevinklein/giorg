@@ -637,13 +637,6 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
-	"\/page-builder.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/page-builder.php",
-		"oF": 0
-		},
 	"\/page-home.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1970,102 +1963,102 @@
 		"oAP": "\/template-parts\/content.php",
 		"oF": 1
 		},
-	"\/views\/acf-homebuilder-3-mpu.php": {
+	"\/template-parts\/views\/acf-homebuilder-3-mpu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-3-mpu.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-3-mpu.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-4-mpu.php": {
+	"\/template-parts\/views\/acf-homebuilder-4-mpu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-4-mpu.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-4-mpu.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-hero-image.php": {
+	"\/template-parts\/views\/acf-homebuilder-hero-image.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-hero-image.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-hero-image.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-hero-slider.php": {
+	"\/template-parts\/views\/acf-homebuilder-hero-slider.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-hero-slider.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-hero-slider.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-image-text.php": {
+	"\/template-parts\/views\/acf-homebuilder-image-text.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-image-text.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-image-text.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-logo-row.php": {
+	"\/template-parts\/views\/acf-homebuilder-logo-row.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-logo-row.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-logo-row.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-promo-bar.php": {
+	"\/template-parts\/views\/acf-homebuilder-promo-bar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-promo-bar.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-promo-bar.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-strapline-bar.php": {
+	"\/template-parts\/views\/acf-homebuilder-strapline-bar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-strapline-bar.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-strapline-bar.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-testimonial-slider.php": {
+	"\/template-parts\/views\/acf-homebuilder-testimonial-slider.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-testimonial-slider.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-testimonial-slider.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-text-image.php": {
+	"\/template-parts\/views\/acf-homebuilder-text-image.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-text-image.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-text-image.php",
 		"oF": 0
 		},
-	"\/views\/acf-homebuilder-widget-1.php": {
+	"\/template-parts\/views\/acf-homebuilder-widget-1.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-homebuilder-widget-1.php",
+		"oAP": "\/template-parts\/views\/acf-homebuilder-widget-1.php",
 		"oF": 0
 		},
-	"\/views\/acf-pagebuilder-content-row.php": {
+	"\/template-parts\/views\/acf-pagebuilder-content-row.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-pagebuilder-content-row.php",
+		"oAP": "\/template-parts\/views\/acf-pagebuilder-content-row.php",
 		"oF": 0
 		},
-	"\/views\/acf-pagebuilder-flexbox-cards.php": {
+	"\/template-parts\/views\/acf-pagebuilder-flexbox-cards.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-pagebuilder-flexbox-cards.php",
+		"oAP": "\/template-parts\/views\/acf-pagebuilder-flexbox-cards.php",
 		"oF": 0
 		},
-	"\/views\/acf-pagebuilder-flexbox-columns.php": {
+	"\/template-parts\/views\/acf-pagebuilder-flexbox-columns.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/views\/acf-pagebuilder-flexbox-columns.php",
+		"oAP": "\/template-parts\/views\/acf-pagebuilder-flexbox-columns.php",
 		"oF": 0
 		}
 	},
