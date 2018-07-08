@@ -102,7 +102,7 @@
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: -$spacer-y;
+    margin-top: (-$spacer-y * 3);
     padding-bottom: $spacer-y;
     padding-top: $spacer-y;
     @extend .container-extended;
