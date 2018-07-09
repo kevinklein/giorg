@@ -66,8 +66,14 @@ fieldset[disabled] a.btn {
 .btn-primary {
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
+.btn-primary-light {
+    @include button-variant($brand-primary-light, $brand-primary, $brand-primary-light);
+}
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-secondary-light {
+    @include button-variant($brand-secondary-light, $brand-secondary, $brand-secondary-light);
 }
 .btn-white {
     @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
