@@ -9,7 +9,7 @@
   border-color: $border;
 
   $active-background: darken($background, 10%);
-  $active-border: darken($border, 12%);
+  $active-border: darken($border, 10%);
 
   &:focus,
   &.focus,
