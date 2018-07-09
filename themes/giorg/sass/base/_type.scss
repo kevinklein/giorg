@@ -259,6 +259,30 @@ mark,
     }
 }
 
+.blockquote-pull {
+    position: relative;
+    &:before {
+        color: $brand-primary-lighter;
+        content: '“';
+        display: block;
+        font-family: $font-family-serif;
+        font-size: 4.4em;
+        position: absolute;
+        left: -.465em;
+        top: -.375em;
+    }
+    &:after {
+        color: $brand-primary-lighter;
+        content: '”';
+        display: inline-block;
+        font-family: $font-family-serif;
+        font-size: 2.2em;
+        position: absolute;
+        margin-left: 5px;
+        transform: translateY(-.2em);
+    }
+}
+
 cite {
     font-style: normal;
 }
