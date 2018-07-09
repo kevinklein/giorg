@@ -43,9 +43,7 @@ $count = count( get_sub_field( 'flexbox_card_repeater' ) );
 							<div class="img-cover img-cover-flex img-cover-flex-<?php echo $flexbox_card_img_aspect; ?>" style="background-image: url(<?php echo $flexbox_card_img_size; ?>);"></div>
 						</div>
 					<?php endif; ?>
-					<div class="card-block flex-1">
-						<?php if($flexbox_card_content): echo $flexbox_card_content; endif; ?>
-					</div>
+					<?php if($flexbox_card_content): echo '<div class="card-block flex-1">' . $flexbox_card_content. '</div>'; endif; ?>
 					<?php if($flexbox_card_footer): echo '<div class="card-footer">' . $flexbox_card_footer . '</div>'; endif; ?>
 				</div>
 			</div>
