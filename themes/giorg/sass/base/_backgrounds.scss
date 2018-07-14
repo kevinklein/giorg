@@ -86,7 +86,7 @@
     background: $brand-orange-light;
 }
 
-.bg-orange-lighterr {
+.bg-orange-lighter {
     background-color: $brand-orange-lighter;
 }
 
@@ -121,10 +121,18 @@
 .bg-warning {
     background-color: $brand-warning;
 }
+.bg-warning-light { background-color: lighten($brand-warning,12.5%); }
+.bg-warning-lighter { background-color: lighten($brand-warning,20%); }
+.bg-warning-lightest { background-color: lighten($brand-warning,27.5%); }
+.bg-warning-pale { background-color: lighten($brand-warning,32.5%); }
 
 .bg-danger {
     background-color: $brand-danger;
 }
+.bg-danger-light { background-color: lighten($brand-danger,8.5%); }
+.bg-danger-lighter { background-color: lighten($brand-danger,20%); }
+.bg-danger-lightest { background-color: lighten($brand-danger,32.5%); }
+.bg-danger-pale { background-color: lighten($brand-danger,45%); }
 
 .bg-opaque-dark {
     background-color: rgba(#000,.15);
