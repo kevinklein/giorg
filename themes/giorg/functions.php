@@ -142,6 +142,8 @@ function giorg_scripts() {
 
 	wp_enqueue_script( 'giorg-scrollreveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', null, null, true  );
 
+	wp_enqueue_script( 'giorg-jqueryui', get_template_directory_uri() . '/js/jquery-ui.min.js', null, null, true  );
+
 	wp_enqueue_script( 'giorg-tether', get_template_directory_uri() . '/js/tether.min.js', null, null, true  );
 
 	wp_enqueue_script( 'giorg-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', null, null, true  );
@@ -174,6 +176,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Patients (aka Patients > GI Health Centers) Functions
+ */
+require get_template_directory() . '/inc/patients-functions.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -189,3 +196,4 @@ function acf_wysiwyg_remove_wpautop() {
     remove_filter('acf_the_content', 'wpautop' );
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop', 15);
+

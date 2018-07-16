@@ -127,6 +127,13 @@
         }).click(function(e) {
             e.preventDefault();
         });
+
+        //legacy tabs for GI Health Centers
+        jQuery('#tabs').tabs({
+            select: function(event,ui){
+                window.location.hash = ui.tab.hash;
+            }	
+        });
         
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();

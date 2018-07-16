@@ -86,7 +86,8 @@
   }
 
   .nav-link.active,
-  .current-menu-item a {
+  .current-menu-item a,
+  .ui-tabs-selected a {
       @include plain-hover-focus {
       color: $brand-primary;
       background-color: #fff;
@@ -94,12 +95,8 @@
       position: relative;
     }
   }
-  .nav-link.active.nav-link-orange,
   .current-menu-item.active a {
       color: $brand-orange;
-  }
-  .nav-link.active.nav-link-blue {
-      color: $brand-info;
   }
 }
 
@@ -121,11 +118,21 @@
     }
 }
 
+// legacy jquery ui tabs
+.ui-tabs-hide {
+	display: none;
+}
+
+//default tab panes
+.tab-pane,
+.ui-tabs-panel { // legacy jquery ui tabs
+    padding-top: 2.25em;
+}
+
 // Hide tabbable panes to start, show them when `.active`
 .tab-content {
   > .tab-pane {
     display: none;
-    padding-top: 2.25em;
   }
   > .active {
     display: block;

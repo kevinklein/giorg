@@ -11,8 +11,6 @@ if(strlen($post->topic_redirect) > 0 && $post->topic_redirect != "xx" && is_nume
  */
 
 get_header(); ?>
-
-	<div class="group">
 	
 		<div id="main" role="main">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -63,22 +61,22 @@ get_header(); ?>
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e6d5ca75f9e63b2"></script>
 <!-- AddThis Button END -->
 			</h1>
-			<div id="tabs">
-				<ul class="tabs">
+			<div class="tab-content p-b-lg" id="tabs">
+				<ul class="nav nav-tabs">
 					<?php if($post->includemain == "includemain"){ ?>
-						<li><a href="#tabs1">Main</a></li>
+						<li class="nav-item"><a role="tab" class="nav-link text-normal" href="#tabs1">Main</a></li>
 					<?php } ?>
 					<?php if($post->includebasics == "includebasics"){ ?>
-						<li><a href="#tabs2">Basics</a></li>
+						<li class="nav-item"><a role="tab" href="#tabs2" class="nav-link text-normal">Basics</a></li>
 					<?php } ?>
 					<?php if($post->includefaqs == "includefaqs"){ ?>
-						<li><a href="#tabs3">FAQs</a></li>
+						<li class="nav-item"><a role="tab" href="#tabs3" class="nav-link text-normal">FAQs</a></li>
 					<?php } ?>
 					<?php if($post->includepodcastsvideos == "includepodcastsvideos"){ ?>
-						<li><a href="#tabs4">Podcasts/Videos</a></li>
+						<li class="nav-item"><a role="tab" href="#tabs4" class="nav-link text-normal">Podcasts/Videos</a></li>
 					<?php } ?>
 					<?php if($post->includeresources == "includeresources"){ ?>
-						<li><a href="#tabs5">Resources</a></li>
+						<li class="nav-item"><a role="tab" href="#tabs5" class="nav-link text-normal">Resources</a></li>
 					<?php } ?>
 				</ul>
 				<?php if($post->includemain == "includemain"){ ?>
@@ -317,16 +315,10 @@ get_header(); ?>
 				<?php } ?>
 					<span id="dht_section"></span>
 			</div>			
-
+</div></div>
 
 
 <?php endwhile; // end of the loop. ?>
-
-		</div>
-	
-	<?php get_sidebar(); ?>
-	
-	</div>
 
 </div>
 <?php get_footer(); ?>

@@ -1,4 +1,6 @@
-.row {
+.row,
+.split //legacy columns 
+{
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
@@ -23,8 +25,11 @@
 
 /******************* WYSI FLEXBOX REPEATER LAYOUT *******************/
  
-.row{
-    .col{
+.row,
+ .split //legacy columns 
+ {
+    > div,
+    .col { 
         box-sizing: border-box;
         flex: 0 0 auto;
         padding-right: ($grid-gutter-width / 2);
@@ -40,17 +45,27 @@
 }
  
 /* Use number of columns to make each one equal width, and for responsive styling */
+//legacy 
+.split > div {
+    flex-basis:50%;
+}
+
+.split.three > div {
+    flex-basis:33.33%;
+}
+
 .col-count-1{
     .col{
       flex-basis:100%;
     }
 }
-.col-count-2{
+
+.col-count-2 {
     .col{
       flex-basis:50%;
     }
 }
-.col-count-3{
+.col-count-3 {
     .col{
       flex-basis:33.33%;
     }
