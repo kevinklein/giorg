@@ -15,18 +15,6 @@
 get_header();
 ?>
 
-	<?php require_once( 'partials/breadcrumbs.php' ); ?>
-	<?php require_once( 'partials/page-title.php' ); ?>
-	
-	<?php
-		$containerSize = get_field('container_size');
-	?>
-
-	<main class="
-		<?php echo $containerSize ?>
-		<?php if ( $containerSize != "none" ) { echo "p-y-lg"; } ?>
-		main-content">
-
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -39,4 +27,5 @@ get_header();
 	</main><!-- .entry-content -->
 
 <?php
-get_footer();
+get_footer(); 
+?>

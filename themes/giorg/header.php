@@ -143,3 +143,17 @@
     </div>
 </div>
 
+<?php require_once( 'partials/breadcrumbs.php' ); ?>
+<?php require_once( 'partials/page-title.php' ); ?>
+
+<?php
+    $containerSize = get_field('container_size');
+    if (empty($containerSize)) :
+        $containerSize = "container";
+    endif; 
+?>
+
+<main class="
+    <?php echo $containerSize ?>
+    <?php if ( $containerSize != "none" ) { echo "p-y-lg"; } ?>
+    main-content">

@@ -1901,22 +1901,19 @@
 		"oAP": "\/sidebar.php",
 		"oF": 1
 		},
+	"\/single-topics.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/single-topics.php",
+		"oF": 0
+		},
 	"\/single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/single.php",
 		"oF": 1
-		},
-	"\/style (KEVIN’s MacBook Pro (2)'s conflicted copy 2018-07-03).css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/style (KEVIN’s MacBook Pro (2)'s conflicted copy 2018-07-03)-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/style.css": {
 		"aP": 1,
