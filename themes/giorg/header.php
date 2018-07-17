@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="item-flex-addon">
-                    <nav class="item-flex position-relative text-lg">
+                    <nav class="item-flex position-relative text-xl">
                         <?php
                         wp_nav_menu( array(
                             'theme_location' => 'menu-2',
