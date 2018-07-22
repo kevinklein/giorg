@@ -158,6 +158,10 @@
     background: linear-gradient(45deg, $brand-primary, $brand-secondary);
 }
 
+.bg-gradient-v-white-primary-lightest {
+    background: linear-gradient(180deg, #fff, $brand-primary-lightest);
+}
+
 .bg-cover {
     background-size: cover;
 }
