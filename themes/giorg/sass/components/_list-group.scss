@@ -80,18 +80,6 @@ button.list-group-item {
     }
 }
 
-.list-group-link {
-    color: $list-group-link-color;
-    &:hover {
-        color: #000;
-        text-decoration: none;
-    }
-    .active &,
-    &.active {
-        color: $list-group-active-text-color;
-    }
-}
-
 .list-group-item {
     // Disabled state
     &.disabled {
