@@ -20,12 +20,12 @@ $count = count( get_sub_field( 'flexbox_card_repeater' ) );
 		$flexbox_card_content = get_sub_field('flexbox_card_content');
 		$flexbox_card_bg = get_sub_field('flexbox_card_bg');
 		$flexbox_card_class = get_sub_field('flexbox_card_css_class');
-		$flexbox_card_img = get_sub_field('flexbox_card_img');
 		$flexbox_card_title = get_sub_field('flexbox_card_title');
 		$flexbox_card_title_class = get_sub_field('flexbox_card_title_class');
 		$flexbox_card_footer = get_sub_field('flexbox_card_footer');
 		$flexbox_card_img = get_sub_field('flexbox_card_img');
 		$flexbox_card_img_size = $flexbox_card_img['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
+		$flexbox_card_img_link = get_sub_field('flexbox_card_img_link');
 		$flexbox_card_img_aspect = get_sub_field('flexbox_card_img_aspect');
 		?>
 		
@@ -40,7 +40,13 @@ $count = count( get_sub_field( 'flexbox_card_repeater' ) );
 					<?php endif; ?>
 					<?php if($flexbox_card_img): ?>
 						<div>
+							<?php if( $flexbox_card_img_link ): ?>
+								<a href="<?php echo $flexbox_card_img_link['url']; ?>" target="<?php echo $flexbox_card_img_link['target']; ?>">
+							<?php endif; ?>
 							<div class="img-cover img-cover-flex img-cover-flex-<?php echo $flexbox_card_img_aspect; ?>" style="background-image: url(<?php echo $flexbox_card_img_size; ?>);"></div>
+							<?php if( $flexbox_card_img_link ): ?>
+								</a>
+							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 					<?php if($flexbox_card_content): echo '<div class="card-block flex-1">' . $flexbox_card_content. '</div>'; endif; ?>
