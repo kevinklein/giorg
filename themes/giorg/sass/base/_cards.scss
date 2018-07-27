@@ -529,3 +529,11 @@ a.card-block {
 .card-hover:hover .card-backface-icon {
     animation-name: bounceIn;
 }
+
+.card-header-backdrop {
+    height: 100px;
+}
+
+.card-header-backdrop-img {
+    margin-top: -75px;
+}
