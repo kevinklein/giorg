@@ -679,13 +679,13 @@ a.text-inverse:hover {
 
 .text-underline,
 .text-hover-underline:hover,
-.main-content a {
+.main-content a:not([class]) {
     border-bottom: 1px solid currentColor;
     text-decoration: none;
 }
 
 .text-underline,
-.main-content a {
+.main-content a:not([class]) {
     &:hover,
     &:focus {
         border: none;
