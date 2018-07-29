@@ -1,4 +1,4 @@
-<?php if($flexbox_cards_title): echo '<h3 class="header-full"><span>' . $flexbox_cards_title . '</span></h3>'; endif; ?>
+<?php if($flexbox_cards_title): echo '<h2 class="header-full"><span>' . $flexbox_cards_title . '</span></h2>'; endif; ?>
 
 <?php 
 $flexbox_cards_wrap_css_class = get_sub_field('flexbox_cards_wrap_css_class');
