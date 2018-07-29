@@ -661,8 +661,41 @@ a.text-inverse:hover {
 //     }
 // }
 
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-no-underline {
+    border-bottom: 1px solid transparent;
+    text-decoration: none !important;
+    &:hover .link-block-link {
+        text-decoration: none !important;
+    }
+}
+
+.text-hover-underline {
+    border-bottom: 1px solid transparent;
+}
+
+.text-underline,
+.text-hover-underline:hover,
+.main-content a {
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+}
+
+.text-underline,
+.main-content a {
+    &:hover,
+    &:focus {
+        border: none;
+        text-decoration: none;
+    }
+}
+
 // generally used for link type text
 .text-more {
+    border: none;
     font-weight: 600;
     text-decoration: none !important;
     white-space: nowrap;
@@ -685,40 +718,10 @@ a.text-inverse:hover {
     }
 }
 
-.text-nowrap {
-    white-space: nowrap;
-}
-
-.text-no-underline {
-    border-bottom: 1px solid transparent;
-    text-decoration: none !important;
-    &:hover .link-block-link {
-        text-decoration: none !important;
-    }
-}
-
-.text-hover-underline,
-.text-no-underline {
-    border-bottom: 1px solid transparent;
-}
-
-.text-underline,
-.text-hover-underline:hover {
-    border-bottom: 1px solid currentColor;
-    text-decoration: none;
-}
-
-.text-underline {
-    &:hover,
-    &:focus {
-        border: none;
-        text-decoration: none;
-    }
-}
-
 /* for links around blocks */
 .link-block {
     color: $text-color;
+    text-decoration: none;
     .link-block-link {
         color: $link-color;
         &:hover {
