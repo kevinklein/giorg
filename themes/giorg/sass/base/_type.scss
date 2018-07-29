@@ -665,14 +665,6 @@ a.text-inverse:hover {
     white-space: nowrap;
 }
 
-.text-no-underline {
-    border-bottom: 1px solid transparent;
-    text-decoration: none !important;
-    &:hover .link-block-link {
-        text-decoration: none !important;
-    }
-}
-
 .text-hover-underline {
     border-bottom: 1px solid transparent;
 }
@@ -690,6 +682,20 @@ a.text-inverse:hover {
     &:focus {
         border: none;
         text-decoration: none;
+    }
+}
+
+.main-content h2 a,
+.main-content h3 a,
+.main-content h4 a,
+.text-no-underline {
+    border-bottom: 1px solid transparent;
+    text-decoration: none !important;
+    &:hover {
+        border-bottom: 1px solid currentColor;
+    }
+    &:hover .link-block-link {
+        text-decoration: none !important;
     }
 }
 
