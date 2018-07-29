@@ -689,7 +689,7 @@ a.text-inverse:hover {
 .main-content h3 a,
 .main-content h4 a,
 .text-no-underline {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent !important;
     text-decoration: none !important;
     &:hover {
         border-bottom: 1px solid currentColor;
