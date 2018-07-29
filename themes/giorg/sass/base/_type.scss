@@ -716,41 +716,6 @@ a.text-inverse:hover {
     }
 }
 
-.link-hover-cta {
-    border-bottom: 1px solid darken($brand-info-light,5%);
-    display: inline-block;
-    padding: 2px 4px 2px 4px;
-    position: relative;
-    transition: 0.3s ease-in;
-    text-decoration: none;
-    span {
-        position: relative;
-        z-index: 2;
-    }
-    &:after {
-        background: $brand-info-light;
-        content: '';
-        display: block;
-        position: absolute;
-    	height: 100%;
-    	right: 0;
-    	top: 0;
-    	transform: scaleX(0);
-    	transform-origin: 0 0;
-    	transition: transform 0.25s;
-    	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    	z-index: 1;
-    	width: 100%;
-    }
-    &:hover {
-        //box-shadow: inset -2px -100px 0px -2px darken($brand-info-light,2.5%);
-        text-decoration: none;
-        &:after {
-            transform: scaleX(1);
-        }
-    }
-}
-
 /* for links around blocks */
 .link-block {
     color: $text-color;
