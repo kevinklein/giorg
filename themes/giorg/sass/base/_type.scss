@@ -8,7 +8,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: $headings-line-height;
-    font-weight: $headings-font-weight;
     margin-bottom: $headings-margin-bottom;
 }
 
@@ -16,12 +15,12 @@ h2, h3, h4, h5, h6 {
     //font-family: $headings-font-family;
 }
 
-h1, .h1 { font-size: $font-size-h1; }
+h1, .h1 { font-size: $font-size-h1; font-weight: 400; }
 h2, .h2 { font-size: $font-size-h2; font-weight: 400; }
-h3, .h3 { font-size: $font-size-h3; }
-h4, .h4 { font-size: $font-size-h4; }
-h5, .h5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
+h3, .h3 { font-size: $font-size-h3; font-weight: $headings-font-weight; }
+h4, .h4 { font-size: $font-size-h4; font-weight: $headings-font-weight; }
+h5, .h5 { font-size: $font-size-h5; font-weight: $headings-font-weight; }
+h6, .h6 { font-size: $font-size-h6; font-weight: $headings-font-weight; }
 
 @include media-breakpoint-down(sm) {
     h1, .h1 { font-size: ($font-size-h1 * .8); }
