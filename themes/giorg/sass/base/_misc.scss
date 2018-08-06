@@ -357,7 +357,8 @@ button.circle-outline-xl { line-height: 4.75rem; }
     }
 }
 
-.faq-answer {
+.faq-answer,
+.toggled-item {
     p:last-child {
         margin-bottom: 0;
     }

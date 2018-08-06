@@ -29,7 +29,8 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $headings-font-weight; }
     h4, .h4 { font-size: ($font-size-h4 * .8); }
 }
 
-.header-full {
+.header-full,
+.header-extended {
     font-size: $font-size-h2;
     font-weight: 400;
     margin-top: 4rem;
@@ -146,6 +147,15 @@ hr {
     margin-bottom: $spacer-y;
     border: 0;
     border-top: $hr-border-width solid $hr-border-color;
+}
+
+.hr-extended {
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
 }
 
 .hr-stub {
