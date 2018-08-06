@@ -150,6 +150,8 @@ hr {
 }
 
 .hr-extended {
+    margin-bottom: ($spacer-y * 3);
+    margin-top: ($spacer-y * 3);
     margin-left: -50vw;
     margin-right: -50vw;
     position: relative;
