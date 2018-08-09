@@ -7,6 +7,8 @@
 
 ?>
 
+</main><!-- .entry-content -->
+
 <div class="position-relative border-bottom">
 	<div class="bg-gray-lightest bg-triangles">
 		<div class="container p-y-md text-center">

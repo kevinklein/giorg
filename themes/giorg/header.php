@@ -153,7 +153,7 @@
     endif; 
 ?>
 
-<main class="
+<main id="main" class="
     <?php echo $containerSize ?>
     <?php if ( $containerSize != "none" ) { echo "p-y-lg"; } ?>
     main-content">

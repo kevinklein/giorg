@@ -1,9 +1,9 @@
 (function ($) {
 
-    var headerOffset = $('#header-main').outerHeight();
-    var heroOffset = $('.hero').outerHeight();
-    var hudOffset = $('#header-hud').outerHeight();
-    var headerHeroOffset = headerOffset + heroOffset;
+    var headerOffset = $( '#header-main' ).height();
+    // var heroOffset = $('.hero').outerHeight();
+    // var hudOffset = $('#header-hud').outerHeight();
+    // var headerHeroOffset = headerOffset + heroOffset;
 
     $(document).ready(function() {
 
@@ -26,7 +26,7 @@
 
         var scenes = [
             fixHeader,
-            fixSidebar,
+            fixSidebar
             //fixLocalnav
         ];
 
