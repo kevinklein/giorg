@@ -49,6 +49,10 @@
     z-index: 100;
 }
 
+.logged-in.admin-bar #header-main {
+    top: 31px;
+}
+
 .logo {
     @include media-breakpoint-down(md) {
         margin-bottom: 10px;
