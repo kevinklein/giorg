@@ -23,7 +23,21 @@
     }
 }
 
-.body-fixed-top #header-main {
+// .body-fixed-top #header-main {
+//     border: none;
+//     background: #fff;
+//     box-shadow: 0 1px 5px rgba(#000,.1);
+//     left: 0;
+//     //height: $fixed-top;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     z-index: 100;
+//     transform: translate3d(0, -100%, 0);
+//     animation: slideInDown .15s ease forwards;
+// }
+
+#header-main {
     border: none;
     background: #fff;
     box-shadow: 0 1px 5px rgba(#000,.1);
@@ -33,8 +47,6 @@
     top: 0;
     right: 0;
     z-index: 100;
-    transform: translate3d(0, -100%, 0);
-    animation: slideInDown .15s ease forwards;
 }
 
 .logo {
