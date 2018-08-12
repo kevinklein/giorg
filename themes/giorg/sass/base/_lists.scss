@@ -6,10 +6,16 @@ ul, ol {
         margin-bottom: 1rem;
         margin-top: .55rem;
     }
+    li {
+        margin-bottom: 0;
+    }
+    li + li {
+        margin-top: .5rem;
+    }
 }
 
 ol {
-    padding-left: 2.05rem;
+    padding-left: 1.25rem;
 }
 
 li ul,

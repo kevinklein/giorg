@@ -62,10 +62,11 @@
             $(target).slideToggle('fast');    
         });
         
-        $('.toggle-target-next').next().hide();
+        $('.toggle-target-next,.faqquestion').next().hide();
         
-        $('.toggle-target-next').click(function() {
+        $('.toggle-target-next,.faqquestion').click(function() {
             $(this).next().slideToggle('fast');
+            event.preventDefault();
         });
         
         $('.toggle-is-toggled').click(function() {
@@ -127,6 +128,23 @@
         }).click(function(e) {
             e.preventDefault();
         });
+
+        if(document.getElementById("cycle-main")){
+            jQuery('#cycle-main div').hide();
+            jQuery('#cycle-main img').each(function(){
+                var thissrc = jQuery(this).attr("src"), img = new Image();
+                img.src = thissrc;
+            });
+            var startcycle = function(){
+                jQuery('#cycle-main div').show();
+                jQuery('#cycle-main').after('<div id="cycle-nav">').cycle({
+                    fx:      'fade',
+                    timeout:  5000,
+                    pager:   '#cycle-nav'
+                });
+            }
+            setTimeout(startcycle,500)
+        }
 
         //legacy tabs for GI Health Centers
         jQuery('#tabs').tabs({

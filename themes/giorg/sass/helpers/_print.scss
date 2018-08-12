@@ -58,13 +58,15 @@
     .label {
         border: 1px solid #000;
     }
-    .table {
+    .table,
+    table.border {
         border-collapse: collapse !important;
         td, th {
             background-color: #fff !important;
         }
     }
-    .table-bordered {
+    .table-bordered,
+    table.border {
         th, td {
             border: 1px solid #ddd !important;
         }

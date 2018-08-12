@@ -336,6 +336,7 @@ button.circle-outline-xl { line-height: 4.75rem; }
 .faq-item,
 .toggle-item {
     cursor: pointer;
+    list-style: none;
     padding-left: 20px;
     position: relative;
     &::after {
@@ -358,8 +359,15 @@ button.circle-outline-xl { line-height: 4.75rem; }
 }
 
 .faq-answer,
+.faqanswer,
 .toggled-item {
     p:last-child {
         margin-bottom: 0;
     }
+}
+
+.faqanswer {
+    background: $brand-secondary-lightest;
+    margin-top: 1rem;
+    padding: 1rem;
 }

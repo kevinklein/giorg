@@ -55,8 +55,10 @@
 
 	?>
 
+	<!-- MAINCOLUMNBEGIN -->
 	<?php
 		the_content();
 	?>
+	<!-- MAINCOLUMNEND -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

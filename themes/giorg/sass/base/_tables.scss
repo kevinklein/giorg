@@ -49,12 +49,24 @@ table {
     }
 }
 
-.table-bordered {
+.table-bordered,
+table.border {
     border: 1px solid $table-border-color;
     th,
     td {
         border: 1px solid $table-border-color;
     }
+}
+
+table.border td p:last-child,
+table.border ul,
+table.border ol {
+    margin-bottom: 0;
+}
+
+table.border ul,
+table.border ol {
+    margin-left: .6rem;
 }
 
 .table-striped {
