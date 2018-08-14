@@ -476,11 +476,11 @@ $state-success-bg: #e6f9e6;
 $state-success-border: darken($state-success-bg, 12%);
 
 $state-info-text: rgba(#000,.75);
-$state-info-bg: $brand-info-light;
+$state-info-bg: $brand-info-lightest;
 $state-info-border: darken($state-info-bg, 9%);
 
 $state-primary-text: rgba(#000,.75);
-$state-primary-bg: $brand-info-light;
+$state-primary-bg: $brand-primary-pale;
 $state-primary-border: darken($state-primary-bg, 7%);
 
 $state-warning-text: rgba(#000,.75);
