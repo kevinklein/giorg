@@ -81,10 +81,10 @@ li ol {
 
 // list-items. these are simply to add a bit of decorative conceit and control placement of icons
 .list-items {
-    border-top: 1px solid $border-color;
+    //border-top: 1px solid $border-color;
     margin: 0 0 ($spacer-y * 1.5);
     list-style: none;
-    padding-left: 0;
+    padding-left: $spacer-x / 2;
 }
 
 .list-items li + li {
@@ -97,8 +97,8 @@ li ol {
     margin: 0;
     padding-bottom: .6rem;
     padding-top: .6rem;
-    &.list-item-shaded {
-        background-color: $table-bg-accent;
+    &.last-child {
+        border: none;
     }
 }
 
