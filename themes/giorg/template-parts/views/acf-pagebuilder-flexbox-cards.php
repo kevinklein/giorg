@@ -1,5 +1,3 @@
-<?php if($flexbox_cards_title): echo '<h2 class="header-full"><span>' . $flexbox_cards_title . '</span></h2>'; endif; ?>
-
 <?php 
 $flexbox_cards_wrap_css_class = get_sub_field('flexbox_cards_wrap_css_class');
 $flexbox_cards_wrap_inner_css_class = get_sub_field('flexbox_cards_wrap_inner_css_class');
@@ -7,6 +5,8 @@ $count = count( get_sub_field( 'flexbox_card_repeater' ) );
 
 ?>
 <section class="row-container <?php if($flexbox_cards_wrap_css_class): echo $flexbox_cards_wrap_css_class; endif;?>">
+
+	<?php if($flexbox_cards_title): echo '<h2 class="header-full"><span>' . $flexbox_cards_title . '</span></h2>'; endif; ?>
 
 	<div class="<?php if($flexbox_cards_wrap_inner_css_class): echo $flexbox_cards_wrap_inner_css_class; endif;?>">
 
