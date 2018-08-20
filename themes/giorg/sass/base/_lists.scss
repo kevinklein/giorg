@@ -106,12 +106,6 @@ li ol {
     }
 }
 
-.list-items-sm li,
-.list-items-sm .list-item {
-    padding-bottom: .3rem;
-    padding-top: .3rem;
-}
-
 .list-items-card {
     margin-bottom: 0;
 }
@@ -129,15 +123,6 @@ li ol {
     padding-top: .7rem;
     &:nth-last-of-type(1) {
         border: none;
-    }
-}
-
-.has-list-items-card {
-    .card-block {
-        padding: 0;
-    }
-    .list-items {
-        @extend .list-items-card;
     }
 }
 
