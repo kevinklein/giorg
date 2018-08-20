@@ -88,18 +88,15 @@ li ol {
 }
 
 .list-items li + li {
+    border-top: 1px solid $border-color;
     margin: 0;
 }
 
 .list-items li,
 .list-item {
-    border-bottom: 1px solid $border-color;
     margin: 0;
     padding-bottom: .6rem;
     padding-top: .6rem;
-    &.last-child {
-        border: none;
-    }
 }
 
 .text-inverse {
