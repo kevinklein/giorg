@@ -85,6 +85,9 @@ li ol {
     margin: 0 0 ($spacer-y * 1.5);
     list-style: none;
     padding-left: $spacer-x / 2;
+    a {
+        text-decoration: none;
+    }
 }
 
 .list-items li + li {

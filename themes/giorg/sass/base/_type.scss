@@ -683,9 +683,6 @@ a.text-inverse:hover {
 .main-content a:not([class]) {
     border-bottom: 1px solid currentColor;
     text-decoration: none;
-    img {
-        text-decoration: none !important;
-    }
 }
 
 .text-underline,
