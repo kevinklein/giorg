@@ -87,11 +87,6 @@ li ol {
     padding-left: $spacer-x / 2;
 }
 
-.main-content .list-items a { // specifity override for sins of the father
-    border: none;
-    text-decoration: none;
-}
-
 .list-items li + li {
     border-top: 1px solid $border-color;
     margin: 0;
