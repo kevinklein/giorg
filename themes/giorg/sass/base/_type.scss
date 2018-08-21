@@ -2,6 +2,15 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
+
+//
+// Give anchors in the body a bit more default discoverability without requiring authors to specify a custom class. put up here so it can be overriden more easily
+//
+.main-content a:not([class]) {
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+}
+
 //
 // Headings
 //
@@ -679,14 +688,12 @@ a.text-inverse:hover {
 }
 
 .text-underline,
-.text-hover-underline:hover,
-.main-content a:not([class]) {
+.text-hover-underline:hover {
     border-bottom: 1px solid currentColor;
     text-decoration: none;
 }
 
-.text-underline,
-.main-content a:not([class]) {
+.text-underline {
     &:hover,
     &:focus {
         border: none;
