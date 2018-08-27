@@ -135,7 +135,8 @@ li ol {
 }
 
 .list-striped {
-    > li {
+    > li,
+    > li + li {
         border: none;
     }
     > li:nth-of-type(odd) {
