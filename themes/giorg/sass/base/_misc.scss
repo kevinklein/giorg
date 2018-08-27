@@ -361,6 +361,7 @@ button.circle-outline-xl { line-height: 4.75rem; }
 .faq-answer,
 .faqanswer,
 .toggled-item {
+    ul:last-child,
     p:last-child {
         margin-bottom: 0;
     }
@@ -370,4 +371,9 @@ button.circle-outline-xl { line-height: 4.75rem; }
     background: $brand-secondary-lightest;
     margin-top: 1rem;
     padding: 1rem;
+}
+
+.question-of-the-week {
+    background: #03609c url(img/bg-question.png) no-repeat 100% 0;
+    padding: 50px 55px 40px;
 }
