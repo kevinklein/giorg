@@ -17,7 +17,7 @@ if(!function_exists( 'get_health_centers_for_menu' )){
 		$healthCenters->query($args);
 		while ($healthCenters->have_posts()) : $healthCenters->the_post();
 ?>
-		<li<?php if(is_single(get_the_ID())){ echo ' class="current_page_item"';}?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+		<a class="list-group-item<?php if(is_single(get_the_ID())){ echo ' active current_page_item';}?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 <?php
 		endwhile;
 		wp_reset_query();
@@ -52,7 +52,7 @@ if(!function_exists( 'get_digestive_health_topics_for_menu' )){
 		$healthTopics->query($args);
 		while ($healthTopics->have_posts()) : $healthTopics->the_post();
 ?>
-		<li<?php if(is_single(get_the_ID())){ echo ' class="current_page_item"';}?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+		<a class="list-group-item<?php if(is_single(get_the_ID())){ echo ' active current_page_item';}?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 <?php
 		endwhile;
 		wp_reset_query();
@@ -86,7 +86,8 @@ if(!function_exists( 'get_giprocedures_for_menu' )){
 		$giprocedures->query($args);
 		while ($giprocedures->have_posts()) : $giprocedures->the_post();
 ?>
-		<li<?php if(is_single(get_the_ID())){ echo ' class="current_page_item"';}?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+		<a class="list-group-item<?php if(is_single(get_the_ID())){ echo ' active current_page_item';}?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 <?php
 		endwhile;
 		wp_reset_query();

@@ -1,28 +1,18 @@
+<div class="list-group m-b-md">
+	<div class="list-group-item"><b>GI Health Centers</b></div>
+	<?php get_health_centers_for_menu(); ?>
+</div>
+<div class="list-group m-b-md">
+	<div class="list-group-item"><b>Digestive Health Topics</b></div>
+	<?php get_digestive_health_topics_for_menu(); ?>
+	<a href="/gi-health-and-disease/" class="list-group-item text-sm">See All Topics (A-Z)</a>
+</div>
+<div class="list-group m-b-md">
+	<div class="list-group-item"><b>GI Procedures</b></div>
+	<?php get_giprocedures_for_menu(); ?>
+	<a href="/gi-health-and-disease/#tabs6" class="list-group-item text-sm">See All Procedures (A-Z)</a>
+</div>
 
-	<div id="secondary">
-		<div id="secondary-inner">
-			<div>
-				<h4>GI Health Centers</h4>
-				<ul class="menu">
-					<?php get_health_centers_for_menu(); ?>
-				</ul>
-			</div>
-			<div>
-				<h4>Digestive Health Topics</h4>
-				<ul class="menu">
-					<?php get_digestive_health_topics_for_menu(); ?>
-					<li><a href="/gi-health-and-disease/" class="all">See All Topics (A-Z)</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4>GI Procedures</h4>
-				<ul class="menu">
-					<?php get_giprocedures_for_menu(); ?>
-					<li><a href="/gi-health-and-disease/#tabs6" class="all">See All Procedures (A-Z)</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<?php if(!is_home()){ ?>
 	<div class="find stomach">
 	<a href="/find-a-gastroenterologist/" class="showhide">Find a Gastroenterologist</a>
