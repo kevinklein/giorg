@@ -105,6 +105,12 @@ get_header(); ?>
 }
 </style>
 
+<div class="row">
+	<div class="col-md-2 col-xs-12">
+		<?php get_sidebar( 'patients' ); ?>
+	</div>
+	<div class="col-md-10 col-xs-12 position-relative">
+
 <div style="position:absolute; right: 0; transform: translateY(-95px)" class="p-r">
 	<!-- AddThis Button BEGIN -->
 	<div class="addthis_toolbox addthis_default_style ">
@@ -415,5 +421,6 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
+	</div>
 </div>
 <?php get_footer(); ?>
