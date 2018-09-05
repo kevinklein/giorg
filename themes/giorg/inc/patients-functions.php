@@ -1,3 +1,4 @@
+<?php
 if(!function_exists( 'get_health_centers_for_menu' )){
 	function get_health_centers_for_menu(){
 		$args = array(
@@ -556,3 +557,5 @@ if(!function_exists( 'get_recent_acg_patients_news' )){
 		wp_reset_query();
 	}
 }
+
+?>
