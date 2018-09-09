@@ -19,8 +19,16 @@ get_header();
 			<?php
 			while ( have_posts() ) :
 				the_post();
+
+				if ( is_page( 'gi-health-and-disease') ) :
+
+				get_template_part( 'template-parts/content-gi-health-and-disease', 'page' );
+
+				else :
 			
 				get_template_part( 'template-parts/content', 'page' );
+
+				endif;
 
 			endwhile; // End of the loop.
 			?>
