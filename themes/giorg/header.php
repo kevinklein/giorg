@@ -33,7 +33,8 @@
                     'menu_id' => 'nav-top',
                     'menu_class' => 'nav-top',
                     'container_class' => '',
-                    'container' => 'ul'
+                    'container' => 'ul',
+                    'depth'=> 1
                 ) );
                 ?>
             </nav>
@@ -61,7 +62,8 @@
                             'menu_id' => 'nav-ancillary',
                             'menu_class' => 'list-inline nav-ancillary',
                             'container_class' => '',
-                            'container' => 'ul'
+                            'container' => 'ul',
+                            'depth'=> 1
                         ) );
                         ?>
                         <a href="http://acgmeetings.gi.org" class="m-l-md" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/acg2018-philly-logo-header.svg" width="110"></a>
@@ -82,7 +84,8 @@
 				'menu_id' => 'nav-primary',
 				'menu_class' => 'nav-primary hidden-sm-down item-flex-main main-nav',
 				'container_class' => 'menu-container',
-				'container' => 'ul'
+				'container' => 'ul',
+                'depth'=> 2
 			) );
 			?>
 

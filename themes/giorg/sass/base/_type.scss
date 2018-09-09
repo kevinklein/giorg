@@ -689,7 +689,7 @@ a.text-inverse:hover {
 .main-content a:not([class]) {
     &:hover,
     &:focus {
-        border: none;
+        border-bottom: none;
         text-decoration: none;
     }
 }

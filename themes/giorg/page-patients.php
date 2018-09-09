@@ -9,6 +9,8 @@
 get_header();
 ?>
 
+	<?php get_sidebar( 'patients-before' ); ?>
+
 	<div class="row">
 		<div class="col-md-2 col-xs-12">
 			<?php get_sidebar( 'patients' ); ?>
