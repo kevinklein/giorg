@@ -59,6 +59,11 @@ if ( ! function_exists( 'giorg_setup' ) ) :
 			'menu-3' => esc_html__( 'Top', 'giorg' ),
 		) );
 
+		//ancillary nav in header
+		register_nav_menus( array(
+			'menu-4' => esc_html__( 'Patients', 'giorg' ),
+		) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
