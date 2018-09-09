@@ -39,18 +39,13 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
  *
  */
 
-get_header(); ?>
+?>
 
-	<div class="group">
-	
-		<div id="main" role="main">
 
-				<h1 class="page-title">Find a Liver Expert</h1>
-
-      <p>As a special service to patients, the College is pleased to provide a locator tool for liver disease experts in the United States.  Within the field of gastroenterology, some GI specialists receive extra training in liver disease or have a special clinical interest in caring for liver disease patients.  This searchable database includes ACG member physicians who have expressed an interest in liver disease.  The College makes no guarantee as to the scope of practice for any of its members based on their reported interests, and while we have aimed to include the most accurate and up-to-date information, ACG cannot certify that all names in the locator are taking new patients or liver patients.</p>
-      <p>Also available, ACG GI Physician Locator, <a href="/find-a-gastroenterologist/">click here</a> to search all ACG Members, Fellows (FACG) and Masters (MACG)</p>
-            <form action="/find-a-liver-expert/" method="POST" id="find-a-liver-expert">
-            <div id="find-a-liver-expert-results"></div>
+      <p>All ACG Members, Fellows (FACG) and Masters (MACG) of the College can be located via this GI Physician Locator service. You may search by Last Name, City, State or Zip Code. The search results will list the names, addresses and phone numbers for all physicians meeting your search criteria.</p>
+      <p>Also available, a new <a href="/find-a-liver-expert/">ACG Liver Expert Locator</a> to identify ACG member physicians who have expressed an interest in liver disease.</p>
+            <form action="/find-a-gastroenterologist/" method="POST" id="find-a-gastroenterologist">
+            <div id="find-a-gastroenterologist-results"></div>
             <div class="gform_body">
             <ul class="gform_fields top_label">
             	<li class="gfield">
@@ -133,6 +128,16 @@ get_header(); ?>
             		</div>
             	</li>
             	<li class="gfield">
+            		<label class="gfield_label" for="phylocator_country">Select Country</label>
+            		<div class="ginput_container">
+            		  <select name="country" size="1" id="phylocator_country" class="gfield_select">
+                      <option value="zzz"> </option>
+                      <option value="us">United States</option>
+                      <option value="canada">Canada</option>
+                      </select>
+            		</div>
+            	</li>
+            	<li class="gfield">
             		<label class="gfield_label" for="phylocator_zip">Zip/Postal Code</label>
             		<div class="ginput_container"><input name="zip" id="phylocator_zip" type="text" size="30" value="<?php echo $passed_zip; ?>" /></div>
             	</li>
@@ -152,16 +157,8 @@ get_header(); ?>
             </form>
 			<?php
 			if( isset( $_POST['mixed-values'] ) ){
-				echo '<span id="liverlocator_externalformsubmit" rel="'.$passed_address_type.'"></span>';
+				echo '<span id="phylocator_externalformsubmit" rel="'.$passed_address_type.'"></span>';
 			}
 			?>
 
-
 		</div>
-	
-	<?php get_sidebar(); ?>
-	
-	</div>
-
-</div>
-<?php get_footer(); ?>
