@@ -9,7 +9,7 @@
 			<?php } else { ?>
 				<?php the_title( '<h1 class="main-title">', '</h1>' ); ?> 
 			<?php } ?> 
-			<?php if( is_singular( 'topics' ) ) { ?>
+			<?php if( is_singular( 'topics' ) ) : ?>
 				<div class="m-l-auto">
 					<!-- AddThis Button BEGIN -->
 					<div class="addthis_toolbox addthis_default_style ">
@@ -23,7 +23,7 @@
 					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e6d5ca75f9e63b2"></script>
 					<!-- AddThis Button END -->
 				</div>
-			<?php } ?>   
+			<?php endif; ?>   
 		</div>
 	</header>
 <?php endif; ?>

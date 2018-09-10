@@ -98,5 +98,13 @@ ajax.onload = function(e) {
 }
 </script>
 
+<?php if( is_singular( 'topics' ) ) : ?>
+<script>
+(function ($) {
+    $('#nav-patients li:first-child').addClass('current-menu-item');
+}(jQuery));
+</script>
+<?php endif; ?> 
+
 </body>
 </html>
