@@ -150,7 +150,7 @@ get_header(); ?>
 				$post->promos_items_count = intval($post->promos_items_count);
 			}
 			?>			
-			<div class="tab-content p-b-lg" id="tabs">
+			<div class="tab-content p-b-lg link-collection" id="tabs">
 				<ul class="nav nav-tabs justify-content-flex-start">
 					<?php if($post->includemain == "includemain"){ ?>
 						<li class="nav-item"><a role="tab" class="nav-link text-normal" href="#tabs1">Main</a></li>

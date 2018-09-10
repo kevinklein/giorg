@@ -3,14 +3,14 @@
 		<div id="main" role="main">
 				
 
-					<div id="tabs">
-						<ul class="tabs">
-							<li><a href="#tabs1">A &#8211; D</a></li>
-							<li><a href="#tabs2">E &#8211; H</a></li>
-							<li><a href="#tabs3">I &#8211; L</a></li>
-							<li><a href="#tabs4">M &#8211; P</a></li>
-							<li><a href="#tabs5">Q &#8211; Z</a></li>
-							<li><a href="#tabs6">GI Procedures</a></li>
+					<div class="tab-content p-b-lg" id="tabs">
+						<ul class="nav nav-tabs justify-content-flex-start">
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs1">A &#8211; D</a></li>
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs2">E &#8211; H</a></li>
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs3">I &#8211; L</a></li>
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs4">M &#8211; P</a></li>
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs5">Q &#8211; Z</a></li>
+							<li class="nav-item"><a class="nav-link text-normal" href="#tabs6">GI Procedures</a></li>
 						</ul>
 						<?php
 						$args = array(
@@ -83,7 +83,7 @@
 							}
 							$inaletter = true;
 							echo '<h2 class="section">'.$current_letter.'</h2>';
-							echo '<ul class="simple">';
+							echo '<ul class="list-items">';
 						}
 						if(strlen($post->topic_redirect) > 0 && $post->topic_redirect != "xx" && is_numeric($post->topic_redirect) ){
 				?>
@@ -135,7 +135,7 @@
 							}
 							$inaletter = true;
 							echo '<h2 class="section">'.$current_letter.'</h2>';
-							echo '<ul class="simple">';
+							echo '<ul class="list-items">';
 						}
 				?>
 						<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

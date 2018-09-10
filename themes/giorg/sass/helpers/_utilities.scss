@@ -65,7 +65,7 @@
 .text-truncate       { @include text-truncate; }
 .text-left           { text-align: left; }
 .text-right          { text-align: right; }
-.text-center         { text-align: center; }
+.center, .text-center         { text-align: center; }
 
 // Responsive alignment
 
