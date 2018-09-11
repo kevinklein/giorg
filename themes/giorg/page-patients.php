@@ -11,6 +11,13 @@ get_header();
 
 	<?php get_sidebar( 'patients-before' ); ?>
 
+	<?php
+	// get page slug name
+	//$slug = get_post_field( 'post_name');
+	// echo the $slug
+	//echo $slug;
+	?>
+
 	<div class="row">
 		<div class="col-md-2 col-xs-12">
 			<?php get_sidebar( 'patients' ); ?>
@@ -20,7 +27,11 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				if ( is_page( 'gi-health-and-disease') ) :
+				if ( is_page( 'patients') ) :
+
+					get_template_part( 'template-parts/content-patients', 'page' );
+
+				elseif ( is_page( 'gi-health-and-disease') ) :
 
 					get_template_part( 'template-parts/content-gi-health-and-disease', 'page' );
 

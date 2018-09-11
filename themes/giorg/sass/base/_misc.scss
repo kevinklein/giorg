@@ -377,3 +377,92 @@ button.circle-outline-xl { line-height: 4.75rem; }
     background: #03609c url(img/bg-question.png) no-repeat 100% 0;
     padding: 50px 55px 40px;
 }
+
+#cycle-main {
+	height: 270px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 480px;
+}
+
+#cycle-main a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#cycle-main div div {
+	background: rgba(0,0,0,.75);
+	padding: 1rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#cycle-main a,
+#cycle-main a:hover { text-decoration: none; }
+
+#cycle-main h1 {
+	color: #fff;
+	font-size: 1.4rem;
+	margin: 0 0 .25rem;
+	padding: 0;
+}
+
+#cycle-main p {
+	color: #fff;
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+}
+
+#cycle-main strong {
+	//background: rgba(0,0,0,.35);
+	color: #fff;
+	display: inline-block;
+	float: right;
+	font-size: 10px;
+	font-style: normal;
+	padding: 3px 5px;
+	text-transform: uppercase;
+}
+
+#cycle-main a:hover strong {
+	//background: rgba(0,0,0,.75);
+	color: #eee !important;
+}
+
+#cycle-nav {
+	height: 32px;
+	overflow: hidden;
+	text-align: center;
+}
+
+#cycle-nav a {
+    background: #ccc;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	height: 15px;
+	margin: 7px 4px 0 4px;
+	text-indent: -9999em;
+	text-decoration: none;
+	width: 15px;
+}
+
+#cycle-nav a:hover {
+	background: #999;
+}
+
+#cycle-nav a:active,
+#cycle-nav a.activeSlide {
+	background: #444;
+}
+
+#cycle-main img {
+	display: block;
+    height: 244px;
+    width: 480px;
+}

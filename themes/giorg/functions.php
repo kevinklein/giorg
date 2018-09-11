@@ -172,7 +172,7 @@ function giorg_scripts() {
 
 	wp_enqueue_script( 'giorg-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '20180915', true );
 
-	if ( is_singular( 'topics' ) ) {
+	if ( is_singular( 'topics' ) || is_page( 'patients') ) {
         wp_enqueue_script('giorg-slider', get_template_directory_uri() . '/js/cycle.js', null, null, true );
     }
 
