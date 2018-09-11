@@ -35,10 +35,6 @@ get_header();
 
 					get_template_part( 'template-parts/content-gi-health-and-disease', 'page' );
 
-				elseif ( is_page( 'video-and-audio-podcasts') ) :
-
-					get_template_part( 'template-parts/content-video-and-audio-podcasts', 'page' );
-
 				elseif ( is_page( 'find-a-liver-expert') ) :
 
 					get_template_part( 'template-parts/content-find-a-liver-expert', 'page' );

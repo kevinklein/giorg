@@ -179,11 +179,7 @@ get_header(); ?>
 						</ul>
 					</div>-->
 					<div class="clear"></div>
-		<!--
-					<div class="group">
-						<a href="#" class="next">Basics</a>
-					</div>
-		-->
+
 				</div>
 				<?php } ?>
 				<?php if($post->includebasics == "includebasics"){ ?>
@@ -222,12 +218,7 @@ get_header(); ?>
 						</ul>
 					</div> -->
 					<div class="clear"></div>
-		<!--
-					<div class="group">
-						<a href="#" class="previous">Main</a>
-						<a href="#" class="next">FAQs</a>
-					</div>
-		-->
+
 				</div>
 				<?php } ?>
 				<?php if($post->includefaqs == "includefaqs"){ ?>
@@ -246,12 +237,7 @@ get_header(); ?>
 						}
 					}
 					?>
-		<!--
-					<div class="group">
-						<a href="#" class="previous">Basics</a>
-						<a href="#" class="next">Podcasts/Videos</a>
-					</div>
-		-->
+
 					<span id="dht_faq_section"></span>
 				</div>
 				<?php } ?>
@@ -261,12 +247,7 @@ get_header(); ?>
 					<?php echo $post->podcast_intro; ?>
 					<?php //get_podcastsvideos_by_category_for_topic( $post->ID ); ?>
 					<?php get_podcastsvideos_by_category_for_topic_2( $post->ID ); ?>
-		<!--
-					<div class="group">
-						<a href="#" class="previous">FAQs</a>
-						<a href="#" class="next">Resources</a>
-					</div>
-		-->
+
 				</div>
 				<?php } ?>
 				<?php if($post->includeresources == "includeresources"){ ?>
@@ -303,11 +284,7 @@ get_header(); ?>
 						$opened = false;
 					}
 					?>
-		<!--
-					<div class="group">
-						<a href="#" class="previous">Podcasts/Videos</a>
-					</div>
-		-->
+
 				</div>
 				<?php } ?>
 					<span id="dht_section"></span>
