@@ -88,28 +88,32 @@
     </div>
     <div class="col-md-4 col-xs-12">
 
-        <div class="border border-gray-light p-a-sm m-b">
-            <h3 class="text-md text-700 m-b-sm">Find a Gastroenterologist</h3>
-            <div class="p-a bg-gray-lightest m-t-sm">
+        <div class="card bg-gray-lightest">
+            <div class="card-header bg-primary text-inverse">
+                <h3 class="text-md text-700 m-b-0">Find a Gastroenterologist</h3>
+            </div>
+            <div class="card-block">
                 <form method="post" action="/find-a-gastroenterologist/">
-                    <p class="small">Locate an ACG member gastroenterologist in your area.</p>
+                    <p class="m-b">Locate an ACG member gastroenterologist in your area.</p>
                     <div class="input-group m-b">
-                        <input type="text" class="form-control form-control-sm search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
-                        <span class="input-group-btn"><input type="submit" class="btn btn-sm btn-primary" value="Go" /></span>
+                        <input type="text" class="form-control search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
+                        <span class="input-group-btn"><input type="submit" class="btn btn-primary" value="Go" /></span>
                     </div>
                 </form>
                 <a href="/find-a-gastroenterologist/"><b>More options</b></a>
             </div>
         </div>
         
-        <div class="border border-gray-light p-a-sm m-b">
-            <h3 class="text-md text-700 m-b-sm">Find a Liver Expert</h3>			
-            <div class="showhide-div p-a bg-gray-lightest m-t-sm">
-                <p class="small">Find an ACG member gastroenterologist with a specialized interest in liver disease.</p>
+        <div class="card bg-gray-lightest">
+            <div class="card-header bg-secondary text-inverse">
+                <h3 class="text-md text-700 m-b-0">Find a Liver Expert</h3>
+            </div>			
+            <div class="card-block">
+                <p class="m-b">Find an ACG member gastroenterologist with a specialized interest in liver disease.</p>
                 <form method="post" action="/find-a-liver-expert/">
                     <div class="input-group m-b">
-                        <input type="text" class="form-control form-control-sm search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
-                        <span class="input-group-btn"><input type="submit" class="btn btn-sm btn-primary" value="Go" /></span>
+                        <input type="text" class="form-control search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
+                        <span class="input-group-btn"><input type="submit" class="btn btn-primary" value="Go" /></span>
                     </div>
                 </form>
                 <a href="/find-a-liver-expert/"><b>More options</b></a>
