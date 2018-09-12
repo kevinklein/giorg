@@ -326,9 +326,11 @@ if(!function_exists( 'get_podcastsvideos_by_category_for_topic_2' )){
 						$i++;					
 						if($i == 1){
 					?>
-						<div class="podcast">
-							<div class="podcast-photo"><img class="<?php if($podcastvideo->post_type == 'podcasts'){ echo 'rounded'; } ?>" src="<?php echo $podcastvideo->picture; ?>" alt="<?php echo $post->podcast_presenter; ?>"/></div>
-							<div class="podcast-content">
+						<div class="item-flex m-b-md align-items-flex-start">
+							<?php if(strlen($podcastvideo->picture) > 0) : ?>
+								<div class="item-flex-addon"><img class="m-r-md <?php if($podcastvideo->post_type == 'podcasts'){ echo 'rounded'; } ?>" src="<?php echo $podcastvideo->picture; ?>" alt="<?php echo $post->podcast_presenter; ?>" width="100"></div>
+							<?php endif; ?>
+							<div class="item-flex-main podcast-content">
 					<?php
 								echo '<h3>'.$cat.' - '.$presenter.'</h3>';
 								echo '<ul>';
