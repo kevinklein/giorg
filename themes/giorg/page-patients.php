@@ -43,6 +43,10 @@ get_header();
 
 					get_template_part( 'template-parts/content-find-a-gastroenterologist', 'page' );
 
+				elseif ( is_page( 'video-and-audio-podcasts-all') ) :
+
+					get_template_part( 'template-parts/content-video-and-audio-podcasts-all', 'page' );
+
 				else :
 			
 					get_template_part( 'template-parts/content', 'page' );

@@ -247,6 +247,7 @@ get_header(); ?>
 					<?php echo $post->podcast_intro; ?>
 					<?php //get_podcastsvideos_by_category_for_topic( $post->ID ); ?>
 					<?php get_podcastsvideos_by_category_for_topic_2( $post->ID ); ?>
+					<?php // get_podcastsvideos_by_category_for_topic_2( false ); ?>
 
 				</div>
 				<?php } ?>
