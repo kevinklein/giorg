@@ -262,6 +262,7 @@ $nav-local-y-padding: .4rem;
             color: $brand-black;
         }
     }
+    .current-menu-ancestor a,
     .current-menu-item a {
         background: $brand-primary;
         box-shadow: 0 0 0 1px $brand-primary;
