@@ -96,11 +96,13 @@ li ol {
 }
 
 .link-collection ul:not([class]) li,
-.list-items li,
-.list-item {
+.list-items li {
     margin: 0;
     padding-bottom: .6rem;
     padding-top: .6rem;
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
 .link-collection ul:not([class]) a,
