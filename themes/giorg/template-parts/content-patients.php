@@ -93,14 +93,14 @@
                 <h3 class="text-md text-700 m-b-0">Find a Gastroenterologist</h3>
             </div>
             <div class="card-block">
-                <form method="post" action="/find-a-gastroenterologist/">
+                <form method="post" action="/patients/find-a-gastroenterologist/">
                     <p class="m-b">Locate an ACG member gastroenterologist in your area.</p>
                     <div class="input-group m-b">
                         <input type="text" class="form-control search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
                         <span class="input-group-btn"><input type="submit" class="btn btn-primary" value="Go" /></span>
                     </div>
                 </form>
-                <a href="/find-a-gastroenterologist/"><b>More options</b></a>
+                <a href="/patients/find-a-gastroenterologist/"><b>More options</b></a>
             </div>
         </div>
         
@@ -110,13 +110,13 @@
             </div>			
             <div class="card-block">
                 <p class="m-b">Find an ACG member gastroenterologist with a specialized interest in liver disease.</p>
-                <form method="post" action="/find-a-liver-expert/">
+                <form method="post" action="/patients/find-a-liver-expert/">
                     <div class="input-group m-b">
                         <input type="text" class="form-control search clearvalues" name="mixed-values" placeholder="City, State, or Zip" />
                         <span class="input-group-btn"><input type="submit" class="btn btn-primary" value="Go" /></span>
                     </div>
                 </form>
-                <a href="/find-a-liver-expert/"><b>More options</b></a>
+                <a href="/patients/find-a-liver-expert/"><b>More options</b></a>
             </div>
         </div>
 

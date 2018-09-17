@@ -43,8 +43,8 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
 
 
       <p>All ACG Members, Fellows (FACG) and Masters (MACG) of the College can be located via this GI Physician Locator service. You may search by Last Name, City, State or Zip Code. The search results will list the names, addresses and phone numbers for all physicians meeting your search criteria.</p>
-      <p>Also available, a new <a href="/find-a-liver-expert/">ACG Liver Expert Locator</a> to identify ACG member physicians who have expressed an interest in liver disease.</p>
-            <form action="/find-a-gastroenterologist/" method="POST" id="find-a-gastroenterologist">
+      <p>Also available, a new <a href="/patients/find-a-liver-expert/">ACG Liver Expert Locator</a> to identify ACG member physicians who have expressed an interest in liver disease.</p>
+            <form action="/patients/find-a-gastroenterologist/" method="POST" id="find-a-gastroenterologist">
             <div id="find-a-gastroenterologist-results"></div>
             <div class="gform_body">
             <ul class="gform_fields top_label">
