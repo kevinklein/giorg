@@ -1,3 +1,7 @@
+<link rel='stylesheet' id='gforms_reset_css-css'  href='/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css'  href='/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css'  href='/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css'  href='/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.3.3' type='text/css' media='all' />
 <?php
 if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, or Zip'){
 	
