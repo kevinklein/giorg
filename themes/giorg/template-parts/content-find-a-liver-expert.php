@@ -40,10 +40,7 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
  */
 
 ?>
-<link rel='stylesheet' id='gforms_reset_css-css'  href='/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_formsmain_css-css'  href='/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_ready_class_css-css'  href='/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_browsers_css-css'  href='/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.3.3' type='text/css' media='all' />
+
       <p>As a special service to patients, the College is pleased to provide a locator tool for liver disease experts in the United States.  Within the field of gastroenterology, some GI specialists receive extra training in liver disease or have a special clinical interest in caring for liver disease patients.  This searchable database includes ACG member physicians who have expressed an interest in liver disease.  The College makes no guarantee as to the scope of practice for any of its members based on their reported interests, and while we have aimed to include the most accurate and up-to-date information, ACG cannot certify that all names in the locator are taking new patients or liver patients.</p>
       <p>Also available, ACG GI Physician Locator, <a href="/patients/find-a-gastroenterologist/">click here</a> to search all ACG Members, Fellows (FACG) and Masters (MACG)</p>
             <form action="/patients/find-a-liver-expert/" method="POST" id="find-a-liver-expert">

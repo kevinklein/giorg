@@ -203,10 +203,8 @@
         ////legacy JS
         var 
         $huduser = jQuery("#hud-user"),
-        ACG_IMAGE_PATH = '/wp-content/themes/acg/images/',
-        ACG_PATIENTS_IMAGE_PATH = '/wp-content/themes/acg_patients/images/',
-        ACG_THEME_PATH = '/wp-content/themes/acg/',
-        ACG_PATIENTS_THEME_PATH = '/wp-content/themes/acg_patients/';
+        ACG_IMAGE_PATH = '/wp-content/themes/gi/img/',
+        ACG_THEME_PATH = '/wp-content/themes/gi/';
 
         jQuery('a.acgtrackevent').live("click",function(){
             var $this = jQuery(this);
