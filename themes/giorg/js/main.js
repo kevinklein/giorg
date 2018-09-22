@@ -203,8 +203,8 @@
         ////legacy JS
         var 
         $huduser = jQuery("#hud-user"),
-        ACG_IMAGE_PATH = '/wp-content/themes/gi/img/',
-        ACG_THEME_PATH = '/wp-content/themes/gi/';
+        ACG_IMAGE_PATH = '/wp-content/themes/giorg/img/',
+        ACG_THEME_PATH = '/wp-content/themes/giorg/';
 
         jQuery('a.acgtrackevent').live("click",function(){
             var $this = jQuery(this);
