@@ -43,10 +43,10 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
 
 
       <p>All ACG Members, Fellows (FACG) and Masters (MACG) of the College can be located via this GI Physician Locator service. You may search by Last Name, City, State or Zip Code. The search results will list the names, addresses and phone numbers for all physicians meeting your search criteria.</p>
-      <p>Also available, a new <a href="/patients/find-a-liver-expert/">ACG Liver Expert Locator</a> to identify ACG member physicians who have expressed an interest in liver disease.</p>
+      <p>Also available, a new <a class="text-underline" href="/patients/find-a-liver-expert/">ACG Liver Expert Locator</a> to identify ACG member physicians who have expressed an interest in liver disease.</p>
             <form action="/patients/find-a-gastroenterologist/" method="POST" id="find-a-gastroenterologist">
             <div id="find-a-gastroenterologist-results"></div>
-            <div class="gform_body">
+            <div class="container-sm">
             <ul class="gform_fields top_label">
             	<li class="gfield">
             		<label class="gfield_label" for="phylocator_last">Last Name</label>
@@ -153,7 +153,7 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
             	</li>
             </ul>
             </div>
-            <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_2" class="button gform_button" value="Submit"></div>
+            <div class="container-sm top_label"> <input type="submit" id="gform_submit_button_2" class="btn btn-lg btn-orange" value="Submit"></div>
             </form>
 			<?php
 			if( isset( $_POST['mixed-values'] ) ){
