@@ -40,7 +40,7 @@
                             </div>
                         </div>
 						<div class="card-backface flex-center">
-							<span class="circle circle-xl bg-opaque-primary text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
+							<span class="circle circle-xl bg-opaque-light text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
 						</div>
                     </a>
                     <a class="swiper-slide card-hover bg-cover bg-50-50" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/colon.jpg)" href="#">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
 						<div class="card-backface flex-center">
-							<span class="circle circle-xl bg-opaque-primary text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
+							<span class="circle circle-xl bg-opaque-light text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
 						</div>
                     </a>
 					<a class="swiper-slide card-hover bg-cover bg-50-50" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/magazine.jpg)" href="#">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
 						<div class="card-backface flex-center">
-							<span class="circle circle-xl bg-opaque-primary text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
+							<span class="circle circle-xl bg-opaque-light text-inverse animated card-backface-icon"><svg class="icon icon-arrow_forward animated pulse animated-delay-500 infinite"><use xlink:href="#icon-arrow_forward"></use></svg></span>
 						</div>
                     </a>
                 </div>
