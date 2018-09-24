@@ -177,7 +177,7 @@ function giorg_scripts() {
     }
 
 	if ( is_front_page() ) {
-		wp_enqueue_style('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css', null, null, true );
+		wp_enqueue_style('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css' );
         wp_enqueue_script('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', null, null, true );
     }
 
