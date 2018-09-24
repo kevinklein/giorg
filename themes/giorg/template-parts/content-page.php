@@ -57,7 +57,15 @@
 
 	<!-- MAINCOLUMNBEGIN -->
 	<?php
-		the_content();
+		if ( is_front_page() ) :
+
+			get_template_part( 'template-parts/content-home', 'page' );
+
+		else :
+
+			the_content();
+
+		endif;
 	?>
 	<!-- MAINCOLUMNEND -->
 

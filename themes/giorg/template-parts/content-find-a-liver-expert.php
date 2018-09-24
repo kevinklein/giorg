@@ -44,7 +44,7 @@ if( isset( $_POST['mixed-values'] ) && $_POST['mixed-values'] != 'City, State, o
       <p>As a special service to patients, the College is pleased to provide a locator tool for liver disease experts in the United States.  Within the field of gastroenterology, some GI specialists receive extra training in liver disease or have a special clinical interest in caring for liver disease patients.  This searchable database includes ACG member physicians who have expressed an interest in liver disease.  The College makes no guarantee as to the scope of practice for any of its members based on their reported interests, and while we have aimed to include the most accurate and up-to-date information, ACG cannot certify that all names in the locator are taking new patients or liver patients.</p>
       <p>Also available, ACG GI Physician Locator, <a class="text-underline" href="/patients/find-a-gastroenterologist/">click here</a> to search all ACG Members, Fellows (FACG) and Masters (MACG)</p>
             <form action="/patients/find-a-liver-expert/" method="POST" id="find-a-liver-expert">
-            <div id="find-a-liver-expert-results"></div>
+            <div id="find-a-liver-expert-results" class="ajax-results"></div>
             <div class="container-sm">
             <ul class="gform_fields top_label">
             	<li class="gfield">

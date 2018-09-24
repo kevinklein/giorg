@@ -10,6 +10,9 @@
 //    border: $card-border-width solid $card-border-color;
     position: relative;
     text-decoration: none; // when enclosed in links
+    &.border-0 {
+        box-shadow: none;
+    }
 }
 
 .card-block {

@@ -9,7 +9,7 @@
 
 </main><!-- .entry-content -->
 
-<div class="position-relative border-bottom">
+<div class="position-relative border-bottom" id="footer-promo">
 	<div class="bg-gray-lightest bg-triangles">
 		<div class="container p-y-md text-center">
 			<span class="logo-footer"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="img-circle" width="50"></span>
@@ -102,6 +102,42 @@ ajax.onload = function(e) {
 <script>
 (function ($) {
     $('#nav-patients li:first-child').addClass('current-menu-item');
+}(jQuery));
+</script>
+<?php endif; ?> 
+
+<?php if( is_front_page() ) : ?>
+<script>
+(function ($) {
+    $(document).ready(function() {
+        
+
+        var swiperBack2 = new Swiper('.header-swiper-back-2', { slidesPerView: 'auto', centeredSlides: true, spaceBetween: 100, onlyExternal: true, effect: 'coverflow', direction: 'vertical', speed: 600, loop: true, coverflowEffect: { slideShadows: false } });
+        var swiperBack1 = new Swiper('.header-swiper-back-1', { slidesPerView: 'auto', centeredSlides: true, spaceBetween: 300, effect: 'coverflow', speed: 600, loop: true, coverflowEffect: { slideShadows: false } });
+        var swiperFront = new Swiper('.header-swiper-front', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+			loop: true,
+			slideToClickedSlide: true,
+            spaceBetween: 100,
+            effect: 'coverflow',
+            speed: 600,
+            coverflowEffect: { slideShadows: false },
+            pagination: { el: '.header-swiper-front .swiper-pagination', clickable: true, },
+            navigation: { nextEl: '.header-swiper-front .swiper-button-next', prevEl: '.header-swiper-front .swiper-button-prev', },
+            controller: { control: [swiperBack1, swiperBack2], by: 'container', },
+            keyboard: true,
+            a11y: true,
+            on: {
+                slideChange: function() {
+                    var s = this;
+                    if (s.activeIndex === $('.swiper-slide-gallery').index()) { $(s.el).find('.swiper-pagination').hide(); } else { $(s.el).find('.swiper-pagination').show(); }
+                }
+            }
+        });
+
+    	
+	});
 }(jQuery));
 </script>
 <?php endif; ?> 
