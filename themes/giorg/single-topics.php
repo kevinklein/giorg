@@ -80,7 +80,7 @@ get_header(); ?>
 				<div id="tabs1" class="main">
 					<!-- <div> -->
 						<?php if($post->includepromos == "includepromos"){ ?>
-						<div class="article">
+						<div class="article p-t-lg">
 						<div class="m-b">
 							<div id="cycle-main">
 								<?php
