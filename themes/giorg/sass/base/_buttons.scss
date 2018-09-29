@@ -78,7 +78,7 @@ fieldset[disabled] a.btn {
 .btn-white {
     @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
     &.active {
-        @include button-variant(#fff, $brand-secondary, $brand-secondary);
+        color: #000;
     }
 }
 .btn-info {
