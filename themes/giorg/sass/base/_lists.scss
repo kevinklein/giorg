@@ -100,9 +100,14 @@ li ol {
     margin: 0;
     padding-bottom: .6rem;
     padding-top: .6rem;
-    &:first-child {
-        padding-top: 0;
-    }
+    padding-left: $spacer-x / 2;
+    // &:first-child {
+    //     padding-top: 0;
+    // }
+}
+
+.link-collection ul:not([class]) li {
+    padding-left: 0;
 }
 
 .link-collection ul:not([class]) a,
