@@ -108,6 +108,9 @@ li ol {
 
 .link-collection ul:not([class]) li {
     padding-left: 0;
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
 .link-collection ul:not([class]) a,
