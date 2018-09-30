@@ -617,13 +617,13 @@ p {
 	color: #fff;
 	&:focus,
 	&:active {
-        color: inherit;
-    }
-	a:not[class='btn'] {
+        color: #fff;
+    }   
+	a:not(.btn) {
     	color: #fff;
     	&:focus,
     	&:active {
-	        color: inherit;
+	        color: #fff;
 	    }
 	}
     h1, h2, h3, h4, p {
