@@ -315,6 +315,26 @@
             jQuery("#find-a-liver-expert").trigger("submit");
         }
 
+        jQuery('#tabs').tabs({
+            select: function(event,ui){
+                window.location.hash = ui.tab.hash;
+            }	
+        });
+
+        jQuery("#tabs1 li.parent li a").live("click",function(){
+            var $this = jQuery(this), tabselector = $this.attr("rel"), $gototab = jQuery(tabselector), $tabs = jQuery("#tabs"), tabindex = $tabs.find("div.ui-tabs-panel").index($gototab);
+            $tabs.tabs("select",tabindex);
+            window.location = $this.attr("href");
+            return false;
+        });
+        
+        jQuery("a.tabselector").live("click",function(){
+            var $this = jQuery(this), tabselector = $this.attr("rel"), $gototab = jQuery(tabselector), $tabs = jQuery("#tabs"), tabindex = $tabs.find("div.ui-tabs-panel").index($gototab);
+            $tabs.tabs("select",tabindex);
+            window.location = $this.attr("href");
+            return false;
+        });
+
         // flowplayer("a.myPlayer", ACG_THEME_PATH+"js/flowplayer.commercial-3.2.7.swf", {key:'#$720bec46f4bc4b729cd'});
         // flowplayer("a.myPlayerStream", ACG_THEME_PATH+"js/flowplayer.commercial-3.2.7.swf", {
         //     key:'#$720bec46f4bc4b729cd',
