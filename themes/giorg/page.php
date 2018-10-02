@@ -23,6 +23,10 @@ get_header();
 
 			get_template_part( 'template-parts/content-fellowship', 'page' );
 
+		elseif ( is_page( 'guidelines') ) :
+
+			get_template_part( 'template-parts/content-guidelines', 'page' );
+
 		endif;
 	
 		get_template_part( 'template-parts/content', 'page' );
