@@ -26,6 +26,19 @@
 
     $(document).ready(function() {
 
+        // Initial state
+        var scrollPos = 0;
+        // adding scroll event
+        window.addEventListener('scroll', function(){
+        // detects new state and compares it with the new one
+        if ((document.body.getBoundingClientRect()).top > scrollPos)
+                $(document.body).removeClass('scrolling-down').addClass('scrolling-up');
+            else
+                $(document.body).removeClass('scrolling-up').addClass('scrolling-down');
+            // saves the new position for iteration.
+            scrollPos = (document.body.getBoundingClientRect()).top;
+        });
+
         var controller = new ScrollMagic.Controller({
             globalSceneOptions: {
                 reverse: true
@@ -44,7 +57,7 @@
         //     .setClassToggle("body", "localnav-affixed");
 
         var scenes = [
-            fixHeader,
+            //fixHeader,
             fixSidebar
             //fixLocalnav
         ];
@@ -59,12 +72,15 @@
         });
         
         //  bind scroll to anchor links
-        $(document).on("click", ".nav-local a[href^='#']", function (e) {
+        $(document).on("click", "a[href^='#']", function (e) {
             var id = $(this).attr("href");
             if ($(id).length > 0) {
                 e.preventDefault();
                 // trigger scroll
-                controller.scrollTo(id);
+                controller.scrollTo(id, {
+     // ...
+     offset:-300
+});
                 // if supported by the browser update the URL.
                 if (window.history && window.history.pushState) {
                     history.pushState("", document.title, id);
@@ -88,7 +104,7 @@
             event.preventDefault();
         });
         
-        $('.toggle-is-toggled').click(function() {
+        $('.toggle-is-toggled,.toggle-this').click(function() {
     		if ($(this).hasClass('is-toggled')) {
                 $(this).removeClass('is-toggled');
             } else {

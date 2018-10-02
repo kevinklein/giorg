@@ -81,12 +81,21 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $headings-font-weight; }
 
 // for Guidelines
 h3.trigger {
-    border-top: 1px solid #ccc;
     color: $gray-darker;
     font-size: $display2-size;
     font-weight: 300;
-    padding-top: 1rem;
-    margin: 3rem 0 2rem;
+    margin: 0 0 2rem;
+    padding-top: 12rem;
+    position: relative;  
+    &:before {
+        background: #ccc;
+        content: '';
+        height: 1px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: 9rem;
+    }
 }
 
 // Type display classes
