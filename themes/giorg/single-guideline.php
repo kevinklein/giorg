@@ -16,7 +16,7 @@ while ( have_posts() ) :
 	?>
 
 <div class="row">
-	<div class="col-md-9 col-xs-12">
+	<div class="col-md-9 col-xs-12" id="guideline-content">
 		<?php the_content(); ?>
 	</div>
 	<div class="col-md-3 col-xs-12">
@@ -27,10 +27,8 @@ while ( have_posts() ) :
 			<?php endif; ?>
 			<h3 class="m-y-md text-webfont-one text-500 nav-local-header">Diagnosis and Management of Achalasia</h3> 
 			<hr>
-			<nav>
-				<ul class="nav nav-local">
-					
-				</ul>
+			<nav id="toc">
+				
 			</nav>
 		</div>
 	</div>

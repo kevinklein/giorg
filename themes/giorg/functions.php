@@ -176,6 +176,10 @@ function giorg_scripts() {
         wp_enqueue_script('giorg-slider', get_template_directory_uri() . '/js/cycle.js', null, null, true );
     }
 
+	if ( is_singular( 'guideline' ) ) {
+        wp_enqueue_script('giorg-toc', get_template_directory_uri() . '/js/toc.min.js', null, null, true );
+    }
+
 	if ( is_front_page() ) {
 		wp_enqueue_style('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css' );
         wp_enqueue_script('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', null, null, true );

@@ -315,11 +315,13 @@
             jQuery("#find-a-liver-expert").trigger("submit");
         }
 
-        jQuery('#tabs').tabs({
-            select: function(event,ui){
-                window.location.hash = ui.tab.hash;
-            }	
-        });
+        if(document.getElementById("tabs")){
+            jQuery('#tabs').tabs({
+                select: function(event,ui){
+                    window.location.hash = ui.tab.hash;
+                }	
+            });
+        }
 
         jQuery("#tabs1 li.parent li a").live("click",function(){
             var $this = jQuery(this), tabselector = $this.attr("rel"), $gototab = jQuery(tabselector), $tabs = jQuery("#tabs"), tabindex = $tabs.find("div.ui-tabs-panel").index($gototab);
