@@ -1,3 +1,15 @@
+<div class="row-container hero p-y-lg text-inverse m-b">
+	<div class="container">
+		<h1 class="m-b-sm">Guidelines</h1>
+		<p class="m-b-0 display-1 text-300">The decision support tools you need for your practice</p>
+	</div>
+</div>
+
+<div class="m-b-lg text-right">
+	<a href="#" class="text-700">Guideline Development Policies</a>
+	<a href="#" class="text-700 m-l-lg">ACG Guidelines App</a>
+</div>
+
 <?php
 
 // WP_Query arguments
