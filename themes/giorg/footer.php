@@ -102,38 +102,6 @@ ajax.onload = function(e) {
 <script>
 (function ($) {
 
-<!-- Isotope.Item.prototype._create = function() {
-  // assign id, used for original-order sorting
-  this.id = this.layout.itemGUID++;
-  // transition objects
-  this._transn = {
-    ingProperties: {},
-    clean: {},
-    onEnd: {}
-  };
-  this.sortData = {};
-};
-
-Isotope.Item.prototype.layoutPosition = function() {
-  this.emitEvent( 'layout', [ this ] );
-};
-
-Isotope.prototype.arrange = function( opts ) {
-  // set any options pass
-  this.option( opts );
-  this._getIsInstant();
-  // just filter
-  this.filteredItems = this._filter( this.items );
-  // flag for initalized
-  this._isLayoutInited = true;
-};
-
-// layout mode that does not position items
-Isotope.LayoutMode.create('none');
-
-
-// --------------- // -->
-
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.grid-item',
@@ -172,12 +140,12 @@ $('#filters').on( 'click', 'button', function() {
   $grid.isotope({ filter: filterValue });
 });
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
+// change active class on buttons
+$('.btn-group').each( function( i, buttonGroup ) {
   var $buttonGroup = $( buttonGroup );
   $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
+    $buttonGroup.find('.active').removeClass('active');
+    $( this ).addClass('active');
   });
 });
 
