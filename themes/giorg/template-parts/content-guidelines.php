@@ -1,3 +1,12 @@
+<style>
+.grid-item {
+	width: 33%;
+}
+.grid-item .card {
+	min-height: 240px;
+}
+</style>
+
 <div class="row-container hero p-y-lg text-inverse m-b">
 	<div class="container">
 		<h1 class="m-b-sm">Guidelines</h1>
@@ -19,7 +28,7 @@ $args = array (
 	'posts_per_page' 		 => '-1',
 	'nopaging'               => true,
 	'order'                  => 'ASC',
-	'orderby'                => 'menu_order',
+	'orderby'                => 'title',
 );
 
 $linkurl = htmlspecialchars(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
@@ -29,7 +38,35 @@ $guidelines = new WP_Query( $args );
 
 ?>
 
-<div class="row">
+<div class="btn-group-responsive-overflow text-center">
+    <div class="btn-group button-group" id="filters">
+		<button class="button btn btn-outline" data-filter="*">
+			ACG Guidelines
+		</button>
+		<button class="button btn btn-outline" data-filter=".monographs">
+			Monographs
+		</button>
+		<button class="button btn btn-outline" data-filter=".competencies-in-endoscopy">
+			Competencies in Endoscopy
+		</button>
+		<button class="button btn btn-outline" data-filter=".Progress">
+			Guidelines in Progress
+		</button>
+	</div>
+</div>
+
+<div class="text-right m-t m-b text-sm">
+	<div class="btn-group sort-by-button-group">
+		<button class="button btn btn-xs btn-outline" data-sort-by="name">
+			Sort A to Z
+		</button>
+		<button class="button btn btn-xs btn-outline" data-sort-by="date">
+			Sort by Date
+		</button>
+	</div>
+</div>
+
+<div class="grid row">
 
 <?php
 // The Loop
@@ -54,18 +91,25 @@ if ( $guidelines->have_posts() ) {
 
 		?>
 		
-		<div class="col-md-4 col-xs-12 display-flex flex-column">
-			<div class="card display-flex flex-column flex-1">
+		<div class="grid-item <?php echo $post->updategl . ' '; 
+				$posttags = get_the_tags();
+				if ($posttags) {
+					foreach($posttags as $tag) {
+						echo $tag->slug . ' '; 
+					}
+				}
+				?>" data-date-created="<?php echo $post->publicationdate; ?>" data-title="<?php the_title(); ?>">
+			<div class="card display-flex flex-column">
 				<div class="card-block flex-1">
 					<?php if (strlen($post->updategl) > 0) : ?>
 						<b class="text-uppercase text-400 text-xxs item-flex m-b-sm"><b class="circle circle-xxs bg-success m-r-xs"></b> <?php echo $post->updategl; ?></b>
 					<?php endif; ?>
 					<h3 class="text-md m-b-xs text-700">
 						<?php if ($post->hashtmlguideline === 'hashtmlguideline') : ?><a href="<?php the_permalink() ?>"><?php endif; ?>
-							<?php the_title(); ?>
+							<span class="name"><?php the_title(); ?></span>
 						<?php if ($post->hashtmlguideline === 'hashtmlguideline') : ?></a><?php endif; ?>
 					</h3>
-					<p class="text-sm text-mute m-b-xs"><?php echo $post->displaydatepublicationdate; ?></p>
+					<p class="text-sm text-mute m-b-xs date"><?php echo $post->displaydatepublicationdate; ?></p>
 					<p class="text-sm m-b-0"><svg class="icon icon-user2"><use xlink:href="#icon-user2"></use></svg> <?php echo $post->primaryauthor; ?></p>
 				</div>
 				<div class="card-footer bg-gray-lighter p-y-sm text-uc">
