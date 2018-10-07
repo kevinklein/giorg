@@ -10,56 +10,59 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="container">
+	<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+		<header class="page-header">
+			<h1 class="page-title">
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
+				?>
+			</h1>
+		</header><!-- .page-header -->
 
-			<header class="page-header">
-				<h1 class="page-title">
+		<?php if ( !get_field( 'hide_header' ) ): ?>
+			<header>
+				<div class="container p-y-md"> 
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
-			</header><!-- .page-header -->
+				</div>
+			</header>
+		<?php endif; ?>
 
-			<?php if ( !get_field( 'hide_header' ) ): ?>
-				<header>
-					<div class="container p-y-md"> 
-						<?php
-						/* translators: %s: search query. */
-						printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
-						?>
-					</div>
-				</header>
-			<?php endif; ?>
+		<?php
+		/* Start the Loop */
+		while ( have_posts() ) :
+			the_post();
+			
+			if(isset($_GET['post_type'])) :
+				$type = $_GET['post_type'];
+				if($type == 'guideline') :
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					get_template_part( 'template-parts/content', 'search-guidelines' );
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				else :
 
-			endwhile;
+					get_template_part( 'template-parts/content', 'search' );
 
-			the_posts_navigation();
+				endif;
+			
+			endif;
 
-		else :
+		endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
+		the_posts_navigation();
 
-		endif;
-		?>
+	else :
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		get_template_part( 'template-parts/content', 'none' );
+
+	endif;
+	?>
+</div>
 
 <?php
 get_sidebar();

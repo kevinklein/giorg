@@ -35,3 +35,5 @@ function giorg_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'giorg_pingback_header' );
+
+

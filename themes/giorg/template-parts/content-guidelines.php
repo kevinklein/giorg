@@ -1,6 +1,6 @@
 <style>
 .grid-item {
-	width: 33%;
+	width: 33.3333%;
 }
 .grid-item .card {
 	min-height: 240px;
@@ -17,6 +17,14 @@
 <div class="m-b-lg text-right">
 	<a href="#" class="text-700">Guideline Development Policies</a>
 	<a href="#" class="text-700 m-l-lg">ACG Guidelines App</a>
+</div>
+
+<div class="text-center container-sm m-b-md p-lg-x-xl">
+	<form role="search" method="get" class="input-group" action="<?php echo home_url( '/' ); ?>">
+		<input type="text" class="form-control" name="s" id="s" value="" placeholder="Search for Guidelines and Other Clinical Documents">
+		<input type="hidden" name="post_type" value="guideline">
+		<span class="input-group-btn"><input type="submit" class="btn btn-orange" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" /></span>
+	</form>
 </div>
 
 <?php
