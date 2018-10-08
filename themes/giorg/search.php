@@ -29,21 +29,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			
-			
-			if(isset($_GET['post_type'])) :
-				$type = $_GET['post_type'];
-				if($type == 'guideline') :
-
-					get_template_part( 'template-parts/content', 'search-guidelines' );
-
-				else :
-
-					get_template_part( 'template-parts/content', 'search' );
-
-				endif;
-			
-			endif;
+			get_template_part( 'template-parts/content', 'search-guidelines' );
 
 		endwhile;
 

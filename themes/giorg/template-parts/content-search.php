@@ -9,30 +9,14 @@
 
 ?>
 
-<div class="container p-y-l">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
-			
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<?php if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php
-				giorg_posted_on();
-				giorg_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</header><!-- .entry-header -->
+	<?php the_title( sprintf( '<a href="%s" rel="bookmark"><h2 class="text-lg text-700 m-b-sm">', esc_url( get_permalink() ) ), '</h2>' ); ?>
 
-		<?php giorg_post_thumbnail(); ?>
+	<div class="row">
+		<div class="text-muted col-lg-9 col-md-12"><?php the_excerpt(); ?></div>
+	</div>
 
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
+	</a>
 
-		<footer class="entry-footer">
-			<?php giorg_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
-	</article><!-- #post-<?php the_ID(); ?> -->
-</div>
+</li><!-- #post-<?php the_ID(); ?> -->
