@@ -13,30 +13,23 @@ get_header();
 <div class="container">
 	<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-			<h1 class="page-title">
-				<?php
-				/* translators: %s: search query. */
-				printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
-				?>
-			</h1>
-		</header><!-- .page-header -->
+		<p class="text-muted text-lg">
+		<?php
+			/* translators: %s: search query. */
+			printf( esc_html__( 'You searched for %s', 'giorg' ), '<b class="text-black">' . get_search_query() . '</b>' );
+		?>
+		</p>
 
-		<?php if ( !get_field( 'hide_header' ) ): ?>
-			<header>
-				<div class="container p-y-md"> 
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'giorg' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</div>
-			</header>
-		<?php endif; ?>
+		<hr>
+
+		<ul>
 
 		<?php
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
+
+			
 			
 			if(isset($_GET['post_type'])) :
 				$type = $_GET['post_type'];
@@ -53,6 +46,8 @@ get_header();
 			endif;
 
 		endwhile;
+
+		echo "</ul><hr>";
 
 		the_posts_navigation();
 

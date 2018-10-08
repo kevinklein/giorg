@@ -6,6 +6,8 @@
 					<!-- TITLEBEGIN -->
 					<!-- TITLEEND -->
 				</h1>
+			<?php } elseif ( is_search() ) { ?>
+				<h1 class="main-title">Search Results</h1>
 			<?php } else { ?>
 				<?php the_title( '<h1 class="main-title">', '</h1>' ); ?> 
 			<?php } ?> 
