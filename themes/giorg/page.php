@@ -27,6 +27,10 @@ get_header();
 
 			get_template_part( 'template-parts/content-guidelines', 'page' );
 
+		elseif ( is_page( 'history') ) :
+
+			get_template_part( 'template-parts/content-history', 'page' );
+
 		endif;
 	
 		get_template_part( 'template-parts/content', 'page' );
