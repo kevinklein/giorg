@@ -11,20 +11,61 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php
+	<div id="timeline">
 
-		if( have_rows('history_slide') ):
+		<ul id="dates">
 
-			// loop through the slides
-			while ( have_rows('history_slide') ) : the_row();
-		
-				// Variables
-				$history_year = get_sub_field('history_year'); 
-				$history_description = get_sub_field('history_description');
+		<?php
 
-	?>
+			if( have_rows('history_slide') ):
 
-		<div>
+			$count = 0;
+
+				// loop through the slides
+				while ( have_rows('history_slide') ) : the_row();
+			
+					// Variables
+					$history_year = get_sub_field('history_year'); 
+
+		?>
+
+		<li><a href="#"><?php echo $history_year; ?></a></li>
+
+		<?php
+			
+			endwhile;
+
+			else :
+
+				// no layouts found
+
+			endif;
+
+		?>
+
+		</ul>
+
+		<ul id="issues">
+
+		<?php
+
+			if( have_rows('history_slide') ):
+
+			$count = 0;
+
+				// loop through the slides
+				while ( have_rows('history_slide') ) : the_row();
+					
+					// set counter
+					$count++;
+			
+					// Variables
+					$history_year = get_sub_field('history_year'); 
+					$history_description = get_sub_field('history_description');
+
+		?>
+
+		<li id="<?php echo $history_year; ?>">
 
 			<h2><?php echo $history_year; ?></h2>
 
@@ -43,7 +84,7 @@
 
 			<?php endwhile; endif; ?>
 
-		</div>
+		</li>
 
 	<?php
 		
@@ -56,5 +97,12 @@
 		endif;
 
 	?>
+
+		</ul>
+
+		<a href="#" id="next">+</a> <!-- optional -->
+   		<a href="#" id="prev">-</a> <!-- optional -->
+
+	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -180,6 +180,10 @@ function giorg_scripts() {
         wp_enqueue_script('giorg-isotope', get_template_directory_uri() . '/js/isotope.min.js', null, null, true );
     }
 
+	if ( is_page( 'history' ) ) {
+        wp_enqueue_script('giorg-timeline', get_template_directory_uri() . '/js/jquery.timelinr.js', null, null, true );
+    }
+
 	if ( is_singular( 'guideline' ) ) {
         wp_enqueue_script('giorg-toc', get_template_directory_uri() . '/js/toc.min.js', null, null, true );
     }

@@ -188,12 +188,23 @@ $('.btn-group').each( function( i, buttonGroup ) {
 </script>
 <?php endif; ?> 
 
+<?php if ( is_page( 'history' ) ) : ?>
+<script>
+(function ($) {
+    $(document).ready(function() {
+      if(document.getElementById('cycle-main')) {
+        $('#history').timelinr();
+      }
+	});
+}(jQuery));
+</script>
+<?php endif; ?> 
+
 <?php if( is_front_page() ) : ?>
 <script>
 (function ($) {
     $(document).ready(function() {
         
-
         var swiperBack2 = new Swiper('.header-swiper-back-2', { slidesPerView: 'auto', centeredSlides: true, spaceBetween: 100, onlyExternal: true, effect: 'coverflow', direction: 'vertical', speed: 600, loop: true, coverflowEffect: { slideShadows: false } });
         var swiperBack1 = new Swiper('.header-swiper-back-1', { slidesPerView: 'auto', centeredSlides: true, spaceBetween: 300, effect: 'coverflow', speed: 600, loop: true, coverflowEffect: { slideShadows: false } });
         var swiperFront = new Swiper('.header-swiper-front', {
