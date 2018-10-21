@@ -191,11 +191,7 @@ $('.btn-group').each( function( i, buttonGroup ) {
 <?php if ( is_page( 'history' ) ) : ?>
 <script>
 (function ($) {
-    $(document).ready(function() {
-      if(document.getElementById('cycle-main')) {
-        $('#history').timelinr();
-      }
-	});
+    $().timelinr();
 }(jQuery));
 </script>
 <?php endif; ?> 
