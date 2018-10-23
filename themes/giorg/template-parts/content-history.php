@@ -17,7 +17,6 @@
     overflow: hidden;
     margin: 100px auto;
     position: relative;
-    background: url('../images/dot.gif') left 45px repeat-x;
   }
     #dates {
       width: 800px;
@@ -31,7 +30,6 @@
         height: 50px;
         font-size: 24px;
         text-align: center;
-        background: url('../images/biggerdot.png') center bottom no-repeat;
       }
         #dates a {
           line-height: 38px;
@@ -53,33 +51,16 @@
         float: left;
       }
         #issues li.selected img {
-          -webkit-transform: scale(1.1,1.1);
           transform: scale(1.1,1.1);
         }
         #issues li img {
-          float: left;
-          margin: 10px 30px 10px 50px;
-          background: transparent;
-          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
-          zoom: 1;
-          -webkit-transition: all 2s ease-in-out;
-          transition: all 2s ease-in-out;
-          -webkit-transform: scale(0.7,0.7);
-          transform: scale(0.7,0.7);
+          
         }
         #issues li h1 {
-          color: #ffcc00;
-          font-size: 48px;
-          margin: 20px 0;
-          text-shadow: #000 1px 1px 2px;
+          
         }
         #issues li p {
-          font-size: 14px;
-          margin-right: 70px;
-          font-weight: normal;
-          line-height: 22px;
-          text-shadow: #000 1px 1px 2px;
+          
         }
     
     #grad_left,
