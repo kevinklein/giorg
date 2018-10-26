@@ -197,24 +197,24 @@
             $(".hero").css("backgroundPosition", "50% " + -(scrolltop/3) + "px");
         });
 
-        if (window.innerWidth  > 800 ) {
-            window.sr = ScrollReveal({ reset: true });
-            sr.reveal('.item-reveal-left', { delay: 1000, origin: 'left', scale:1, distance: '50vw', easing: 'ease-out', duration: '350' } );
-            sr.reveal('.item-reveal-right', { delay: 1000, origin: 'right', scale:1, distance: '50vw', easing: 'ease-out', duration: '350' } );
-            sr.reveal('[class*="item-reveal"]', { delay: 200, scale: 1, distance: '-50px', duration: 800 } );
-            sr.reveal('.item-reveal-fade', { delay: 100, scale: 1, distance: '0', reset: false } );
-            sr.reveal('.hero', { delay: 200, scale: 1, distance: '-50px', duration: 800 } );
-            sr.reveal('.item-reveal-1', { delay: 200, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-2', { delay: 400, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-3', { delay: 600, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-4', { delay: 800, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-5', { delay: 1000, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-6', { delay: 1200, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-7', { delay: 1400, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-8', { delay: 1600, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-9', { delay: 1800, scale: 1, duration: 800 } );
-            sr.reveal('.item-reveal-10', { delay: 2000, scale: 1, duration: 800 } );
-        }
+        // if (window.innerWidth  > 800 ) {
+        //     window.sr = ScrollReveal({ reset: true });
+        //     sr.reveal('.item-reveal-left', { delay: 1000, origin: 'left', scale:1, distance: '50vw', easing: 'ease-out', duration: '350' } );
+        //     sr.reveal('.item-reveal-right', { delay: 1000, origin: 'right', scale:1, distance: '50vw', easing: 'ease-out', duration: '350' } );
+        //     sr.reveal('[class*="item-reveal"]', { delay: 200, scale: 1, distance: '-50px', duration: 800 } );
+        //     sr.reveal('.item-reveal-fade', { delay: 100, scale: 1, distance: '0', reset: false } );
+        //     sr.reveal('.hero', { delay: 200, scale: 1, distance: '-50px', duration: 800 } );
+        //     sr.reveal('.item-reveal-1', { delay: 200, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-2', { delay: 400, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-3', { delay: 600, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-4', { delay: 800, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-5', { delay: 1000, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-6', { delay: 1200, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-7', { delay: 1400, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-8', { delay: 1600, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-9', { delay: 1800, scale: 1, duration: 800 } );
+        //     sr.reveal('.item-reveal-10', { delay: 2000, scale: 1, duration: 800 } );
+        // }
 
         ////legacy JS
         var 

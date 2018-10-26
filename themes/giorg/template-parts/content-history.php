@@ -12,46 +12,101 @@
 
 <style>
 #timeline {
-    width: 800px;
-    height: 350px;
     overflow: hidden;
-    margin: 100px auto;
+    margin: 0 0 ;
     position: relative;
+	
   }
     #dates {
-      width: 800px;
-      height: 60px;
-      overflow: hidden;
+	  align-items: center;
+	  display: flex;
+	  margin: 0;
+	  padding: 25px 0 5px;
+	  width: 800px;
+	  position: relative;
     }
+	#dates::after {
+		border-bottom: 2px dotted #fff;
+		content: '';
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		right: 0;
+	}
+	#dates::before {
+
+	}
       #dates li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
         list-style: none;
-        float: left;
+		margin: 0;
+	    padding: 0;
         width: 100px;
-        height: 50px;
-        font-size: 24px;
+        font-size: 16px;
+		position: relative;
         text-align: center;
+		z-index: 2;
       }
+	  #dates li::before {
+		background: #8097B6;
+		border-radius: 50%;
+		content: '';
+		height: 14px;
+		width: 14px;
+		position: absolute;
+		bottom: -11px;
+		left: calc(50% - 5px);
+		right: 0;
+	  }
+	  #dates li::after {
+		background: #fff;
+		border-radius: 50%;
+		content: '';
+		height: 8px;
+		width: 8px;
+		position: absolute;
+		bottom: -8px;
+		left: calc(50% - 2px);
+		right: 0;
+	  }
+	  #dates li + li {
+		  margin-top: 0;
+	  }
         #dates a {
-          line-height: 38px;
-          padding-bottom: 10px;
+			color: rgba(255,255,255,.6);
         }
         #dates .selected {
-              font-size: 38px;
+			color: #fff;
+            font-size: 24px;
         }
+		/* #dates .selected::after {
+			content: ' ';
+			height: 0;
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			border: 10px solid transparent; 
+			border-top-color: #fff;
+		} */
     
     #issues {
-      width: 800px;
-      height: 350px;
-      overflow: hidden;
+     
     } 
       #issues li {
         width: 800px;
-        height: 350px;
         list-style: none;
         float: left;
+		opacity: 0 !important;
       }
+	  #issues li.selected {
+		  opacity: 1 !important;
+	  }
         #issues li.selected img {
-          transform: scale(1.1,1.1);
+          
         }
         #issues li img {
           
@@ -108,29 +163,100 @@
         #prev.disabled {
           opacity: 0.2;
         }
+	.history-hero {
+		background: url(/wp-content/themes/giorg/img/history-bg.jpg) no-repeat 50% 50%;
+		background-size: cover;
+	}
 </style>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<div class="history-hero">
+		<div class="container text-center">
+			<img src="/wp-content/themes/giorg/img/history-bg-text.png" width="90%">
+		</div>
+	</div>
+
 	<div id="timeline">
 
-		<ul id="dates">
+		<div class="bg-primary-lighter text-inverse">
+			<div class="container p-b-md p-x-xl position-relative">
+				<div class="m-x-xl overflow-hidden p-b-sm">
+				<ul id="dates">
 
-		<?php
+				<?php
 
-			if( have_rows('history_slide') ):
+					if( have_rows('history_slide') ):
 
-			$count = 0;
+					$count = 0;
 
-				// loop through the slides
-				while ( have_rows('history_slide') ) : the_row();
-			
-					// Variables
-					$history_year = get_sub_field('history_year'); 
+						// loop through the slides
+						while ( have_rows('history_slide') ) : the_row();
+					
+							// Variables
+							$history_year = get_sub_field('history_year'); 
 
-		?>
+				?>
 
-		<li><a href="#"><?php echo $history_year; ?></a></li>
+				<li><a href="#"><?php echo $history_year; ?></a></li>
+
+				<?php
+					
+					endwhile;
+
+					else :
+
+						// no layouts found
+
+					endif;
+
+				?>
+
+				</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container-sm p-t-lg">
+			<ul id="issues">
+
+			<?php
+
+				if( have_rows('history_slide') ):
+
+				$count = 0;
+
+					// loop through the slides
+					while ( have_rows('history_slide') ) : the_row();
+						
+						// set counter
+						$count++;
+				
+						// Variables
+						$history_year = get_sub_field('history_year'); 
+						$history_description = get_sub_field('history_description');
+
+			?>
+
+			<li id="<?php echo $history_year; ?>">
+
+				<p><?php echo $history_description; ?></p>
+
+				<?php if ( have_rows( 'history_images' ) ) : 
+					while ( have_rows( 'history_images' ) ) : the_row();
+						$history_image = get_sub_field('history_image');
+						$history_caption = get_sub_field('history_caption');
+						$history_image_size = $history_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
+				?>
+
+					<?php if($history_image): echo '<div class="text-center"><img src="' . $history_image_size. '"></div>'; endif; ?>
+
+					<?php if($history_caption): echo '<p class="m-y-sm text-muted text-sm text-center">' . $history_caption. '</p>'; endif; ?>
+
+				<?php endwhile; endif; ?>
+
+			</li>
 
 		<?php
 			
@@ -144,65 +270,12 @@
 
 		?>
 
-		</ul>
+			</ul>
 
-		<ul id="issues">
-
-		<?php
-
-			if( have_rows('history_slide') ):
-
-			$count = 0;
-
-				// loop through the slides
-				while ( have_rows('history_slide') ) : the_row();
-					
-					// set counter
-					$count++;
-			
-					// Variables
-					$history_year = get_sub_field('history_year'); 
-					$history_description = get_sub_field('history_description');
-
-		?>
-
-		<li id="<?php echo $history_year; ?>">
-
-			<h2><?php echo $history_year; ?></h2>
-
-			<p><?php echo $history_description; ?></p>
-
-			<?php if ( have_rows( 'history_images' ) ) : 
-				while ( have_rows( 'history_images' ) ) : the_row();
-					$history_image = get_sub_field('history_image');
-					$history_caption = get_sub_field('history_caption');
-					$history_image_size = $history_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
-			?>
-
-				<?php if($history_image): echo '<img src="' . $history_image_size. '">'; endif; ?>
-
-				<?php if($history_caption): echo '<p>' . $history_caption. '</p>'; endif; ?>
-
-			<?php endwhile; endif; ?>
-
-		</li>
-
-	<?php
+			<a href="#" id="next">+</a> <!-- optional -->
+			<a href="#" id="prev">-</a> <!-- optional -->
 		
-		endwhile;
-
-		else :
-
-			// no layouts found
-
-		endif;
-
-	?>
-
-		</ul>
-
-		<a href="#" id="next">+</a> <!-- optional -->
-   		<a href="#" id="prev">-</a> <!-- optional -->
+		</div>
 
 	</div>
 
