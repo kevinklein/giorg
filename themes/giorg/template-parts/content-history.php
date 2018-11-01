@@ -101,6 +101,7 @@
         list-style: none;
         float: left;
 		opacity: 0 !important;
+		padding-bottom: 1.5rem;
       }
 	  #issues li.selected {
 		  opacity: 1 !important;
