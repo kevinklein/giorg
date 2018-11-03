@@ -66,7 +66,7 @@
                             'depth'=> 1
                         ) );
                         ?>
-                        <a href="http://acgmeetings.gi.org" class="m-l-md" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/acg2018-philly-logo-header.svg" width="110"></a>
+                        <a href="http://acgmeetings.gi.org" class="m-l-md" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/meeting-2019.svg" width="110"></a>
                     </nav>
                 </div>
             </div>
