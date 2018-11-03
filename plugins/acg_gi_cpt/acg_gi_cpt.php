@@ -166,6 +166,7 @@ function acg_gi_cpt_guideline_meta_function( $post ){
 	$acg_gi_cpt_summaryurl = get_post_meta( $post->ID, '_acg_gi_cpt_summaryurl', true );
 	$acg_gi_cpt_partnermessage = get_post_meta( $post->ID, '_acg_gi_cpt_partnermessage', true );
 	$acg_gi_cpt_updategl = get_post_meta( $post->ID, '_acg_gi_cpt_updategl', true );
+	$acg_gi_cpt_podcast = get_post_meta( $post->ID, '_acg_gi_cpt_podcast', true );
 	?>
 	<p><input type="hidden" name="acg_gi_cpt_hashtmlguideline" value="0" /><input type="checkbox" name="acg_gi_cpt_hashtmlguideline" id="acg_gi_cpt_hashtmlguideline" value="hashtmlguideline" <?php checked( $acg_gi_cpt_hashtmlguideline, 'hashtmlguideline' ); ?> /> <label for="acg_gi_cpt_hashtmlguideline">Has HTML Guideline</label></p>
 	<p>Words to sort title by:<br /><input type="text" name="acg_gi_cpt_titlesortby" style="width: 98%;" value="<?php echo esc_attr( $acg_gi_cpt_titlesortby ); ?>" /></p>
@@ -178,6 +179,7 @@ function acg_gi_cpt_guideline_meta_function( $post ){
 	<p>Decision Support Tool URL:<br /><input type="text" name="acg_gi_cpt_decisionsupporttoolurl" style="width: 98%;" value="<?php echo esc_attr( $acg_gi_cpt_decisionsupporttoolurl ); ?>" /></p>
 	<p>PDF of Guideline Summary URL:<br /><input type="text" name="acg_gi_cpt_summaryurl" style="width: 98%;" value="<?php echo esc_attr( $acg_gi_cpt_summaryurl ); ?>" /></p>
 	<p>Update:<br /><input type="text" name="acg_gi_cpt_updategl" style="width: 98%;" value="<?php echo esc_attr( $acg_gi_cpt_updategl ); ?>" /></p>
+	<p>Podcast URL:<br /><input type="text" name="acg_gi_cpt_podcast" style="width: 98%;" value="<?php echo esc_attr( $acg_gi_cpt_podcast ); ?>" /></p>
 	
 	<?php
 }
@@ -435,6 +437,14 @@ function acg_gi_cpt_save_meta( $post_id ){
 	
 		//save the metadata
 		update_post_meta( $post_id, '_acg_gi_cpt_updategl', strip_tags( $_POST['acg_gi_cpt_updategl'] ) );
+	
+	}
+
+	//verify the metadata is set
+	if( isset( $_POST['acg_gi_cpt_podcast'] ) ){
+	
+		//save the metadata
+		update_post_meta( $post_id, '_acg_gi_cpt_podcast', strip_tags( $_POST['acg_gi_cpt_podcast'] ) );
 	
 	}
 
