@@ -16,7 +16,7 @@
 
 <div class="m-b-lg text-right">
 	<a href="#" class="text-700">Guideline Development Policies</a>
-	<a href="#" class="text-700 m-l-lg">ACG Guidelines App</a>
+	<a href="/membership/acg-mobile-app/" class="text-700 m-l-lg">ACG Guidelines App</a>
 </div>
 
 <div class="text-center container-sm m-b-md p-lg-x-xl">
