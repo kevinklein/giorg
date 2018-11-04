@@ -3,7 +3,7 @@
 	width: 33.3333%;
 }
 .grid-item .card {
-	min-height: 240px;
+	min-height: 205px;
 }
 </style>
 
