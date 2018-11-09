@@ -139,7 +139,7 @@
 								</span>
 								<span class="col-xs-8 text-sm">
 									<div class="p-a-md">
-										<h3 class="text-uppercase text-primary m-b-sm text-md text-webfont-one">2018 ACG/LGS Regional Postgraduate Course</h3> 
+										<h3 class="text-uppercase text-primary m-b-sm text-md text-font-one">2018 ACG/LGS Regional Postgraduate Course</h3> 
 										This course offers the latest clinical
 updates, Breakout Sessions and Hands-on Sessions.
 										<div class="item-flex">
@@ -166,7 +166,7 @@ updates, Breakout Sessions and Hands-on Sessions.
 								</span>
 								<span class="col-xs-8 text-sm">
 									<div class="p-a-md">
-										<h3 class="text-uppercase text-primary m-b-sm text-md text-webfont-one">2018 ACG/FGS Annual Spring Symposium</h3> 
+										<h3 class="text-uppercase text-primary m-b-sm text-md text-font-one">2018 ACG/FGS Annual Spring Symposium</h3> 
 										This course offers the latest clinical updates, Breakout Sessions and Hands-on Sessions.
 										<div class="item-flex">
 											<div class="item-flex align-items-flex-start m-y">
@@ -192,7 +192,7 @@ updates, Breakout Sessions and Hands-on Sessions.
 								</span>
 								<span class="col-xs-8 text-sm">
 									<div class="p-a-md">
-										<h3 class="text-uppercase text-primary m-b-sm text-md text-webfont-one">2018 ACG's IBD School and Eastern Regional Postgraduate Cours</h3> 
+										<h3 class="text-uppercase text-primary m-b-sm text-md text-font-one">2018 ACG's IBD School and Eastern Regional Postgraduate Cours</h3> 
 										This course offers the latest clinical updates, Breakout Sessions and Hands-on Sessions.
 										<div class="item-flex">
 											<div class="item-flex align-items-flex-start m-y">
@@ -452,7 +452,7 @@ updates, Breakout Sessions and Hands-on Sessions.
 						<div class="row display-flex flex-column flex-1">
 							<div class="col-md-6 col-xs-12 display-flex flex-column flex-1">
 								<a href="http://giquic.gi.org" target="_blank" class="card border-0 card-hover border-0 flex-1 text-inverse" style="background:#005696">
-									<div class="card-block p-b-xl text-webfont-two text-xl">
+									<div class="card-block p-b-xl text-font-two text-xl">
 										With GIQuIC you can demonstrate to patients as well as referring providers and payers the quality of your performance and your dedication to continuous improvement.
 									</div>
 									<div class="card-block text-right position-absolute position-absolute-bl position-absolute-br">

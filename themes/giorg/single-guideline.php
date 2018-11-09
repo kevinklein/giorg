@@ -19,7 +19,7 @@ while ( have_posts() ) :
 	</div>
 	<div class="col-md-3 col-xs-12">
 		<div id="sidebar">
-			<!-- <h3 class="m-b-sm text-webfont-one text-500 nav-local-header text-secondary"><?php the_title() ?></h3>  -->
+			<!-- <h3 class="m-b-sm text-font-one text-500 nav-local-header text-secondary"><?php the_title() ?></h3>  -->
 			<?php if ( get_post_meta($post->ID, '_acg_gi_cpt_downloadurl', true) ) : ?>
 				<div class="text-sm">
 					<a href="<?php echo get_post_meta($post->ID, '_acg_gi_cpt_downloadurl', true) ?>" class="btn btn-outline btn-sm text-muted text-700 btn-block" target="_blank">
