@@ -114,8 +114,8 @@ fieldset[disabled] a.btn {
 .btn-primary-outline {
     @include button-outline-variant($btn-primary-bg,$btn-primary-bg,#fff);
 }
-.btn-danger-outline {
-    @include button-outline-variant($btn-yellow-bg,$btn-yellow-bg,#fff);
+.btn-orange-outline {
+    @include button-outline-variant($brand-orange,$brand-orange,#fff);
 }
 .btn-white-outline  {
     @include button-outline-variant($btn-white-bg,$btn-white-bg,$gray);
