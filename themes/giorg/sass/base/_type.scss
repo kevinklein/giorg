@@ -498,6 +498,10 @@ p {
     color: $gray-darker;
 }
 
+.text-primary-dark {
+    color: darken($brand-primary,5%);
+}
+
 .text-primary {
     color: $brand-primary;
 }
