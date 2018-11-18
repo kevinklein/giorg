@@ -697,12 +697,14 @@ a.text-inverse:hover {
     white-space: nowrap;
 }
 
-.text-hover-underline {
+.text-hover-underline,
+.text-hover-underline a {
     border-bottom: 1px solid transparent;
 }
 
 .text-underline,
-.text-hover-underline:hover {
+.text-hover-underline:hover,
+.text-hover-underline a:hover {
 //.main-content a:not([class])
     border-bottom: 1px solid currentColor;
     text-decoration: none;

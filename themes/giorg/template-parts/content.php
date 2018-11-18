@@ -13,14 +13,14 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="text-sm text-muted m-b">
 				<?php
 				giorg_posted_on();
 				giorg_posted_by();
@@ -45,15 +45,23 @@
 			),
 			get_the_title()
 		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'giorg' ),
-			'after'  => '</div>',
-		) );
 		?>
+
+		<?php
+		if ( !is_singular() ) :
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'giorg' ),
+				'after'  => '</div>',
+			) );
+		endif;
+		?>
+		
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php giorg_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php if ( is_singular() ) : ?>
+		<footer class="entry-footer text-sm m-t-lg bg-primary-pale p-a">
+			<?php giorg_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->
