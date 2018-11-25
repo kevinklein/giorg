@@ -10,6 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php $postThumb = get_the_post_thumbnail(); if( !empty( $postThumb ) ) : ?>
+	
+		<a href="<?php the_permalink(); ?>" class="post-thumbnail pull-left m-r m-b">
+			<?php the_post_thumbnail('medium'); ?> 
+		</a>
+
+	<?php endif; ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -29,37 +38,24 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php giorg_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-content clearfix">
+		
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'giorg' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+			if ( !is_singular() ) :
 		?>
 
-		<?php
-		if ( !is_singular() ) :
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'giorg' ),
-				'after'  => '</div>',
-			) );
-		endif;
-		?>
+			<?php the_excerpt(); ?>
+
+			<hr class="m-b-md">
+
+		<?php else :
+			the_content();
+		endif; ?>
 		
 	</div><!-- .entry-content -->
 
 	<?php if ( is_singular() ) : ?>
-		<footer class="entry-footer text-sm m-t-lg bg-primary-pale p-a">
+		<footer class="entry-footer text-sm m-t-lg bg-primary-pale p-a text-hover-underline">
 			<?php giorg_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>

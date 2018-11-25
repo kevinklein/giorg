@@ -35,6 +35,11 @@ if ( ! function_exists( 'giorg_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
+		function custom_excerpt_length( $length ) {
+			return 30;
+		}
+		add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -188,7 +193,7 @@ function giorg_scripts() {
         wp_enqueue_script('giorg-toc', get_template_directory_uri() . '/js/toc.min.js', null, null, true );
     }
 
-	if ( is_front_page() ) {
+	if ( is_front_page() || is_home() ) {
 		wp_enqueue_style('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css' );
         wp_enqueue_script('giorg-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js', null, null, true );
     }
@@ -232,3 +237,7 @@ function acf_wysiwyg_remove_wpautop() {
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop', 15);
 
+// for seeing if a post is any number of blog content pages
+function is_blog () {
+    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+}

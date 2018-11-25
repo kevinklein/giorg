@@ -662,7 +662,7 @@ $card-spacer-x-sm: ($card-spacer-x * .667);
 $card-spacer-y-sm: ($card-spacer-y / 2);
 $card-border-width: .0625rem;
 $card-border-radius: 0;
-$card-border-color: #ccc;
+$card-border-color: $list-group-border;
 $card-border-radius-inner: 0;//($card-border-radius - $card-border-width);
 
 $card-cap-bg: #fff;

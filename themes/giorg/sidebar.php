@@ -6,6 +6,12 @@
 ?>
 <aside id="secondary">
 
+	<?php if ( is_single() ) : ?>
+		<div class="m-b">
+			<a href="/acg-blog/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/acgblog@2x.png" alt="ACG Blog"></a>
+		</div>
+	<?php endif; ?>
+
 	<div class="list-group m-b-md">
 		<div class="list-group-item"><h3 class="text-uc text-gray-dark m-b-0">Recent Posts</h3></div>
 		<!-- // Define our WP Query Parameters -->
@@ -24,10 +30,15 @@
 		?>
 	</div>
 
+	<div class="card card-block p-x-sm p-t-sm p-b-0">
+		<a class="twitter-timeline" href="https://twitter.com/AmCollegeGastro" data-widget-id="437348425101615104">Tweets by @AmCollegeGastro</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+
 	<div class="list-group m-b-md">
 		<div class="list-group-item"><h3 class="text-uc text-gray-dark m-b-0">Tags</h3></div>
-		<div class="list-group-item">
-			<?php wp_tag_cloud( 'smallest=7&largest=30' ); ?>
+		<div class="list-group-item text-hover-underline">
+			<?php wp_tag_cloud( 'smallest=8&largest=30&number=35' ); ?>
 		</div>
 	</div>
 	
@@ -36,7 +47,7 @@
 		return;
 	}
 	?>
-	<div class="widget-area">adfs
+	<div class="widget-area">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
 

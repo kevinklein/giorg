@@ -8,6 +8,12 @@
 				</h1>
 			<?php } elseif ( is_search() ) { ?>
 				<h1 class="main-title">Search Results</h1>
+			<?php } elseif ( is_blog() || is_single() ) { ?>
+				<?php if ( !is_single() ) { ?>
+					<a href="/acg-blog/" class="main-title"><img src="<?php echo get_template_directory_uri(); ?>/img/acgblog@2x.png" alt="ACG Blog" class="display-block" width="300"></a>
+				<?php } else { ?>
+					<?php the_title( '<h1 class="main-title">', '</h1>' ); ?> 
+				<?php } ?> 
 			<?php } else { ?>
 				<?php the_title( '<h1 class="main-title">', '</h1>' ); ?> 
 			<?php } ?> 

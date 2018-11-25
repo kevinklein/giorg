@@ -27,7 +27,7 @@ if ( ! function_exists( 'giorg_posted_on' ) ) :
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Posted on %s', 'post date', 'giorg' ),
-			'<a class="text-700" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<a class="text-700 text-hover-underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
@@ -43,7 +43,7 @@ if ( ! function_exists( 'giorg_posted_by' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'giorg' ),
-			'<span class="author vcard"><a class="text-700 url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><a class="text-700 text-hover-underline url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.

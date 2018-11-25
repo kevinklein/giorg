@@ -196,6 +196,22 @@ $('.btn-group').each( function( i, buttonGroup ) {
 </script>
 <?php endif; ?> 
 
+<?php if( is_home() ) : ?>
+<script>
+(function ($) {
+    $(document).ready(function() {
+        
+        var swiperPosts = new Swiper('.posts-latest', {
+			loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true, },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
+        });
+
+	});
+}(jQuery));
+</script>
+<?php endif; ?> 
+
 <?php if( is_front_page() ) : ?>
 <script>
 (function ($) {

@@ -188,3 +188,11 @@ img {
 	display: block;
 	margin: 0 auto;
 }
+
+.post-thumbnail {
+    img {
+        height: auto;
+        max-width: 200px;
+        width: auto;
+    }
+}
