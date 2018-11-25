@@ -1,3 +1,4 @@
+.nav-links,
 .pagination {
   display: inline-block;
   font-family: $font-family-sans-serif;
@@ -8,29 +9,30 @@
 
   > li {
     display: inline; // Remove list-style and block-level defaults
-
-    > a,
-    > span {
-      position: relative;
-      float: left; // Collapse white-space
-      padding: $pagination-padding-y $pagination-padding-x;
-      margin-left: -1px;
-      line-height: $line-height;
-      color: $pagination-color;
-      text-decoration: none;
-      background-color: $pagination-bg;
-      border: 1px solid transparent;
-    }
-    &:first-child {
-      > a,
-      > span {
-        margin-left: 0;
-      }
-    }
   }
 
   > li > a,
-  > li > span {
+  > li > span,
+  .page-numbers {
+    position: relative;
+    float: left; // Collapse white-space
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -1px;
+    line-height: $line-height;
+    color: $pagination-color;
+    text-decoration: none;
+    background-color: $pagination-bg;
+    border: 1px solid transparent;
+  }
+
+  li:first-child > a,
+  li:first-child > span {
+    margin-left: 0;
+  }
+
+  > li > a,
+  > li > span,
+  .page-numbers {
     @include hover-focus {
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
@@ -38,8 +40,9 @@
     }
   }
 
-  > .active > a,
-  > .active > span {
+  > li > .active > a,
+  > li > .active > span,
+  .page-numbers.current {
     @include plain-hover-focus {
       z-index: 2;
       color: $pagination-active-color;
