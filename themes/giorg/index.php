@@ -29,9 +29,9 @@ get_header();
 
 			<main id="main" class="site-main col-md-10 col-xs-12 p-l-lg">
 
-				<div class="bg-gray-lighter m-b-lg position-relative p-t-md">
+				<div class="bg-gray-lighter m-b-lg position-relative p-t-md p-b p-x">
 		
-					<div class="swiper-container posts-latest p-b-lg">
+					<div class="swiper-container posts-latest p-b-md">
 						<div class="swiper-wrapper">
 						<?php
 						$args = array( 
