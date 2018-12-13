@@ -12,6 +12,17 @@
 		</div>
 	<?php endif; ?>
 
+	<?php
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		return;
+	}
+	?>
+	<div class="list-group m-b-md">
+		<div class="list-group-item text-hover-underline">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		</div>
+	</div>
+
 	<div class="list-group m-b-md">
 		<div class="list-group-item"><h3 class="text-uc text-gray-dark m-b-0">Recent Posts</h3></div>
 		<!-- // Define our WP Query Parameters -->
@@ -40,15 +51,6 @@
 		<div class="list-group-item text-hover-underline">
 			<?php wp_tag_cloud( 'smallest=8&largest=30&number=35' ); ?>
 		</div>
-	</div>
-	
-	<?php
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		return;
-	}
-	?>
-	<div class="widget-area">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
 
 </aside>

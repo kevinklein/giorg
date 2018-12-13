@@ -148,6 +148,15 @@ function giorg_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidbear Widgets 1', 'giorg' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Sidebar Widets', 'giorg' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="list-group-item"><h3 class="text-uc text-gray-dark m-b-0">',
+		'after_title'   => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'giorg_widgets_init' );
 
@@ -159,7 +168,9 @@ function giorg_scripts() {
 
 	wp_enqueue_script( 'giorg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'giorg-scrollreveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', null, null, true  );
+	//wp_enqueue_script( 'giorg-scrollreveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', null, null, true  );
+
+	//wp_enqueue_script( 'giorg-scrollreveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', null, null, true  );
 
 	wp_enqueue_script( 'giorg-jqueryui', get_template_directory_uri() . '/js/jquery-ui.min.js', null, null, true  );
 
