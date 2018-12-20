@@ -21,7 +21,7 @@
 
 		<div class="bg-primary-lighter text-inverse">
 			<div class="container p-b-md position-relative">
-				<div class="m-x-xl overflow-hidden p-b-sm">
+				<div class="overflow-hidden p-b-sm">
 				<ul id="dates">
 
 				<?php
