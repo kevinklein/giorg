@@ -20,7 +20,7 @@
 	<div id="timeline">
 
 		<div class="bg-primary-lighter text-inverse">
-			<div class="container p-b-md p-x-xl position-relative">
+			<div class="container p-b-md position-relative">
 				<div class="m-x-xl overflow-hidden p-b-sm">
 				<ul id="dates">
 
