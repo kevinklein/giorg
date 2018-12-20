@@ -82,27 +82,29 @@
 			<li id="<?php echo $history_year; ?>">
 
 				<div class="row">
-					<div class="col-md-4 col-xs-12">
-						<?php if ( have_rows( 'history_images' ) ) : 
-							while ( have_rows( 'history_images' ) ) : the_row();
+
+					<?php if ( have_rows( 'history_images' ) ) : ?>
+						<div class="col-md-4 col-xs-12">
+							<?php while ( have_rows( 'history_images' ) ) : the_row();
 								$history_image = get_sub_field('history_image');
 								$history_caption = get_sub_field('history_caption');
 								$history_image_size = $history_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
-						?>
-
+							?>
 							<div class="m-b">
-
 								<?php if($history_image): echo '<div class="text-center border-1 border-a border-gray-light p-a-sm"><img src="' . $history_image_size. '"></div>'; endif; ?>
-
 								<?php if($history_caption): echo '<p class="m-t-sm text-muted text-sm text-center">' . $history_caption. '</p>'; endif; ?>
-
 							</div>
-
-						<?php endwhile; endif; ?>
-					</div>
-					<div class="col-md-8 col-xs-12">
+						</div>
+					<?php endwhile; endif; ?>
+			
+					<?php if ( have_rows( 'history_images' ) ) : ?>
+						<div class="col-md-8 col-xs-12">
+					<?php else : ?>
+						<div class="col-xs-12">
+					<?php endif; ?>
 						<p><?php echo $history_description; ?></p>
 					</div>
+					
 				</div>
 
 			</li>
