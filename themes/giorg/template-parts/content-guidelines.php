@@ -7,7 +7,7 @@
 }
 </style>
 
-<?php the_content(); ?>
+<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 <div class="text-center container-sm m-b-md p-lg-x-xl">
 	<form role="search" method="get" class="input-group" action="<?php echo home_url( '/' ); ?>">
