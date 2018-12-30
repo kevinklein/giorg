@@ -12,15 +12,19 @@
 		</div>
 	<?php endif; ?>
 
-	<?php
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		return;
-	}
-	?>
 	<div class="list-group m-b-md">
-		<div class="list-group-item text-hover-underline">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-		</div>
+		<div class="list-group-item"><h3 class="text-uc text-gray-dark m-b-0">Categories</h3></div>
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'menu-5',
+			'menu_id' => '',
+			'menu_class' => '',
+			'container_class' => '',
+			'items_wrap' => '<div>%3$s</div>',
+			'walker' => new Categories_Walker,
+			'depth'=> 1
+		) );
+		?>
 	</div>
 
 	<div class="list-group m-b-md">
