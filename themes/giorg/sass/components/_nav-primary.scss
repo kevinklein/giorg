@@ -377,6 +377,11 @@
     border-bottom: 1px solid currentColor;
 }
 
+.nav-ancillary .current-menu-item a {
+    border-bottom: 2px solid currentColor;
+    font-weight: 500;
+}
+
 .nav-top {
     display: flex;
     font-size: .9rem;
