@@ -43,7 +43,13 @@ $count = count( get_sub_field( 'flexbox_card_repeater' ) );
 							<?php if( $flexbox_card_img_link ): ?>
 								<a href="<?php echo $flexbox_card_img_link['url']; ?>" target="<?php echo $flexbox_card_img_link['target']; ?>">
 							<?php endif; ?>
-							<div class="img-cover img-cover-flex img-cover-flex-<?php echo $flexbox_card_img_aspect; ?>" style="background-image: url(<?php echo $flexbox_card_img_size; ?>);"></div>
+								<?php 
+									//check to see if fullsize image is selected
+									if($flexbox_card_img_aspect == "fullsize") : ?>
+									<img src="<?php echo $flexbox_card_img_size; ?>">
+								<?php else: ?>
+									<div class="img-cover img-cover-flex img-cover-flex-<?php echo $flexbox_card_img_aspect; ?>" style="background-image: url(<?php echo $flexbox_card_img_size; ?>);"></div>
+								<?php endif; ?>
 							<?php if( $flexbox_card_img_link ): ?>
 								</a>
 							<?php endif; ?>
