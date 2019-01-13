@@ -30,18 +30,32 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $headings-font-weight; }
 }
 
 .header-full,
+.header-full-sm,
 .header-extended {
     font-size: $font-size-h2;
     font-weight: 400;
     margin-top: 4rem;
     margin-bottom: 3rem;
-    margin-left: -50vw;
-    margin-right: -50vw;
     position: relative;
     text-align: center;
+}
+
+.header-full,
+.header-extended {
+    margin-left: -50vw;
+    margin-right: -50vw;
     left: 50%;
     right: 50%;
     width: 100vw;
+}
+
+.header-full-sm {
+    position: relative;
+}
+
+.header-full,
+.header-full-sm,
+.header-extended {
     span {
         background: #fff;
         padding: 0 60px;
