@@ -19,6 +19,8 @@ get_header();
 	while ( have_posts() ) :
 		the_post();
 
+		get_template_part( 'template-parts/content', 'page' );
+
 		if ( is_page( 'gi-fellowship-program-information') ) :
 
 			get_template_part( 'template-parts/content-fellowship', 'page' );
@@ -32,8 +34,6 @@ get_header();
 			get_template_part( 'template-parts/content-history', 'page' );
 
 		endif;
-	
-		get_template_part( 'template-parts/content', 'page' );
 
 	endwhile; // End of the loop.
 	?>

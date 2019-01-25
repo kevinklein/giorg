@@ -7,8 +7,6 @@
 }
 </style>
 
-<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
 <div class="text-center container-sm m-b-md p-lg-x-xl">
 	<form role="search" method="get" class="input-group" action="<?php echo home_url( '/' ); ?>">
 		<input type="text" class="form-control" name="s" id="s" value="" placeholder="Search for Guidelines and Other Clinical Documents">
