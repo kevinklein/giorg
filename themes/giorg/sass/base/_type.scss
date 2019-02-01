@@ -138,7 +138,7 @@ h3.trigger {
     padding-left: 1rem;
     position: relative;
     &:after {
-        background: $brand-primary;
+        background: currentColor;
         content: '';
         display: block;
         position: absolute;

@@ -1,5 +1,5 @@
 <?php if ( !get_field( 'hide_header' ) ): ?>
-	<header class="border-bottom">
+	<header class="bg-triangles-primary text-inverse">
 		<div class="item-flex container p-y-md"> 
 			<?php if( is_page( 'contentapi' ) ) { ?>
 				<h1 class="main-title">
