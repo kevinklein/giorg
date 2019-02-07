@@ -277,7 +277,7 @@ body {
 }
 
 // for sticky sidebar elements using Scrollmagic. if the sidebar is smaller than a certain arbitrary threshold (i.e. my 13" Macbook pro as an example) add overflow to the sidebar
-@media (max-height: 750px) {
+@media (max-height: 720px) {
     #sidebar {
         max-height: 520px;
         overflow: auto;
