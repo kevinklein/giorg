@@ -80,7 +80,8 @@
     <div class="p-y bg-gray-lightest bg-white text-xs">
         <div class="container item-flex item-flex-responsive">
             <span class="text-gray item-flex-main">©2018 American College of Gastroenterology</span>
-            <a href="#" class="text-muted text-hover-underline">Terms of Use</a> <span class="text-pipe">|</span> <a href="#" class="text-muted text-hover-underline">Privacy Policy</a>
+            <!-- <a href="#" class="text-muted text-hover-underline">Terms of Use</a> <span class="text-pipe">|</span>  -->
+            <a href="/privacy-policy/" class="text-muted text-hover-underline">Privacy Policy</a>
         </div>
     </div>
 </div>
