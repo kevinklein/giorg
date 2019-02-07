@@ -38,5 +38,4 @@ while ( have_posts() ) :
 ?>
 
 <?php
-get_sidebar();
 get_footer();

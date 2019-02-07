@@ -48,7 +48,11 @@
         var fixHeader = new ScrollMagic.Scene({triggerElement: ".main-content", triggerHook: 'onLeave', offset: 0})
             .setClassToggle("body", "body-fixed-top");
 
-        var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: $('#main').height(), offset: -headerOffset})
+        // var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: $('#main').height(), offset: -headerOffset})
+        //     .setPin("#sidebar")
+        //     .setClassToggle("body", "sidebar-affixed");
+
+        var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: 0, offset: -headerOffset})
             .setPin("#sidebar")
             .setClassToggle("body", "sidebar-affixed");
 

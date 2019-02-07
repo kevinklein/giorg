@@ -1,0 +1,146 @@
+#timeline {
+    overflow: hidden;
+    margin: 0 0 ;
+    position: relative;
+}
+#dates {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 25px 0 5px;
+    width: 100%;
+    position: relative;
+}
+#dates::after {
+    border-bottom: 2px dotted #fff;
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+}
+#dates::before {
+
+}
+#dates li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+#dates li::before {
+    background: #8097B6;
+    border-radius: 50%;
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    bottom: -11px;
+    left: calc(50% - 5px);
+    right: 0;
+}
+#dates li::after {
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 2px);
+    right: 0;
+}
+#dates li + li {
+    margin-top: 0;
+}
+#dates a {
+    color: rgba(255,255,255,.6);
+}
+#dates .selected {
+    color: #fff;
+    font-size: 30px;
+}
+/* #dates .selected::after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    border: 10px solid transparent; 
+    border-top-color: #fff;
+} */
+
+#issues {
+    margin: 0;
+    padding: 0;
+} 
+#issues li {
+    width: 800px;
+    list-style: none;
+    float: left;
+    opacity: 0 !important;
+    //padding-bottom: 1rem;
+}
+#issues li.selected {
+    opacity: 1 !important;
+}
+#issues li.selected img {
+    
+}
+#issues li img {
+    
+}
+#issues li h1 {
+    
+}
+#issues li p {
+    
+}
+
+// #grad_left,
+// #grad_right {
+//     width: 100px;
+//     height: 350px;
+//     position: absolute;
+//     top: 0;
+// }
+
+#next,
+#prev {
+    position: absolute;
+	z-index: 10;
+    text-indent: -9999em;
+	cursor: pointer;
+	top: calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+	background-size: 24px 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#next {
+    right: 0;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+}
+#prev {
+    left: 0;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+}
+#next.disabled,
+#prev.disabled {
+    opacity: 0.2;
+}
+.history-hero {
+    background: url(/wp-content/themes/giorg/img/history-bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
