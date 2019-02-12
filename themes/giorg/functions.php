@@ -257,9 +257,9 @@ function giorg_scripts() {
 
 	wp_enqueue_script( 'giorg-gsap-tween', get_template_directory_uri() . '/js/gsap/TweenLite.min.js', null, null, true  );
 
-	wp_enqueue_script( 'giorg-scrollmagic', get_template_directory_uri() . '/js/scrollmagic/ScrollMagic.min.js', null, null, true  );
+	wp_enqueue_script( 'giorg-stickybit', get_template_directory_uri() . '/js/stickybits.min.js', null, null, true  );
 
-	wp_enqueue_script( 'giorg-scrollmagic-anim', get_template_directory_uri() . '/js/scrollmagic/ScrollMagic.animation.gsap.min.js', null, null, true  );
+//	wp_enqueue_script( 'giorg-scrollmagic-anim', get_template_directory_uri() . '/js/scrollmagic/ScrollMagic.animation.gsap.min.js', null, null, true  );
 
 	wp_enqueue_script( 'giorg-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '20180915', true );
 

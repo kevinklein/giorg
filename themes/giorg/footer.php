@@ -176,7 +176,7 @@ $('.btn-group').each( function( i, buttonGroup ) {
 
         }, //called when a new section is highlighted 
         'highlightOnScroll': true, //add class to heading that is currently in focus
-        'highlightOffset': 100, //offset to trigger the next headline
+        'highlightOffset': 200, //offset to trigger the next headline
         'anchorName': function(i, heading, prefix) { //custom function for anchor name
             return prefix+i;
         },

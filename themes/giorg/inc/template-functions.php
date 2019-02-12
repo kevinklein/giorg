@@ -40,3 +40,34 @@ add_action( 'wp_head', 'giorg_pingback_header' );
 /**
  * Custom Post Types
  */
+
+function create_post_type() {
+
+    /* This week in DC */
+    register_post_type( 'week',
+        array(
+            'exclude_from_search' => false,
+            'public' => true,
+            'query_var' => false,
+            'hierarchical' => false,
+            'show_in_admin_bar' => true,
+            'menu_position'     => 10,
+            'supports' => array(
+                'title',
+                // 'editor',
+                'thumbnail',
+                // 'excerpt',
+                'custom-fields',
+            ),
+            'labels' => array(
+                'name' => 'This Week In DC Items',
+                'singular_name' => 'This Week In DC Week',
+                'add_new' => 'Add Week',
+                'add_new_item' => 'Add Week'
+            )
+        )
+    );
+
+}
+
+add_action( 'init', 'create_post_type' );

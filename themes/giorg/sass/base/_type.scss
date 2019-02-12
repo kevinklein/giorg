@@ -99,7 +99,7 @@ h3.trigger {
     font-size: $display2-size;
     font-weight: 300;
     margin: 0 0 2rem;
-    padding-top: 12rem;
+    padding-top: 2rem;
     position: relative;  
     &:before {
         background: #ccc;
@@ -108,7 +108,7 @@ h3.trigger {
         left: 0;
         right: 0;
         position: absolute;
-        top: 9rem;
+        top: 1rem;
     }
 }
 

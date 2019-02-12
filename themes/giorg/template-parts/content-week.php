@@ -11,9 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="container p-t-lg">
-		
-		<ul class="list-unstyled">
+	<div class="container">
 
 		<?php
 
@@ -34,40 +32,37 @@
 
 		?>
 
-		<li id="<?php echo $count; ?>">
+		<div id="item<?php echo $count; ?>">
 
-			<div class="row">
+			<div class="week-row">
 
-				<?php if ( have_rows( 'week_images' ) ) : ?>
-					<div class="col-md-4 col-xs-12">
-						<?php while ( have_rows( 'week_images' ) ) : the_row();
-							$week_image = get_sub_field('week_image');
-							$week_caption = get_sub_field('week_caption');
-							$week_image_size = $week_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
-						?>
-						<div class="m-b">
-							<?php if($week_image): echo '<div class="text-center border-1 border-a border-gray-light p-a-sm"><img src="' . $week_image_size. '"></div>'; endif; ?>
-							<?php if($week_caption): echo '<p class="m-t-sm text-muted text-sm text-center">' . $week_caption. '</p>'; endif; ?>
-						</div>
-					</div>
-				<?php endwhile; endif; ?>
-		
-				<?php if ( have_rows( 'week_images' ) ) : ?>
-					<div class="col-md-8 col-xs-12">
-				<?php else : ?>
-					<div class="col-xs-12">
-				<?php endif; ?>
+				<h3 class="p-a-sm text-inverse bg-primary text-md"><?php echo $week_headline; ?></h3>
+
 					<?php echo $week_description; ?>
-					<?php if($week_url): ?>
-						<a href="$week_url" class="btn btn-primary">Learn More</a>
+
+					<?php if ( have_rows( 'week_images' ) ) : ?>
+						<div>
+							<?php while ( have_rows( 'week_images' ) ) : the_row();
+								$week_image = get_sub_field('week_image');
+								$week_caption = get_sub_field('week_caption');
+								$week_image_size = $week_image['sizes'][ 'large' ]; // Use the 'large' size version rather than the original, in case the original is HUGE 
+							?>
+							<div class="m-b">
+								<?php if($week_image): echo '<div class="text-center border-1 border-a border-gray-light p-a-sm"><img src="' . $week_image_size. '"></div>'; endif; ?>
+								<?php if($week_caption): echo '<p class="m-t-sm text-muted text-sm text-center">' . $week_caption. '</p>'; endif; ?>
+							</div>
+						</div>
+					<?php endwhile; endif; ?>
+
+					<?php if($week_cta): ?>
+						<a href="$week_cta" class="btn btn-primary">Learn More</a>
 					<?php endif; ?>
+
 				</div>
 				
 			</div>
 
-		</li>
-
-	</ul>
+		</div>
 
 	<?php
 		

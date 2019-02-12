@@ -7,13 +7,13 @@ body {
 // }
 
 //account for fixed header on anchor links
-:target::before { 
-    display: block; 
-    content: " "; 
-    margin-top: -$fixed-top; 
-    height: $fixed-top; 
-    visibility: hidden;
-}
+// :target::before { 
+//     display: block; 
+//     content: " "; 
+//     margin-top: -$fixed-top; 
+//     height: $fixed-top; 
+//     visibility: hidden;
+// }
 
 .search-toggle {
     border: none;

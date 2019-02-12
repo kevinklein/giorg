@@ -1,23 +1,23 @@
 (function ($) {
 
-    //google analytics tracking
-    var acg_tracklink = function(path){
-        if((typeof path==="string")&&(path.length)){
-            if(typeof _gaq==="object"){
-                _gaq.push(['_trackPageview', path]); 
-            }
-        }
-    };
-    //_trackEvent(category, action, opt_label, opt_value)
-    var acg_trackevent = function(category, action, opt_label, opt_value){
-        if(typeof _gaq==="object"){
-            if(typeof opt_value !== "undefined"){
-                _gaq.push(['_trackEvent', category, action, opt_label,opt_value]); 
-            }else{
-                _gaq.push(['_trackEvent', category, action, opt_label]); 
-            }
-        }
-    };
+    // //google analytics tracking
+    // var acg_tracklink = function(path){
+    //     if((typeof path==="string")&&(path.length)){
+    //         if(typeof _gaq==="object"){
+    //             _gaq.push(['_trackPageview', path]); 
+    //         }
+    //     }
+    // };
+    // //_trackEvent(category, action, opt_label, opt_value)
+    // var acg_trackevent = function(category, action, opt_label, opt_value){
+    //     if(typeof _gaq==="object"){
+    //         if(typeof opt_value !== "undefined"){
+    //             _gaq.push(['_trackEvent', category, action, opt_label,opt_value]); 
+    //         }else{
+    //             _gaq.push(['_trackEvent', category, action, opt_label]); 
+    //         }
+    //     }
+    // };
 
     var headerOffset = $( '#header-main' ).height();
     // var heroOffset = $('.hero').outerHeight();
@@ -39,58 +39,74 @@
             scrollPos = (document.body.getBoundingClientRect()).top;
         });
 
-        var controller = new ScrollMagic.Controller({
-            globalSceneOptions: {
-                reverse: true
+        stickybits('.sticky-parent', {stickyBitStickyOffset: headerOffset});
+        stickybits('#sidebar', {stickyBitStickyOffset: headerOffset});
+
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash),
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - headerOffset
+                }, 500);
+                    return false;
+                }
             }
         });
 
-        var fixHeader = new ScrollMagic.Scene({triggerElement: ".main-content", triggerHook: 'onLeave', offset: 0})
-            .setClassToggle("body", "body-fixed-top");
+        // var controller = new ScrollMagic.Controller({
+        //     globalSceneOptions: {
+        //         reverse: true
+        //     }
+        // });
+
+        // var fixHeader = new ScrollMagic.Scene({triggerElement: ".main-content", triggerHook: 'onLeave', offset: 0})
+        //     .setClassToggle("body", "body-fixed-top");
 
         // var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: $('#main').height(), offset: -headerOffset})
         //     .setPin("#sidebar")
         //     .setClassToggle("body", "sidebar-affixed");
 
-        var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: 0, offset: -headerOffset})
-            .setPin("#sidebar")
-            .setClassToggle("body", "sidebar-affixed");
+        // var fixSidebar = new ScrollMagic.Scene({triggerElement: "#sidebar", triggerHook: 'onLeave', duration: 0, offset: -headerOffset})
+        //     .setPin("#sidebar")
+        //     .setClassToggle("body", "sidebar-affixed");
 
         // var fixLocalnav = new ScrollMagic.Scene({triggerElement: "#localnav", triggerHook: 'onLeave', duration: $('#main').height(), offset: -headerOffset})
         //     .setPin("#localnav")
         //     .setClassToggle("body", "localnav-affixed");
 
-        var scenes = [
-            //fixHeader,
-            fixSidebar
-            //fixLocalnav
-        ];
+        // var scenes = [
+        //     //fixHeader,
+        //     fixSidebar
+        //     //fixLocalnav
+        // ];
 
-        var $container = $('#main');
-        console.log(headerOffset);
+        // var $container = $('#main');
+        // console.log(headerOffset);
 
-        controller.addScene(scenes);
+        // controller.addScene(scenes);
 
-        controller.scrollTo(function (newpos) {
-            TweenMax.to(window, 0.5, {scrollTo: {y: newpos, offsetY: headerOffset - 5} });
-        });
+        // controller.scrollTo(function (newpos) {
+        //     TweenMax.to(window, 0.5, {scrollTo: {y: newpos, offsetY: headerOffset - 5} });
+        // });
         
         //  bind scroll to anchor links
-        $(document).on("click", "a[href^='#']", function (e) {
-            var id = $(this).attr("href");
-            if ($(id).length > 0) {
-                e.preventDefault();
-                // trigger scroll
-                controller.scrollTo(id, {
-     // ...
-     offset:-300
-});
-                // if supported by the browser update the URL.
-                if (window.history && window.history.pushState) {
-                    history.pushState("", document.title, id);
-                }
-            }
-        });
+//         $(document).on("click", "a[href^='#']", function (e) {
+//             var id = $(this).attr("href");
+//             if ($(id).length > 0) {
+//                 e.preventDefault();
+//                 // trigger scroll
+//                 controller.scrollTo(id, {
+//      // ...
+//      offset:-70
+// });
+//                 // if supported by the browser update the URL.
+//                 if (window.history && window.history.pushState) {
+//                     history.pushState("", document.title, id);
+//                 }
+//             }
+//         });
        
         // $(function() {
         //     $('.match-height').matchHeight();
