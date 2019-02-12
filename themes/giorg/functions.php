@@ -7,6 +7,24 @@
  * @package giorg
  */
 
+if(SERVERKEY == 'dev'){
+        define('ACG_ACCOUNTS_APP', 'http://accounts.acggi.net');
+} else {
+        define('ACG_ACCOUNTS_APP', 'https://accounts.gi.org');
+}
+if(!function_exists('curPageURL')){
+         function curPageURL() {
+                 $pageURL = 'http';
+                 if (!empty($_SERVER['HTTPS'])) {$pageURL .= "s";}
+                 $pageURL .= "://";
+                 if ($_SERVER["SERVER_PORT"] != "80") {
+                         $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+                 } else {
+                         $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+                 }
+                 return htmlspecialchars($pageURL);
+         }
+}
 if ( ! function_exists( 'giorg_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
