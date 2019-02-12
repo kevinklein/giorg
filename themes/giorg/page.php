@@ -1,4 +1,18 @@
 <?php
+global $post;
+$post->acgmemberonly = get_post_meta($post->ID, '_acg_gi_cpt_acgmemberonly', true);
+if(!current_user_can("publish_pages") || !current_user_can("edit_pages")){
+        if($post->acgmemberonly == "acgmemberonly"){
+                define('DONOTCACHEPAGE', true);
+                if (accts_is_signed_in()){
+                        if(!accts_get_account_acg_member_id()){
+                                header("location:/about/my-acg-login/?returnurl=".urlencode(curPageURL()));
+                        }
+                }else{
+                        header("location:/about/my-acg-login/?returnurl=".urlencode(curPageURL()));
+                }
+        }
+}
 /**
  * The template for displaying all pages
  *
