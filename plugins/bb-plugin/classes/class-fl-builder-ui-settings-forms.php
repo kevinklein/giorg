@@ -263,6 +263,11 @@ class FLBuilderUISettingsForms {
 		 */
 		$field = apply_filters( 'fl_builder_field_js_config', $field, $field_key, $form_key );
 
+		// Bail if the field has no type.
+		if ( ! isset( $field['type'] ) ) {
+			return;
+		}
+
 		// Convert class to className for JS compat.
 		if ( isset( $field['class'] ) ) {
 			$field['className'] = $field['class'];
@@ -293,11 +298,16 @@ class FLBuilderUISettingsForms {
 			$css = '';
 			$js  = '';
 
-			if ( file_exists( $module->dir . 'css/settings.css' ) ) {
-				$css .= '<link class="fl-builder-settings-css" rel="stylesheet" href="' . $module->url . 'css/settings.css" />';
+			$css_file_path = apply_filters( "fl_builder_module_settings_css_file_path_{$module->slug}", "{$module->dir}css/settings.css", $module );
+			$css_file_uri = apply_filters( "fl_builder_module_settings_css_file_uri_{$module->slug}", "{$module->url}css/settings.css", $module );
+			$js_file_path = apply_filters( "fl_builder_module_settings_js_file_path_{$module->slug}", "{$module->dir}js/settings.js", $module );
+			$js_file_uri = apply_filters( "fl_builder_module_settings_js_file_uri_{$module->slug}", "{$module->url}js/settings.js", $module );
+
+			if ( file_exists( $css_file_path ) ) {
+				$css .= '<link class="fl-builder-settings-css" rel="stylesheet" href="' . $css_file_uri . '" />';
 			}
-			if ( file_exists( $module->dir . 'js/settings.js' ) ) {
-				$js .= '<script class="fl-builder-settings-js" src="' . $module->url . 'js/settings.js"></script>';
+			if ( file_exists( $js_file_path ) ) {
+				$js .= '<script class="fl-builder-settings-js" src="' . $js_file_uri . '"></script>';
 			}
 
 			$module_forms[ $module->slug ] = array(
@@ -343,6 +353,10 @@ class FLBuilderUISettingsForms {
 					continue;
 				}
 
+				if ( isset( $field['inline_editor'] ) && ! $field['inline_editor'] ) {
+					continue;
+				}
+
 				if ( ! isset( $editables[ $module->slug ] ) ) {
 					$editables[ $module->slug ] = array();
 				}
@@ -352,6 +366,7 @@ class FLBuilderUISettingsForms {
 					'field'	   => array(
 						'name'		=> $key,
 						'type'		=> $field['type'],
+						'toolbar'	=> isset( $field['inline_editor'] ) ? $field['inline_editor'] : null,
 					),
 				);
 			}
@@ -472,6 +487,7 @@ class FLBuilderUISettingsForms {
 			return false;
 		}
 
+		$post			= get_post( $id );
 		$filename 		= wp_basename( $url );
 		$base_url 		= str_replace( $filename, '', $url );
 		$meta     		= wp_get_attachment_metadata( $id );
@@ -510,6 +526,7 @@ class FLBuilderUISettingsForms {
 			'id'		=> $id,
 			'url'   	=> $url,
 			'filename' 	=> $filename,
+			'caption'	=> $post->post_excerpt,
 			'sizes' 	=> apply_filters( 'fl_builder_photo_sizes_select', $sizes ),
 		);
 	}
@@ -649,6 +666,9 @@ class FLBuilderUISettingsForms {
 		// Render legacy custom fields.
 		if ( isset( $data['fields'] ) ) {
 			foreach ( $data['fields'] as $name ) {
+				if ( ! isset( $fields[ $name ] ) ) {
+					continue;
+				}
 				ob_start();
 				self::render_settings_field( $name, (array) $fields[ $name ], $settings );
 				$response['fields'][ $name ] = ob_get_clean();
@@ -757,7 +777,10 @@ class FLBuilderUISettingsForms {
 			'settings'	=> $settings,
 		);
 
-		// Legacy filter for the config.
+		/**
+		 * Legacy filter for the config.
+		 * @see fl_builder_settings_form_config
+		 */
 		$form = apply_filters( 'fl_builder_settings_form_config', array_merge( $defaults, $form ) );
 
 		// Setup the class var to be safe in JS.
@@ -831,6 +854,11 @@ class FLBuilderUISettingsForms {
 		 * @since 2.0
 		 */
 		$field              = apply_filters( 'fl_builder_render_settings_field', $field, $name, $settings ); // Allow field settings filtering first
+
+		if ( ! isset( $field['type'] ) ) {
+			return;
+		}
+
 		$i                  = null;
 		$is_multiple        = isset( $field['multiple'] ) && true === (bool) $field['multiple'];
 		$supports_multiple  = 'editor' != $field['type'] && 'service' != $field['type'];

@@ -248,7 +248,10 @@ final class FLBuilderAdminSettings {
 		// Tools
 		self::render_form( 'tools' );
 
-		// Let extensions hook into form rendering.
+		/**
+		 * Let extensions hook into form rendering.
+		 * @see fl_builder_admin_settings_render_forms
+		 */
 		do_action( 'fl_builder_admin_settings_render_forms' );
 	}
 
@@ -347,7 +350,10 @@ final class FLBuilderAdminSettings {
 		self::debug();
 		self::uninstall();
 
-		// Let extensions hook into saving.
+		/**
+		 * Let extensions hook into saving.
+		 * @see fl_builder_admin_settings_save
+		 */
 		do_action( 'fl_builder_admin_settings_save' );
 	}
 
@@ -449,6 +455,11 @@ final class FLBuilderAdminSettings {
 					fl_builder_filesystem()->rmdir( $sets[ $key ]['path'], true );
 					FLBuilderIcons::remove_set( $key );
 				}
+				/**
+				 * After set is deleted.
+				 * @see fl_builder_admin_settings_remove_icon_set
+				 */
+				do_action( 'fl_builder_admin_settings_remove_icon_set', $key );
 			}
 
 			// Upload a new set?
@@ -456,10 +467,16 @@ final class FLBuilderAdminSettings {
 
 				$dir		 = FLBuilderModel::get_cache_dir( 'icons' );
 				$id			 = (int) $_POST['fl-new-icon-set'];
-				$path		 = get_attached_file( $id );
-				$new_path	 = $dir['path'] . 'icon-' . time() . '/';
+				$path		 = apply_filters( 'fl_builder_icon_set_upload_path', get_attached_file( $id ) );
+				$new_path	 = apply_filters( 'fl_builder_icon_set_new_path', $dir['path'] . 'icon-' . time() . '/' );
 
 				fl_builder_filesystem()->get_filesystem();
+
+				/**
+				 * Before set is unziped.
+				 * @see fl_builder_before_unzip_icon_set
+				 */
+				do_action( 'fl_builder_before_unzip_icon_set', $id, $path, $new_path );
 
 				$unzipped	 = unzip_file( $path, $new_path );
 
@@ -498,9 +515,17 @@ final class FLBuilderAdminSettings {
 					}
 				}
 
+				/**
+				 * After set is unzipped.
+				 * @see fl_builder_after_unzip_icon_set
+				 */
+				do_action( 'fl_builder_after_unzip_icon_set', $new_path );
+
+				$check_path = apply_filters( 'fl_builder_icon_set_check_path', $new_path );
+
 				// Check for supported sets.
-				$is_icomoon	 = fl_builder_filesystem()->file_exists( $new_path . 'selection.json' );
-				$is_fontello = fl_builder_filesystem()->file_exists( $new_path . 'config.json' );
+				$is_icomoon	 = fl_builder_filesystem()->file_exists( $check_path . 'selection.json' );
+				$is_fontello = fl_builder_filesystem()->file_exists( $check_path . 'config.json' );
 
 				// Show an error if we don't have a supported icon set.
 				if ( ! $is_icomoon && ! $is_fontello ) {
@@ -511,7 +536,7 @@ final class FLBuilderAdminSettings {
 
 				// check for valid Icomoon
 				if ( $is_icomoon ) {
-					$data = json_decode( fl_builder_filesystem()->file_get_contents( $new_path . 'selection.json' ) );
+					$data = json_decode( fl_builder_filesystem()->file_get_contents( $check_path . 'selection.json' ) );
 					if ( ! isset( $data->metadata ) ) {
 						fl_builder_filesystem()->rmdir( $new_path, true );
 						self::add_error( __( 'Error! When downloading from Icomoon, be sure to click the Download Font button and not Generate SVG.', 'fl-builder' ) );
@@ -521,7 +546,7 @@ final class FLBuilderAdminSettings {
 
 				// Enable the new set.
 				if ( is_array( $enabled_icons ) ) {
-					$key = FLBuilderIcons::get_key_from_path( $new_path );
+					$key = FLBuilderIcons::get_key_from_path( $check_path );
 					$enabled_icons[] = $key;
 				}
 			}
@@ -578,6 +603,10 @@ final class FLBuilderAdminSettings {
 					FLCustomizer::clear_all_css_cache();
 				}
 			}
+			/**
+			 * Fires after cache is cleared.
+			 * @see fl_builder_cache_cleared
+			 */
 			do_action( 'fl_builder_cache_cleared' );
 		}
 	}

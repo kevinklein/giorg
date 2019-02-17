@@ -34,7 +34,7 @@
 
 		<div id="item<?php echo $count; ?>">
 
-			<div class="week-row">
+			<div class="week-row p-b-lg">
 
 				<h3 class="p-a-sm text-inverse bg-primary text-md"><?php echo $week_headline; ?></h3>
 

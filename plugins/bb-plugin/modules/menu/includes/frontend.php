@@ -2,11 +2,15 @@
 
 $menu_classes = 'fl-menu';
 
-if ( $settings->collapse ) {
+if ( $settings->collapse && 'accordion' == $settings->menu_layout ) {
 	$menu_classes .= ' fl-menu-accordion-collapse';
 }
 if ( $settings->mobile_breakpoint && 'expanded' != $settings->mobile_toggle ) {
 	$menu_classes .= ' fl-menu-responsive-toggle-' . $settings->mobile_breakpoint;
+}
+if ( $module->is_responsive_menu_flyout() ) {
+	$menu_classes .= ' fl-menu-responsive-' . $settings->mobile_full_width;
+	$menu_classes .= ' fl-flyout-' . $settings->flyout_position;
 }
 ?>
 <div class="<?php echo $menu_classes; ?>">
@@ -35,6 +39,7 @@ if ( $settings->mobile_breakpoint && 'expanded' != $settings->mobile_toggle ) {
 		'container'		=> false,
 		'menu_class'	=> 'menu ' . $layout . $toggle,
 		'walker'		=> new FL_Menu_Module_Walker(),
+		'item_spacing'  => 'discard',
 		);
 		add_filter( 'wp_nav_menu_objects',  'FLMenuModule::sort_nav_objects', 10, 2 );
 		wp_nav_menu( $defaults );

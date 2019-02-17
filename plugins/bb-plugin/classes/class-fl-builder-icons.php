@@ -51,7 +51,10 @@ final class FLBuilderIcons {
 			restore_current_blog();
 		}
 
-		// Filter the sets
+		/**
+		 * Filter the icon sets.
+		 * @see fl_builder_icon_sets
+		 */
 		self::$sets = apply_filters( 'fl_builder_icon_sets', self::$sets );
 
 		// Return the sets.
@@ -78,7 +81,7 @@ final class FLBuilderIcons {
 		self::register_core_sets();
 
 		// Get the new sets.
-		$sets = self::$sets;
+		$sets = apply_filters( 'fl_builder_current_site_icon_sets', self::$sets );
 
 		// Revert to the original sets.
 		self::$sets = $original_sets;
@@ -392,6 +395,10 @@ final class FLBuilderIcons {
 	 * @return void
 	 */
 	static private function enqueue_styles_for_icon( $icon ) {
+		/**
+		 * Enqueue the stylesheet for an icon.
+		 * @see fl_builder_enqueue_styles_for_icon
+		 */
 		do_action( 'fl_builder_enqueue_styles_for_icon', $icon );
 
 		// Is this a core icon?
