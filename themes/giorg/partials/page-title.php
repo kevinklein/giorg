@@ -1,5 +1,5 @@
 <?php if ( !get_field( 'hide_header' ) ): ?>
-	<?php if ( is_blog() || is_single() ) { ?>
+	<?php if ( is_blog() ) { ?>
 		<div class="border-bottom">
 			<div class="item-flex container p-y"> 
 				<?php if ( !is_single() ) { ?>
@@ -20,7 +20,12 @@
 				<?php } elseif ( is_search() ) { ?>
 					<h1 class="main-title">Search Results</h1>
 				<?php } else { ?>
-					<?php the_title( '<h1 class="main-title">', '</h1>' ); ?> 
+					<h1 class="main-title">
+						<?php if ( is_singular( 'week' ) ) {
+							echo 'This Week in Washington DC – ';	
+						} ?>
+						<?php the_title(); ?> 
+					</h1>
 				<?php } ?> 
 				<?php if( is_singular( 'topics' ) ) : ?>
 					<div class="m-l-auto">

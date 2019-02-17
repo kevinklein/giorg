@@ -27,6 +27,10 @@ get_header();
 
 			get_template_part( 'template-parts/content-history', 'page' );
 
+		elseif ( is_page( 'this-week-in-washington-dc') ) :
+			
+			get_template_part( 'template-parts/content-this-week-in-washington-dc', 'page' );
+
 		endif;
 	
 		get_template_part( 'template-parts/content', 'page' );
