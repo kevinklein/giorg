@@ -1,0 +1,13 @@
+https://mediatemple.net/community/products/grid/204403864/export-and-import-mysql-databases
+
+internal-db.s37670.gridserver.com
+db37670_wp_dev
+
+1clk_wp_LyaSIlg
+oPjXKYOx
+
+import from file system 
+
+ssh rcsuniverse.com@s37670.gridserver.com
+cd domains/prototypes.gi.org/html/
+mysql -h internal-db.s37670.gridserver.com -u 1clk_wp_LyaSIlg -p db37670_wp_dev < 2018-11-24-db37670_wp_dev.sql
