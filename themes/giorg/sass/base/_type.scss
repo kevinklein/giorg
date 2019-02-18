@@ -414,10 +414,12 @@ p {
 
 .text-normal {
     font-size: $font-size-normal;
+    line-height: 1.5;
     p,
     li,
     td {
        font-size: $font-size-normal; 
+       line-height: 1.5;
     }
 }
 
