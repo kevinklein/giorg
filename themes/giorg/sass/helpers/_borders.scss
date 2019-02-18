@@ -102,6 +102,18 @@
     border-color: $brand-primary;
 }
 
+.border-primary-dark {
+    border-color: darken($brand-primary,5%);
+}
+
+.border-primary-darker {
+    border-color: darken($brand-primary,10%);
+}
+
+.border-primary-darkest {
+    border-color: darken($brand-primary,15%);
+}
+
 .border-primary-light {
     border-color: $brand-primary-light;
 }
