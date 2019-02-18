@@ -54,8 +54,8 @@
                             <?php dynamic_sidebar( 'footer-5' ); ?>
                         <?php } ?>
 
-                        <a href="#" class="display-block text-no-underline m-t">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/meeting2018-black.svg" class="" width="80">
+                        <a href="http://acgmeetings.gi.org" class="display-block text-no-underline m-t">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/acg2019-footer.png" class="" width="80">
                         </a>
                     
                     </div>
