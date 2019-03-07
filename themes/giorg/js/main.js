@@ -211,11 +211,11 @@
         });
 
         // Enable parallax and fade effects on homepage sections
-        $(window).scroll(function(){
-            scrolltop = $(window).scrollTop()
-            scrollwindow = scrolltop + $(window).height();
-            $(".hero").css("backgroundPosition", "50% " + -(scrolltop/3) + "px");
-        });
+        // $(window).scroll(function(){
+        //     scrolltop = $(window).scrollTop()
+        //     scrollwindow = scrolltop + $(window).height();
+        //     $(".hero").css("backgroundPosition", "50% " + -(scrolltop/3) + "px");
+        // });
 
         // if (window.innerWidth  > 800 ) {
         //     window.sr = ScrollReveal({ reset: true });
