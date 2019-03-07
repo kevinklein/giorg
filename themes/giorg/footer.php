@@ -11,14 +11,14 @@
 
 <div class="footer-container">
     <div class="position-relative border-bottom" id="footer-promo">
-        <div class="bg-gray-lightest bg-triangles">
+        <div class="bg-primary-lightest border-b border-1 border-primary bg-triangles">
             <div class="container p-y-md text-center">
                 <span class="logo-footer"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="img-circle" width="50"></span>
                 <div class="display-2 text-300">Advancing gastroenterology, improving patient care</div>
             </div>
         </div>
     </div>
-    <div class="bg-gray-lightest text-sm" id="footer">
+    <div class="bg-white text-sm" id="footer">
         <div class="container">
             <div class="p-y-md site-footer">
                 <div class="row row-flex row-bordered">

@@ -24,7 +24,7 @@
 
 <div id="top"></div>
 <header id="header-main" class="raised-sm position-relative">
-    <div class="text-sm bg-gray-lightest" role="directory" id="header-hud">
+    <div class="text-sm bg-primary-lightest" role="directory" id="header-hud">
         <div class="container item-flex justify-content-flex-end">
             <nav class="hidden-sm-down p-r">
                 <?php
