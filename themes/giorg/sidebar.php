@@ -7,9 +7,9 @@
 <aside id="secondary">
 
 	<?php if ( is_single() ) : ?>
-		<div class="m-b">
+		<!-- <div class="m-b">
 			<a href="/acg-blog/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/acgblog@2x.png" alt="ACG Blog"></a>
-		</div>
+		</div> -->
 	<?php endif; ?>
 
 	<div class="list-group m-b-md">
