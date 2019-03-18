@@ -163,8 +163,8 @@
         
         var showChar = 100;  // How many characters are shown by default
         var ellipsestext = "...";
-        var moretext = "Show more >";
-        var lesstext = "Show less";
+        var moretext = "More";
+        var lesstext = "Less";
         
 
         $('.more').each(function() {
@@ -175,7 +175,7 @@
                 var c = content.substr(0, showChar);
                 var h = content.substr(showChar, content.length - showChar);
     
-                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="text-uc morelink">' + moretext + '</a></span>';
     
                 $(this).html(html);
             }

@@ -820,6 +820,14 @@ span.text-hover-underline:hover,
     }
 }
 
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+}
+
 .link-read-more-parent {
     max-height: 250px;
     position: relative;
