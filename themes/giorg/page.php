@@ -23,6 +23,10 @@ get_header();
 
 			get_template_part( 'template-parts/content-fellowship', 'page' );
 
+		elseif ( is_page( 'toolbox') ) :
+
+			get_template_part( 'template-parts/content-toolbox', 'page' );
+
 		elseif ( is_page( 'history') ) :
 
 			get_template_part( 'template-parts/content-history', 'page' );
