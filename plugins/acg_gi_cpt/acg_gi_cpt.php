@@ -46,34 +46,34 @@ function acg_gi_cpt_register_post_types(){
 	register_post_type( 'news', $news_args );
 
 	/* set up the arguments for the 'event' post type */
-	$event_args = array(
-		'public' => true,
-		'query_var' => 'events',
-		'rewrite' => true,
-		'has_archive' => true,
-		'taxonomies' => array( 'category', 'post_tag' ),
-		'supports' => array(
-			'title',
-			'thumbnail',
-			'editor',
-			'excerpt'
-		),
-		'labels' => array(
-			'name' => 'Events',
-			'singular_name' => 'Event',
-			'add_new' => 'Add New Event',
-			'add_new_item' => 'Add New Event',
-			'edit_item' => 'Edit Event',
-			'new_item' => 'New Event',
-			'view_item' => 'View Event',
-			'search_items' => 'Search Events',
-			'not_found' => 'No Events Found',
-			'not_found_in_trash' => 'No Events Found In Trash'
-		),
-	);
+	// $event_args = array(
+	// 	'public' => true,
+	// 	'query_var' => 'events',
+	// 	'rewrite' => true,
+	// 	'has_archive' => true,
+	// 	'taxonomies' => array( 'category', 'post_tag' ),
+	// 	'supports' => array(
+	// 		'title',
+	// 		'thumbnail',
+	// 		'editor',
+	// 		'excerpt'
+	// 	),
+	// 	'labels' => array(
+	// 		'name' => 'Events',
+	// 		'singular_name' => 'Event',
+	// 		'add_new' => 'Add New Event',
+	// 		'add_new_item' => 'Add New Event',
+	// 		'edit_item' => 'Edit Event',
+	// 		'new_item' => 'New Event',
+	// 		'view_item' => 'View Event',
+	// 		'search_items' => 'Search Events',
+	// 		'not_found' => 'No Events Found',
+	// 		'not_found_in_trash' => 'No Events Found In Trash'
+	// 	),
+	// );
 	
 	/* Register the document post type. */
-	register_post_type( 'event', $event_args );
+	// register_post_type( 'event', $event_args );
 
 	/* set up the arguments for the 'event' post type */
 	$guideline_args = array(

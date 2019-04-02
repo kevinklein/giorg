@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <div class="row">
-	<div class="col-md-9 col-xs-12">
+	<div class="col-xs-12">
 	<?php if ( have_posts() ) : ?>
 
 		<p class="text-muted text-lg">
@@ -44,9 +44,6 @@ get_header();
 
 	endif;
 	?>
-	</div>
-	<div class="col-md-3 col-xs-12 hidden-sm-down">
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 
